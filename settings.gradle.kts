@@ -1,0 +1,1 @@
+rootProject.name = "SD_DZ_2_1"
