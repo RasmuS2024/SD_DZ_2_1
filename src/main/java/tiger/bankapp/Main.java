@@ -8,9 +8,9 @@ import tiger.bankapp.controller.MenuController;
 @SpringBootApplication
 public class Main {
     public static void main(String[] args) {
+        ConfigurableApplicationContext context = SpringApplication.run(Main.class, args);
 
-        try (ConfigurableApplicationContext context = SpringApplication.run(Main.class, args)) {
-
+        try {
             // Получаем контроллер меню из контейнера Spring
             MenuController menuController = context.getBean(MenuController.class);
 
@@ -18,6 +18,9 @@ public class Main {
             menuController.start();
 
         } finally {
+            if (context != null) {
+                context.close();
+            }
             System.out.println("Программа завершена");
         }
     }
