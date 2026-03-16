@@ -1,44 +1,20 @@
 package tiger.bankapp.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
 public class BankAccount {
-    private Long id;
+    private long id;
     private String name;
-    private int balance;
+    private double balance;
 
-    public BankAccount(Long id, String name) {
-        this.id = id;
-        this.name = name;
-        this.balance = 0;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getBalance() {
-        return balance;
-    }
-
-    public void setBalance(int balance) {
-        this.balance = balance;
-    }
-
-    public void deposit(int amount) {
+    public void deposit(double amount) {
         if (amount > 0) balance += amount;
     }
 
-    public boolean withdraw(int amount) {
+    public boolean withdraw(double amount) {
         if (amount > 0 && balance >= amount) {
             balance -= amount;
             return true;
@@ -48,6 +24,7 @@ public class BankAccount {
 
     @Override
     public String toString() {
-        return String.format("Счет{id=%d, name='%s', balance=%d}", id, name, balance);
+        return String.format("Счет{id=%s, name='%s', balance=%.2f}", id, name, balance);
     }
+
 }
