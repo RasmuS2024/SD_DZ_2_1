@@ -11,10 +11,20 @@ public class AccountRepository {
     private final Map<Long, BankAccount> storage = new HashMap<>();
     private final AtomicLong nextId = new AtomicLong(1);
 
+    /**
+     * Сохраняет счет (создает или обновляет существующий)
+     * ID = 0 означает новый счет, ему будет присвоен следующий ID
+     */
     public BankAccount save(BankAccount account) {
-        if (account.getId() == null) {
-            account.setId(nextId.getAndIncrement());
+        if (account.getId() == 0) {
+            long id = nextId.getAndIncrement();
+            account.setId(id);
+        } else {
+            if (account.getId() >= nextId.get()) {
+                nextId.set(account.getId() + 1);
+            }
         }
+
         storage.put(account.getId(), account);
         return account;
     }
@@ -29,10 +39,6 @@ public class AccountRepository {
 
     public boolean deleteById(Long id) {
         return storage.remove(id) != null;
-    }
-
-    public void update(BankAccount account) {
-        storage.put(account.getId(), account);
     }
 
 }

@@ -1,21 +1,29 @@
 package tiger.bankapp.repository;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.beans.factory.annotation.Autowired;
 import tiger.bankapp.model.Category;
+import tiger.bankapp.factory.CategoryFactory;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 @Repository
 public class CategoryRepository {
     private final Map<Integer, Category> storage = new HashMap<>();
     private final AtomicInteger nextId = new AtomicInteger(1);
+    private final CategoryFactory categoryFactory;
 
-    public Category save(Category category) {
-        if (category.getId() == null) {
-            category.setId(nextId.getAndIncrement());
-        }
-        storage.put(category.getId(), category);
+    @Autowired
+    public CategoryRepository(CategoryFactory categoryFactory) {
+        this.categoryFactory = categoryFactory;
+    }
+
+    public Category save(String type, String name) {
+        int id = nextId.getAndIncrement();
+        Category category = categoryFactory.createCategory(id, type, name);
+        storage.put(id, category);
         return category;
     }
 
@@ -30,7 +38,7 @@ public class CategoryRepository {
     public List<Category> findByType(String type) {
         return storage.values().stream()
                 .filter(c -> c.getType().equals(type))
-                .toList();
+                .collect(Collectors.toList());
     }
 
     public boolean deleteById(Integer id) {
@@ -41,4 +49,10 @@ public class CategoryRepository {
         storage.put(category.getId(), category);
     }
 
+    public Category saveCategory(String type, String name) {
+        int id = nextId.getAndIncrement();
+        Category category = categoryFactory.createCategory(id, type, name);  // фабрика
+        storage.put(id, category);  // сохранение
+        return category;
+    }
 }

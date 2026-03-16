@@ -1,29 +1,51 @@
 package tiger.bankapp.service;
 
 import org.springframework.stereotype.Service;
-import org.springframework.beans.factory.annotation.Autowired;
 import tiger.bankapp.model.Category;
 import tiger.bankapp.repository.CategoryRepository;
+import tiger.bankapp.factory.CategoryFactory;
 
 import java.util.List;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {
     private final CategoryRepository categoryRepository;
+    private final CategoryFactory categoryFactory;
 
-    @Autowired
-    public CategoryServiceImpl(CategoryRepository categoryRepository) {
+    public CategoryServiceImpl(CategoryRepository categoryRepository,
+                               CategoryFactory categoryFactory) {
         this.categoryRepository = categoryRepository;
+        this.categoryFactory = categoryFactory;
     }
 
     @Override
     public Category createCategory(String type, String name) {
-        Category category = new Category(null, type, name);
-        return categoryRepository.save(category);
+        if (type == null || (!"INCOME".equals(type) && !"EXPENSE".equals(type))) {
+            throw new IllegalArgumentException("Тип должен быть INCOME или EXPENSE");
+        }
+        if (name == null || name.trim().isEmpty()) {
+            throw new IllegalArgumentException("Название категории не может быть пустым");
+        }
+
+        // Используем специализированный метод репозитория, не нужен save
+        return categoryRepository.saveCategory(type, name.trim());
+    }
+
+    @Override
+    public Category createIncomeCategory(String name) {
+        return createCategory("INCOME", name);
+    }
+
+    @Override
+    public Category createExpenseCategory(String name) {
+        return createCategory("EXPENSE", name);
     }
 
     @Override
     public Category getCategory(Integer id) {
+        if (id == null || id <= 0) {
+            return null;
+        }
         return categoryRepository.findById(id).orElse(null);
     }
 
@@ -44,11 +66,21 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public boolean updateCategory(Integer id, String type, String name) {
+        if (id == null || id <= 0) {
+            return false;
+        }
+
         return categoryRepository.findById(id)
                 .map(category -> {
-                    category.setType(type);
-                    category.setName(name);
-                    categoryRepository.update(category);
+                    // Используем фабрику для создания обновленной категории
+                    String newType = type != null ? type : category.getType();
+                    String newName = name != null ? name.trim() : category.getName();
+
+                    Category updatedCategory = categoryFactory.createCategory(
+                            category.getId(), newType, newName
+                    );
+
+                    categoryRepository.update(updatedCategory);
                     return true;
                 })
                 .orElse(false);
@@ -56,6 +88,9 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public boolean deleteCategory(Integer id) {
+        if (id == null || id <= 0) {
+            return false;
+        }
         return categoryRepository.deleteById(id);
     }
 }
