@@ -1,10 +1,7 @@
 package tiger.bankapp.helpers;
 
-import org.springframework.stereotype.Component;
-
 import java.util.Scanner;
 
-@Component
 public class ConsoleHelper {
     private final Scanner scanner;
 
@@ -66,6 +63,8 @@ public class ConsoleHelper {
     }
 
     public void close() {
-        scanner.close();
+        if (scanner != null) {
+            scanner.close();
+        }
     }
 }

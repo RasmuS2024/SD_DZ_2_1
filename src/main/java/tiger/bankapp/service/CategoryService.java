@@ -7,8 +7,6 @@ import java.util.List;
 public interface CategoryService {
     Category createCategory(String type, String name);
     Category getCategory(Integer id);
-    Category createIncomeCategory(String name);
-    Category createExpenseCategory(String name);
     List<Category> getAllCategories();
     List<Category> getIncomeCategories();
     List<Category> getExpenseCategories();

@@ -1,9 +1,7 @@
 package tiger.bankapp.repository;
 
 import org.springframework.stereotype.Repository;
-import org.springframework.beans.factory.annotation.Autowired;
 import tiger.bankapp.model.Operation;
-import tiger.bankapp.factory.OperationFactory;
 
 import java.time.LocalDateTime;
 import java.util.*;
@@ -15,25 +13,12 @@ public class OperationRepository {
     private final Map<Integer, Operation> storage = new HashMap<>();
     private final AtomicInteger nextId = new AtomicInteger(1);
 
-    // Фабрика здесь больше не нужна, так как объекты приходят готовыми из Service или Importer
-
-    /**
-     * Универсальный метод сохранения.
-     * Если ID нет - создает новый. Если есть - обновляет.
-     */
     public Operation save(Operation operation) {
         if (operation.getId() == null) {
             operation.setId(nextId.getAndIncrement());
-        } else {
-            // Если ID пришел извне (например, при импорте), подтягиваем счетчик
-            updateNextId(operation.getId());
         }
         storage.put(operation.getId(), operation);
         return operation;
-    }
-
-    private void updateNextId(int currentId) {
-        nextId.getAndUpdate(prev -> Math.max(prev, currentId + 1));
     }
 
     public Optional<Operation> findById(Integer id) {
@@ -50,22 +35,24 @@ public class OperationRepository {
                 .toList();
     }
 
+    public List<Operation> findByCategoryId(Integer categoryId) {
+        return storage.values().stream()
+                .filter(op -> categoryId.equals(op.getCategoryId()))
+                .toList();
+    }
+
     public boolean deleteById(Integer id) {
         return storage.remove(id) != null;
     }
 
-    public void saveAll(List<Operation> operations) {
-        operations.forEach(this::save);
+    public void update(Operation operation) {
+        storage.put(operation.getId(), operation);
     }
 
     public List<Operation> findByDateRange(LocalDateTime from, LocalDateTime to) {
         return storage.values().stream()
                 .filter(op -> !op.getDate().isBefore(from) && !op.getDate().isAfter(to))
-                .toList();
+                .collect(Collectors.toList());
     }
 
-    public void clear() {
-        storage.clear();
-        nextId.set(1);
-    }
 }
