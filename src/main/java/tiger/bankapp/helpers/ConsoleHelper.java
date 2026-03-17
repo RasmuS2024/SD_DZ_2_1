@@ -58,6 +58,7 @@ public class ConsoleHelper {
             System.out.println((i + 1) + ". " + menuItems[i]);
         }
         System.out.println("0. Выход");
+        System.out.println("-------------------->");
     }
 
     public void waitForEnter() {

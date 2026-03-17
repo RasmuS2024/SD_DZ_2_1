@@ -2,6 +2,7 @@ package tiger.bankapp.facade;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+import tiger.bankapp.model.BankAccount;
 import tiger.bankapp.model.Operation;
 import tiger.bankapp.service.OperationService;
 import tiger.bankapp.service.AccountService;
@@ -58,7 +59,6 @@ public class AnalyticsFacade {
         return getSumByCategory(from, to, "EXPENSE");
     }
 
-    // Приватный вспомогательный метод, чтобы не дублировать код группировки
     private Map<String, Double> getSumByCategory(LocalDateTime from, LocalDateTime to, String type) {
         return operationService.getOperationsInPeriod(from, to).stream()
                 .filter(op -> type.equals(op.getType()))
@@ -67,13 +67,13 @@ public class AnalyticsFacade {
                             var cat = categoryService.getCategory(op.getCategoryId());
                             return (cat != null) ? cat.getName() : "Без категории";
                         },
-                        Collectors.summingDouble(Operation::getAmount) // Суммируем double
+                        Collectors.summingDouble(Operation::getAmount)
                 ));
     }
 
     public double getTotalBalance() {
         return accountService.getAllAccounts().stream()
-                .mapToDouble(acc -> acc.getBalance()) // Убедитесь, что getBalance() возвращает double
+                .mapToDouble(BankAccount::getBalance)
                 .sum();
     }
 
@@ -88,6 +88,52 @@ public class AnalyticsFacade {
         getExpenseByCategory(from, to).forEach((cat, sum) ->
                 System.out.printf("  - %s: %.2f%n", cat, sum));
 
-        System.out.printf("\nОбщий текущий баланс всех счетов: %.2f%n", getTotalBalance());
+        System.out.printf("%nОбщий текущий баланс всех счетов: %.2f%n", getTotalBalance());
     }
+
+    /**
+     * Пересчитывает баланс счета
+     * @param accountId id счета
+     * @return истина если баланс исправлен
+     */
+    public boolean verifyAndFixAccountBalance(Long accountId) {
+        BankAccount account = accountService.getAccount(accountId);
+        if (account == null) {
+            return false;
+        }
+
+        List<Operation> operations = operationService.getAccountOperations(accountId);
+
+        double calculatedBalance = operations.stream()
+                .mapToDouble(op -> "INCOME".equals(op.getType()) ? op.getAmount() : -op.getAmount())
+                .sum();
+
+        double currentBalance = account.getBalance();
+
+        if (Math.abs(calculatedBalance - currentBalance) > 0.001) {
+            account.setBalance(calculatedBalance);
+            accountService.updateAccount(accountId, account.getName());
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
+     * Исправление баланса всех счетов
+     * @return количество обработанных счетов
+     */
+    public int verifyAndFixAllAccounts() {
+        List<BankAccount> accounts = accountService.getAllAccounts();
+        int fixedCount = 0;
+
+        for (BankAccount account : accounts) {
+            if (verifyAndFixAccountBalance(account.getId())) {
+                fixedCount++;
+            }
+        }
+
+        return fixedCount;
+    }
+
 }

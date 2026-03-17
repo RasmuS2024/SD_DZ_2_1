@@ -35,12 +35,10 @@ public abstract class DataExporter {
         System.out.println("Экспорт завершён.");
     }
 
-    // Абстрактный метод — реализуется в подклассах
     protected abstract void serializeData(ImportData data, String filePath);
 
     /**
      * Общий метод загрузки данных
-     * @return
      */
     private ImportData loadData() {
         ImportData data = new ImportData();

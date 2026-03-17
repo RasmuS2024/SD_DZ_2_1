@@ -27,7 +27,6 @@ public class CategoryServiceImpl implements CategoryService {
             throw new IllegalArgumentException("Название категории не может быть пустым");
         }
 
-        // Используем специализированный метод репозитория, не нужен save
         return categoryRepository.saveCategory(type, name.trim());
     }
 
@@ -72,7 +71,6 @@ public class CategoryServiceImpl implements CategoryService {
 
         return categoryRepository.findById(id)
                 .map(category -> {
-                    // Используем фабрику для создания обновленной категории
                     String newType = type != null ? type : category.getType();
                     String newName = name != null ? name.trim() : category.getName();
 

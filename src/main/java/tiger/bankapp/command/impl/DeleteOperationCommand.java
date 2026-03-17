@@ -5,28 +5,26 @@ import tiger.bankapp.command.Command;
 import tiger.bankapp.controller.CommandHandler;
 
 @Component
-public class CreateAccountCommand implements Command {
-
+public class DeleteOperationCommand implements Command {
     private final CommandHandler handler;
 
-    public CreateAccountCommand(CommandHandler handler) {
+    public DeleteOperationCommand(CommandHandler handler) {
         this.handler = handler;
     }
 
     @Override
     public void execute() {
-        handler.handleCreateAccount();
+        handler.handleDeleteOperation();
     }
 
     @Override
     public String getLabel() {
-        return "Создать счет";
+        return "Удалить операцию";
     }
 
     @Override
     public int getOrder() {
-        return 1;
+        return 8;
     }
 }
-
 

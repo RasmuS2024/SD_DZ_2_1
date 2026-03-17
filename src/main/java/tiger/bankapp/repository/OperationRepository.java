@@ -1,21 +1,15 @@
 package tiger.bankapp.repository;
 
 import org.springframework.stereotype.Repository;
-import org.springframework.beans.factory.annotation.Autowired;
 import tiger.bankapp.model.Operation;
-import tiger.bankapp.factory.OperationFactory;
-
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.stream.Collectors;
 
 @Repository
 public class OperationRepository {
     private final Map<Integer, Operation> storage = new HashMap<>();
     private final AtomicInteger nextId = new AtomicInteger(1);
-
-    // Фабрика здесь больше не нужна, так как объекты приходят готовыми из Service или Importer
 
     /**
      * Универсальный метод сохранения.
@@ -25,7 +19,6 @@ public class OperationRepository {
         if (operation.getId() == null) {
             operation.setId(nextId.getAndIncrement());
         } else {
-            // Если ID пришел извне (например, при импорте), подтягиваем счетчик
             updateNextId(operation.getId());
         }
         storage.put(operation.getId(), operation);

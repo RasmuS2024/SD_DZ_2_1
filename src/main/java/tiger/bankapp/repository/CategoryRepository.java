@@ -20,7 +20,7 @@ public class CategoryRepository {
         this.categoryFactory = categoryFactory;
     }
 
-    public Category save(String type, String name) {
+    public Category saveCategory(String type, String name) {
         int id = nextId.getAndIncrement();
         Category category = categoryFactory.createCategory(id, type, name);
         storage.put(id, category);
@@ -49,10 +49,4 @@ public class CategoryRepository {
         storage.put(category.getId(), category);
     }
 
-    public Category saveCategory(String type, String name) {
-        int id = nextId.getAndIncrement();
-        Category category = categoryFactory.createCategory(id, type, name);  // фабрика
-        storage.put(id, category);  // сохранение
-        return category;
-    }
 }

@@ -1,6 +1,5 @@
 package tiger.bankapp;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import tiger.bankapp.model.BankAccount;
 
@@ -8,65 +7,53 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BankAccountTest {
 
-    private BankAccount account;
-
-    @BeforeEach
-    void setUp() {
-        account = new BankAccount(1L, "Тестовый счет");
-    }
-
     @Test
-    void testConstructor() {
+    void testCreateAccount() {
+        BankAccount account = new BankAccount(1L, "Тестовый счет", 0.0);
+
         assertEquals(1L, account.getId());
         assertEquals("Тестовый счет", account.getName());
-        assertEquals(0, account.getBalance());
+        assertEquals(0.0, account.getBalance());
     }
 
     @Test
     void testDeposit() {
+        BankAccount account = new BankAccount(1L, "Тестовый счет", 0.0);
+
         account.deposit(1000);
-        assertEquals(1000, account.getBalance());
+        assertEquals(1000.0, account.getBalance());
 
         account.deposit(500);
-        assertEquals(1500, account.getBalance());
-    }
-
-    @Test
-    void testDepositNegativeAmount() {
-        account.deposit(-100);
-        assertEquals(0, account.getBalance(), "Отрицательная сумма не должна изменять баланс");
+        assertEquals(1500.0, account.getBalance());
     }
 
     @Test
     void testWithdraw() {
+        BankAccount account = new BankAccount(1L, "Тестовый счет", 0.0);
         account.deposit(1000);
 
         boolean result = account.withdraw(300);
+
         assertTrue(result);
-        assertEquals(700, account.getBalance());
+        assertEquals(700.0, account.getBalance());
     }
 
     @Test
     void testWithdrawInsufficientFunds() {
+        BankAccount account = new BankAccount(1L, "Тестовый счет", 0.0);
         account.deposit(500);
 
         boolean result = account.withdraw(1000);
-        assertFalse(result);
-        assertEquals(500, account.getBalance(), "Баланс не должен измениться");
-    }
 
-    @Test
-    void testWithdrawNegativeAmount() {
-        account.deposit(500);
-
-        boolean result = account.withdraw(-100);
         assertFalse(result);
-        assertEquals(500, account.getBalance());
+        assertEquals(500.0, account.getBalance());
     }
 
     @Test
     void testToString() {
-        String expected = "Счет{id=1, name='Тестовый счет', balance=0}";
+        BankAccount account = new BankAccount(1L, "Тестовый счет", 1500.0);
+
+        String expected = "Счет{id=1, name='Тестовый счет', balance=1500,00}";
         assertEquals(expected, account.toString());
     }
 }

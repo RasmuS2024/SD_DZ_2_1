@@ -1,35 +1,35 @@
 package tiger.bankapp.command.impl;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import tiger.bankapp.command.Command;
+import tiger.bankapp.controller.CommandHandler;
 import tiger.bankapp.helpers.ConsoleHelper;
-import tiger.bankapp.importer.DataImporter;
-import tiger.bankapp.model.enums.ImportFormat;
-
-import java.util.List;
 
 @Component
-@RequiredArgsConstructor
 public class ImportDataCommand implements Command {
-    private final List<DataImporter> importers; // Внедряем все импортеры
+
+    private final CommandHandler handler;
     private final ConsoleHelper console;
 
-    @Override
-    public void execute() {
-        String path = console.readString("Введите путь к файлу: ");
-        ImportFormat format = ImportFormat.getByFileName(path);
-
-        DataImporter importer = importers.stream()
-                .filter(i -> i.getSupportedFormat() == format)
-                .findFirst()
-                .orElseThrow(() -> new RuntimeException("Формат не поддерживается"));
-
-        importer.importData(path);
-        System.out.println("Данные импортированы!");
+    public ImportDataCommand(CommandHandler handler, ConsoleHelper console) {
+        this.handler = handler;
+        this.console = console;
     }
 
     @Override
-    public String getDescription() { return "Импорт данных (JSON/YAML/CSV)"; }
+    public void execute() {
+        String filePath = console.readString("Введите путь к файлу (по умолчанию - data.csv (Enter)): ");
+        handler.handleImport(filePath);
+    }
+
+    @Override
+    public String getLabel() {
+        return "ИМПОРТ данных (JSON/YAML/CSV)";
+    }
+
+    @Override
+    public int getOrder() {
+        return 16;
+    }
 }
 

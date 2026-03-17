@@ -5,28 +5,26 @@ import tiger.bankapp.command.Command;
 import tiger.bankapp.controller.CommandHandler;
 
 @Component
-public class CreateAccountCommand implements Command {
+public class CategoryReportCommand implements Command {
 
     private final CommandHandler handler;
 
-    public CreateAccountCommand(CommandHandler handler) {
+    public CategoryReportCommand(CommandHandler handler) {
         this.handler = handler;
     }
 
     @Override
     public void execute() {
-        handler.handleCreateAccount();
+        handler.handleCategoryReport();
     }
 
     @Override
     public String getLabel() {
-        return "Создать счет";
+        return "Отчет по категориям (доходы/расходы)";
     }
 
     @Override
     public int getOrder() {
-        return 1;
+        return 15;
     }
 }
-
-

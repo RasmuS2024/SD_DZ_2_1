@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import tiger.bankapp.model.Operation;
 import tiger.bankapp.service.OperationService;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Component
@@ -44,11 +45,13 @@ public class OperationFacade {
         return operationService.deleteOperation(id);
     }
 
-    public Operation importIncome(Long accountId, double amount, Integer categoryId, String description) {
-        return operationService.importIncome(accountId, amount, categoryId, description);
+    public Operation importIncome(Long accountId, double amount, Integer categoryId,
+                                  String description, LocalDateTime date) {
+        return operationService.importIncome(accountId, amount, categoryId, description, date);
     }
 
-    public Operation importExpense(Long accountId, double amount, Integer categoryId, String description) {
-        return operationService.importExpense(accountId, amount, categoryId, description);
+    public Operation importExpense(Long accountId, double amount, Integer categoryId,
+                                   String description, LocalDateTime date) {
+        return operationService.importExpense(accountId, amount, categoryId, description, date);
     }
 }

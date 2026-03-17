@@ -24,7 +24,6 @@ public class YamlDataExporter extends DataExporter {
                             OperationFacade operationFacade) {
         super(accountFacade, categoryFacade, operationFacade);
 
-        // Настройка формата вывода
         DumperOptions options = new DumperOptions();
         options.setIndent(2);
         options.setPrettyFlow(true);

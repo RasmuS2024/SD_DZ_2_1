@@ -226,16 +226,28 @@ public class CommandHandler {
      * @param filePath имя файла
      */
     public void handleImport(String filePath) {
-        ImportFormat format = ImportFormat.getByFileName(filePath);
+        // Если пользователь ничего не ввел, используем значение по умолчанию
+        if (filePath == null || filePath.trim().isEmpty()) {
+            filePath = "data.csv";
+            console.printMessage("Используется файл по умолчанию: data.csv");
+        }
 
-        DataImporter importer = importers.stream()
-                .filter(i -> i.getSupportedFormat() == format)
-                .findFirst()
-                .orElseThrow(() -> new ValidationException("Импортер для формата " + format.getLabel() + " не найден"));
+        try {
+            ImportFormat format = ImportFormat.getByFileName(filePath);
 
-        importer.importData(filePath);
+            DataImporter importer = importers.stream()
+                    .filter(i -> i.getSupportedFormat() == format)
+                    .findFirst()
+                    .orElseThrow(() -> new ValidationException("Импортер для формата " + format.getLabel() + " не найден"));
 
-        console.printSuccess("Данные из файла " + filePath + " успешно импортированы!");
+            importer.importData(filePath);
+            console.printSuccess("Данные из файла " + filePath + " успешно импортированы!");
+
+        } catch (IllegalArgumentException e) {
+            console.printError("Неподдерживаемый формат файла. Укажите файл с расширением .csv, .json или .yaml");
+        } catch (Exception e) {
+            console.printError("Ошибка при импорте: " + e.getMessage());
+        }
     }
 
     /**
@@ -247,8 +259,6 @@ public class CommandHandler {
                 ? filePath
                 : filePath + format.getExtension();
 
-        ImportData dataToExport = collectAllData();
-
         DataExporter exporter = exporters.stream()
                 .filter(e -> e.getSupportedFormat() == format)
                 .findFirst()
@@ -258,12 +268,58 @@ public class CommandHandler {
         console.printSuccess("Данные успешно экспортированы в файл: " + finalPath);
     }
 
-    private ImportData collectAllData() {
-        ImportData data = new ImportData();
-        data.setAccounts(accountFacade.getAllAccounts());
-        data.setCategories(categoryFacade.getAllCategories());
-        data.setOperations(operationFacade.getAllOperations());
-        return data;
+    /**
+     * Отчет по категориям за период
+     */
+    public void handleCategoryReport() {
+        console.printMessage("\nВведите даты в формате ДД.ММ.ГГГГ");
+
+        LocalDateTime from = parseDate(console.readString("Начальная дата: "));
+        LocalDateTime to = parseDate(console.readString("Конечная дата: ")).plusDays(1).minusNanos(1);
+
+        analyticsFacade.printFullAnalytics(from, to);
+    }
+
+    /**
+     * Проверка и исправление баланса счета или всех счетов
+     */
+    public void handleBalanceVerification() {
+        System.out.println("Выберите действие:");
+        System.out.println("1. Проверить и исправить все счета");
+        System.out.println("2. Проверить конкретный счет");
+
+        int choice = console.readInt("Ваш выбор: ");
+
+        switch (choice) {
+            case 1 -> {
+                int fixed = analyticsFacade.verifyAndFixAllAccounts();
+                if (fixed > 0) {
+                    console.printSuccess("Проверка завершена. Исправлено счетов: " + fixed);
+                } else {
+                    console.printSuccess("Проверка завершена. Все балансы корректны.");
+                }
+            }
+            case 2 -> {
+                Long id = console.readLong("ID счета: ");
+
+                BankAccount account = accountFacade.getAccount(id);
+                if (account == null) {
+                    console.printError("Счет с ID " + id + " не найден");
+                    return;
+                }
+
+                boolean wasFixed = analyticsFacade.verifyAndFixAccountBalance(id);
+
+                if (wasFixed) {
+                    console.printSuccess("Баланс счета " + id + " был исправлен. Текущий баланс: " +
+                            accountFacade.getAccount(id).getBalance());
+                } else {
+                    console.printSuccess("Счет " + id + ": баланс корректен (" +
+                            account.getBalance() + ")");
+                }
+            }
+            default -> console.printError("Неверный выбор");
+        }
     }
 
 }

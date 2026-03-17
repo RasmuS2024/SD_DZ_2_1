@@ -5,28 +5,25 @@ import tiger.bankapp.command.Command;
 import tiger.bankapp.controller.CommandHandler;
 
 @Component
-public class CreateAccountCommand implements Command {
-
+public class BalanceVerificationCommand implements Command {
     private final CommandHandler handler;
 
-    public CreateAccountCommand(CommandHandler handler) {
+    public BalanceVerificationCommand(CommandHandler handler) {
         this.handler = handler;
     }
 
     @Override
     public void execute() {
-        handler.handleCreateAccount();
+        handler.handleBalanceVerification();
     }
 
     @Override
     public String getLabel() {
-        return "Создать счет";
+        return "Проверка и исправление балансов";
     }
 
     @Override
     public int getOrder() {
-        return 1;
+        return 18;
     }
 }
-
-

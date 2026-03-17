@@ -42,40 +42,37 @@ public abstract class DataImporter {
      * Общий метод сохранения
       */
     protected void saveData(ImportData data) {
-        // 1. Сортируем операции по дате
         List<Operation> sortedOperations = data.getOperations().stream()
                 .sorted((op1, op2) -> op1.getDate().compareTo(op2.getDate()))
                 .toList();
 
-        // 2. Создаем счета с их конечным балансом из CSV
         for (BankAccount acc : data.getAccounts()) {
-            // Создаем счет с балансом из CSV
-            BankAccount account = accountFacade.createAccountWithBalance(
+            accountFacade.createAccountWithBalance(
                     acc.getName(),
                     acc.getBalance()
             );
         }
 
-        // 3. Создаем категории
         for (Category cat : data.getCategories()) {
             categoryFacade.createCategory(cat.getType(), cat.getName());
         }
 
-        // 4. Импортируем операции без изменения баланса
         for (Operation op : sortedOperations) {
             if ("INCOME".equals(op.getType())) {
                 operationFacade.importIncome(
                         op.getBankAccountId(),
                         op.getAmount(),
                         op.getCategoryId(),
-                        op.getDescription()
+                        op.getDescription(),
+                        op.getDate()
                 );
             } else {
                 operationFacade.importExpense(
                         op.getBankAccountId(),
                         op.getAmount(),
                         op.getCategoryId(),
-                        op.getDescription()
+                        op.getDescription(),
+                        op.getDate()
                 );
             }
         }

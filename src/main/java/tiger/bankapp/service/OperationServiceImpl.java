@@ -109,19 +109,25 @@ public class OperationServiceImpl implements OperationService {
         return 0;
     }
 
-    public Operation importIncome(Long accountId, double amount, Integer categoryId, String description) {
+    public Operation importIncome(Long accountId, double amount, Integer categoryId,
+                                  String description, LocalDateTime date) {
         BankAccount account = accountService.getAccount(accountId);
         if (account == null) return null;
 
-        Operation operation = operationFactory.createIncome(accountId, amount, categoryId, description);
+        Operation operation = operationFactory.createOperationWithAllFields(
+                null, "INCOME", accountId, amount, date, description, categoryId
+        );
         return operationRepository.save(operation);
     }
 
-    public Operation importExpense(Long accountId, double amount, Integer categoryId, String description) {
+    public Operation importExpense(Long accountId, double amount, Integer categoryId,
+                                   String description, LocalDateTime date) {
         BankAccount account = accountService.getAccount(accountId);
         if (account == null) return null;
 
-        Operation operation = operationFactory.createExpense(accountId, amount, categoryId, description);
+        Operation operation = operationFactory.createOperationWithAllFields(
+                null, "EXPENSE", accountId, amount, date, description, categoryId
+        );
         return operationRepository.save(operation);
     }
 

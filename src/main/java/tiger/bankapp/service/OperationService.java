@@ -28,9 +28,9 @@ public interface OperationService {
 
     long getOperationsCount();
 
-    public Operation importIncome(Long accountId, double amount, Integer categoryId, String description);
+    public Operation importIncome(Long accountId, double amount, Integer categoryId, String description, LocalDateTime date);
 
-    public Operation importExpense(Long accountId, double amount, Integer categoryId, String description);
+    public Operation importExpense(Long accountId, double amount, Integer categoryId, String description, LocalDateTime date);
 
 
 }

@@ -5,28 +5,26 @@ import tiger.bankapp.command.Command;
 import tiger.bankapp.controller.CommandHandler;
 
 @Component
-public class CreateAccountCommand implements Command {
-
+public class DifferenceForPeriodCommand implements Command {
     private final CommandHandler handler;
 
-    public CreateAccountCommand(CommandHandler handler) {
+    public DifferenceForPeriodCommand(CommandHandler handler) {
         this.handler = handler;
     }
 
     @Override
     public void execute() {
-        handler.handleCreateAccount();
+        handler.handleDifferenceForPeriod();
     }
 
     @Override
     public String getLabel() {
-        return "Создать счет";
+        return "Разница доходов и расходов за период";
     }
 
     @Override
     public int getOrder() {
-        return 1;
+        return 14;
     }
 }
-
 
