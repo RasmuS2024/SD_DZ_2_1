@@ -53,8 +53,8 @@
 - `@Autowired` – для внедрения зависимостей через конструктор.
 
 ## Измерение скорости выполнения методов
-В папке aop реализована аннотация @LogExecutionTime, которая реализует возможность замера времени выполнения методов.
-Для примера аннотация добавлена к методам createAccount в AccountServiceImpl, createCategory в CategoryServiceImpl, createIncome в OperationServiceImpl в папке service.
+В папке `aop` реализована аннотация `@LogExecutionTime`, которая реализует возможность замера времени выполнения методов.
+Для примера аннотация добавлена к методам `createAccount` в `AccountServiceImpl`, `createCategory` в `CategoryServiceImpl`, `createIncome` в `OperationServiceImpl` в папке service.
 При запуске данных методов в консоли выводится время выполнения метода.
 
 ## Проблемы при расширении
