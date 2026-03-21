@@ -1,6 +1,7 @@
 package tiger.bankapp.service;
 
 import org.springframework.stereotype.Service;
+import tiger.bankapp.aop.LogExecutionTime;
 import tiger.bankapp.model.Category;
 import tiger.bankapp.repository.CategoryRepository;
 import tiger.bankapp.factory.CategoryFactory;
@@ -18,6 +19,7 @@ public class CategoryServiceImpl implements CategoryService {
         this.categoryFactory = categoryFactory;
     }
 
+    @LogExecutionTime
     @Override
     public Category createCategory(String type, String name) {
         if (type == null || (!"INCOME".equals(type) && !"EXPENSE".equals(type))) {

@@ -1,6 +1,7 @@
 package tiger.bankapp.service;
 
 import org.springframework.stereotype.Service;
+import tiger.bankapp.aop.LogExecutionTime;
 import tiger.bankapp.factory.AccountFactory;
 import tiger.bankapp.model.BankAccount;
 import tiger.bankapp.repository.AccountRepository;
@@ -17,6 +18,7 @@ public class AccountServiceImpl implements AccountService {
         this.accountFactory = accountFactory;
     }
 
+    @LogExecutionTime
     @Override
     public BankAccount createAccount(String name) {
         BankAccount account = accountFactory.createAccount(name);
