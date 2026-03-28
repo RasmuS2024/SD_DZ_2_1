@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CategoryFactoryTest {
 
-    private final CategoryFactory factory = new CategoryFactory();
+    private final CategoryFactory factory = new CategoryFactoryImpl();
 
     /**
      * Проверяет создание категории на основе строкового представления типа.

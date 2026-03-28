@@ -4,6 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import tiger.bankapp.command.Command;
 import tiger.bankapp.command.TimedCommand;
 import tiger.bankapp.command.impl.*;
+import tiger.bankapp.controller.FacadeContext;
+import tiger.bankapp.controller.MenuController;
 import tiger.bankapp.facade.*;
 import tiger.bankapp.factory.*;
 import tiger.bankapp.helpers.ConsoleHelper;
@@ -26,13 +28,13 @@ public class AppContainer {
     public static MenuController assemble(ConsoleHelper console, ObjectMapper mapper) {
         var display = new DisplayHelper();
 
-        var accFact = new AccountFactory();
-        var catFact = new CategoryFactory();
-        var opFact = new OperationFactory();
+        AccountFactory accFact = new AccountFactoryImpl();
+        CategoryFactory catFact = new CategoryFactoryImpl();
+        OperationFactory opFact = new OperationFactoryImpl();
 
-        var accRepo = new AccountRepository();
-        var catRepo = new CategoryRepository(catFact);
-        var opRepo = new OperationRepository();
+        AccountRepository accRepo = new AccountRepositoryImpl();
+        CategoryRepository catRepo = new CategoryRepositoryImpl(catFact);
+        OperationRepository opRepo = new OperationRepositoryImpl();
 
         var accService = new AccountServiceImpl(accRepo, accFact);
         var catService = new CategoryServiceImpl(catRepo, catFact);

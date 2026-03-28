@@ -18,6 +18,7 @@ import tiger.bankapp.model.Operation;
 
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -58,11 +59,13 @@ class AddExpenseCommandTest {
         String description = "Покупка";
 
         when(console.readLong(anyString())).thenReturn(accountId);
-        when(console.readInt("Сумма:")).thenReturn(amount);
+        when(console.readInt(anyString()))
+                .thenReturn(amount)
+                .thenReturn(categoryId);
+        when(console.readString(anyString())).thenReturn(description);
         when(categoryFacade.getExpenseCategories()).thenReturn(List.of(new Category()));
-        when(console.readInt("ID категории:")).thenReturn(categoryId);
-        when(console.readString("Описание:")).thenReturn(description);
-        when(operationFacade.addExpense(accountId, amount, categoryId, description)).thenReturn(new Operation());
+        when(operationFacade.addExpense(accountId, amount, categoryId, description))
+                .thenReturn(new Operation());
         when(accountFacade.getAccount(accountId)).thenReturn(new BankAccount());
 
         // Act
@@ -72,7 +75,7 @@ class AddExpenseCommandTest {
         verify(display).showCategoriesForSelection(categoryFacade.getExpenseCategories(), "расходов");
         verify(operationFacade).addExpense(accountId, amount, categoryId, description);
         verify(console).printSuccess(anyString());
-        verify(console).printMessage(anyString()); // showAccountBalance
+        verify(console).printMessage(anyString());
     }
 
     /**

@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AccountFactoryTest {
 
-    private final AccountFactory factory = new AccountFactory();
+    private final AccountFactory factory = new AccountFactoryImpl();
 
     /**
      * Проверяет создание счета с дефолтным ID и нулевым балансом.

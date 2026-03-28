@@ -2,18 +2,11 @@ package tiger.bankapp.factory;
 
 import tiger.bankapp.model.BankAccount;
 
-public class AccountFactory {
+public interface AccountFactory {
 
-    public BankAccount createAccount(String name) {
-        return new BankAccount(0L, name, 0.0);
-    }
+    BankAccount createAccount(String name);
 
-    public BankAccount createAccountWithId(long id, String name) {
-        return new BankAccount(id, name, 0.0);
-    }
+    BankAccount createAccountWithId(long id, String name);
 
-    public BankAccount createAccountWithBalance(String name, double initialBalance) {
-        return new BankAccount(0L, name, initialBalance);
-    }
-
+    BankAccount createAccountWithBalance(String name, double initialBalance);
 }

@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class OperationFactoryTest {
 
-    private final OperationFactory factory = new OperationFactory();
+    private final OperationFactory factory = new OperationFactoryImpl();
 
     /**
      * Проверяет создание новой операции с автоматической установкой текущей даты и пустым ID

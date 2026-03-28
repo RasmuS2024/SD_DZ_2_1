@@ -22,12 +22,6 @@ public interface OperationService {
 
     List<Operation> getOperationsInPeriod(LocalDateTime from, LocalDateTime to);
 
-    List<Operation> getOperationsByAccountAndPeriod(Long accountId, LocalDateTime from, LocalDateTime to);
-
-    List<Operation> getOperationsByType(String type);
-
-    long getOperationsCount();
-
     public Operation importIncome(Long accountId, double amount, Integer categoryId, String description, LocalDateTime date);
 
     public Operation importExpense(Long accountId, double amount, Integer categoryId, String description, LocalDateTime date);

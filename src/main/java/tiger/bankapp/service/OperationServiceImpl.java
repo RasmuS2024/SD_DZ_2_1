@@ -95,7 +95,7 @@ public class OperationServiceImpl implements OperationService {
     public boolean deleteOperation(Integer id) {
         return operationRepository.findById(id)
                 .map(op -> {
-                    if ("INCOME".equals(op.getType())) {
+                    if (OperationType.INCOME.equals(op.getType())) {
                         accountService.withdraw(op.getBankAccountId(), op.getAmount());
                     } else {
                         accountService.deposit(op.getBankAccountId(), op.getAmount());
@@ -110,21 +110,6 @@ public class OperationServiceImpl implements OperationService {
             throw new IllegalArgumentException("Некорректный период дат");
         }
         return operationRepository.findByDateRange(from, to);
-    }
-
-    @Override
-    public List<Operation> getOperationsByAccountAndPeriod(Long accountId, LocalDateTime from, LocalDateTime to) {
-        return List.of();
-    }
-
-    @Override
-    public List<Operation> getOperationsByType(String type) {
-        return List.of();
-    }
-
-    @Override
-    public long getOperationsCount() {
-        return 0;
     }
 
     public Operation importIncome(Long accountId, double amount, Integer categoryId,
