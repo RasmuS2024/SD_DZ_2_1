@@ -1,18 +1,22 @@
 package tiger.bankapp.command.impl;
 
 import tiger.bankapp.command.Command;
-import tiger.bankapp.controller.CommandHandler;
+import tiger.bankapp.controller.FacadeContext;
+import tiger.bankapp.helpers.DisplayHelper;
 
 public class ShowCategoriesCommand implements Command {
-    private final CommandHandler handler;
+    private final FacadeContext facades;
+    private final DisplayHelper display;
 
-    public ShowCategoriesCommand(CommandHandler handler) {
-        this.handler = handler;
+    public ShowCategoriesCommand(FacadeContext facades, DisplayHelper display) {
+        this.facades = facades;
+        this.display = display;
     }
 
     @Override
     public void execute() {
-        handler.handleShowCategories();
+        display.showCategories(facades.categoryFacade().getIncomeCategories(),
+                facades.categoryFacade().getExpenseCategories());
     }
 
     @Override

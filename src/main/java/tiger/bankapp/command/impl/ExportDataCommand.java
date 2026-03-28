@@ -1,18 +1,24 @@
 package tiger.bankapp.command.impl;
 
 import tiger.bankapp.command.Command;
-import tiger.bankapp.controller.CommandHandler;
+import tiger.bankapp.controller.FacadeContext;
+import tiger.bankapp.exceptions.ValidationException;
+import tiger.bankapp.exporter.DataExporter;
 import tiger.bankapp.helpers.ConsoleHelper;
 import tiger.bankapp.model.enums.ImportFormat;
+
 import java.util.Arrays;
+import java.util.List;
 
 public class ExportDataCommand implements Command {
 
-    private final CommandHandler handler;
+    private final FacadeContext facades;
+    private final List<DataExporter> exporters;
     private final ConsoleHelper console;
 
-    public ExportDataCommand(CommandHandler handler, ConsoleHelper console) {
-        this.handler = handler;
+    public ExportDataCommand(FacadeContext facades, List<DataExporter> exporters, ConsoleHelper console) {
+        this.facades = facades;
+        this.exporters = exporters;
         this.console = console;
     }
 
@@ -35,7 +41,17 @@ public class ExportDataCommand implements Command {
 
         String path = console.readString("Введите имя файла для сохранения: ");
 
-        handler.handleExport(path, format);
+        String finalPath = path.toLowerCase().endsWith(format.getExtension())
+                ? path
+                : path + format.getExtension();
+
+        DataExporter exporter = exporters.stream()
+                .filter(e -> e.getSupportedFormat() == format)
+                .findFirst()
+                .orElseThrow(() -> new ValidationException("Экспортер для " + format.getLabel() + " не найден"));
+
+        exporter.exportData(finalPath);
+        console.printSuccess("Данные успешно экспортированы в файл: " + finalPath);
     }
 
     @Override

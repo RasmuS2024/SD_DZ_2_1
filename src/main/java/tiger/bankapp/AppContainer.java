@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import tiger.bankapp.command.Command;
 import tiger.bankapp.command.TimedCommand;
 import tiger.bankapp.command.impl.*;
-import tiger.bankapp.controller.*;
 import tiger.bankapp.facade.*;
 import tiger.bankapp.factory.*;
 import tiger.bankapp.helpers.ConsoleHelper;
@@ -27,18 +26,6 @@ public class AppContainer {
     public static MenuController assemble(ConsoleHelper console, ObjectMapper mapper) {
         var display = new DisplayHelper();
 
-        CommandHandler handler = createCommandHandler(mapper, console, display);
-
-        List<Command> commands = createCommands(handler, console);
-
-        return new MenuController(console, commands);
-    }
-
-    private static CommandHandler createCommandHandler(
-            ObjectMapper mapper,
-            ConsoleHelper console,
-            DisplayHelper display
-    ) {
         var accFact = new AccountFactory();
         var catFact = new CategoryFactory();
         var opFact = new OperationFactory();
@@ -71,36 +58,38 @@ public class AppContainer {
                 new YamlDataExporter(facades)
         );
 
-        return new CommandHandler(importers, exporters, facades, console, display);
+        List<Command> commands = createCommands(facades, importers, exporters, console, display);
+
+        return new MenuController(console, commands);
     }
 
-    private static List<Command> createCommands(CommandHandler handler, ConsoleHelper console) {
+    private static List<Command> createCommands(FacadeContext facades, List<DataImporter> importers, List<DataExporter> exporters, ConsoleHelper console, DisplayHelper display) {
         List<Command> commands = new ArrayList<>();
 
         // Счета и Категории
-        commands.add(new CreateAccountCommand(handler));
-        commands.add(new EditAccountCommand(handler));
-        commands.add(new DeleteAccountCommand(handler));
-        commands.add(new ShowAccountsCommand(handler));
-        commands.add(new CreateCategoryCommand(handler));
-        commands.add(new EditCategoryCommand(handler));
-        commands.add(new DeleteCategoryCommand(handler));
-        commands.add(new ShowCategoriesCommand(handler));
+        commands.add(new CreateAccountCommand(facades, console));
+        commands.add(new EditAccountCommand(facades, console));
+        commands.add(new DeleteAccountCommand(facades, console));
+        commands.add(new ShowAccountsCommand(facades, display));
+        commands.add(new CreateCategoryCommand(facades, console));
+        commands.add(new EditCategoryCommand(facades, console));
+        commands.add(new DeleteCategoryCommand(facades, console));
+        commands.add(new ShowCategoriesCommand(facades, display));
 
         // Операции
-        commands.add(new AddIncomeCommand(handler));
-        commands.add(new AddExpenseCommand(handler));
-        commands.add(new EditOperationCommand(handler));
-        commands.add(new DeleteOperationCommand(handler));
-        commands.add(new ShowOperationsCommand(handler));
+        commands.add(new AddIncomeCommand(facades, console, display));
+        commands.add(new AddExpenseCommand(facades, console, display));
+        commands.add(new EditOperationCommand(facades, console));
+        commands.add(new DeleteOperationCommand(facades, console));
+        commands.add(new ShowOperationsCommand(facades, console, display));
 
         // Аналитика и сервис
         // замеряемые команды
-        addTimedCommand(commands, new BalanceVerificationCommand(handler));
-        addTimedCommand(commands, new CategoryReportCommand(handler));
-        addTimedCommand(commands, new DifferenceForPeriodCommand(handler));
-        addTimedCommand(commands, new ExportDataCommand(handler, console));
-        addTimedCommand(commands, new ImportDataCommand(handler, console));
+        addTimedCommand(commands, new BalanceVerificationCommand(facades, console));
+        addTimedCommand(commands, new CategoryReportCommand(facades, console));
+        addTimedCommand(commands, new DifferenceForPeriodCommand(facades, console));
+        addTimedCommand(commands, new ExportDataCommand(facades, exporters, console));
+        addTimedCommand(commands, new ImportDataCommand(facades, importers, console));
 
         return commands;
     }

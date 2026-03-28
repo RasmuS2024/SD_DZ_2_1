@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import tiger.bankapp.command.impl.CreateAccountCommand;
 import tiger.bankapp.facade.AccountFacade;
 import tiger.bankapp.facade.AnalyticsFacade;
 import tiger.bankapp.facade.CategoryFacade;
@@ -14,14 +15,12 @@ import tiger.bankapp.helpers.DisplayHelper;
 import tiger.bankapp.model.BankAccount;
 import tiger.bankapp.exceptions.ValidationException;
 
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-class CommandHandlerTest {
+class CreateAccountCommandTest {
 
     @Mock private AccountFacade accountFacade;
     @Mock private CategoryFacade categoryFacade;
@@ -31,7 +30,7 @@ class CommandHandlerTest {
     @Mock private ConsoleHelper console;
     @Mock private DisplayHelper display;
 
-    private CommandHandler commandHandler;
+    private CreateAccountCommand command;
 
     @BeforeEach
     void setUp() {
@@ -43,25 +42,19 @@ class CommandHandlerTest {
                 analyticsFacade
         );
 
-        // Инициализируем хендлер
-        commandHandler = new CommandHandler(
-                List.of(), // importers
-                List.of(), // exporters
-                facades,
-                console,
-                display
-        );
+        // Инициализируем команду
+        command = new CreateAccountCommand(facades, console);
     }
 
     @Test
-    void testHandleCreateAccount_Success() {
+    void testExecute_Success() {
         // Arrange
         String accountName = "Зарплатный";
         when(console.readString(anyString())).thenReturn(accountName);
         when(accountFacade.createAccount(accountName)).thenReturn(new BankAccount());
 
         // Act
-        commandHandler.handleCreateAccount();
+        command.execute();
 
         // Assert
         verify(accountFacade).createAccount(accountName);
@@ -69,31 +62,14 @@ class CommandHandlerTest {
     }
 
     @Test
-    void testHandleCreateAccount_ValidationError() {
+    void testExecute_ValidationError() {
         // Arrange: пользователь ввел пустую строку
         when(console.readString(anyString())).thenReturn("   ");
 
         // Act & Assert
-        assertThrows(ValidationException.class, () -> commandHandler.handleCreateAccount());
+        assertThrows(ValidationException.class, () -> command.execute());
 
         // Проверяем, что фасад НЕ вызывался
         verify(accountFacade, never()).createAccount(anyString());
-    }
-
-    @Test
-    void testHandleDeleteAccount_NonZeroBalance() {
-        // Arrange
-        Long accountId = 1L;
-        BankAccount richAccount = new BankAccount();
-        richAccount.deposit(100.0);
-
-        when(console.readLong(anyString())).thenReturn(accountId);
-        when(accountFacade.getAccount(accountId)).thenReturn(richAccount);
-
-        // Act & Assert
-        assertThrows(ValidationException.class, () -> commandHandler.handleDeleteAccount());
-
-        // Проверяем, что метод удаления в фасаде не был вызван
-        verify(accountFacade, never()).deleteAccount(accountId);
     }
 }

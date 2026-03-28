@@ -1,18 +1,24 @@
 package tiger.bankapp.command.impl;
 
 import tiger.bankapp.command.Command;
-import tiger.bankapp.controller.CommandHandler;
+import tiger.bankapp.controller.FacadeContext;
+import tiger.bankapp.helpers.ConsoleHelper;
 
 public class DeleteOperationCommand implements Command {
-    private final CommandHandler handler;
+    private final FacadeContext facades;
+    private final ConsoleHelper console;
 
-    public DeleteOperationCommand(CommandHandler handler) {
-        this.handler = handler;
+    public DeleteOperationCommand(FacadeContext facades, ConsoleHelper console) {
+        this.facades = facades;
+        this.console = console;
     }
 
     @Override
     public void execute() {
-        handler.handleDeleteOperation();
+        Integer operationId = console.readInt("ID операции: ");
+
+        facades.operationFacade().deleteOperation(operationId);
+        console.printSuccess("Операция удалена, баланс счета скорректирован");
     }
 
     @Override

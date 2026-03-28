@@ -1,18 +1,28 @@
 package tiger.bankapp.command.impl;
 
 import tiger.bankapp.command.Command;
-import tiger.bankapp.controller.CommandHandler;
+import tiger.bankapp.controller.FacadeContext;
+import tiger.bankapp.helpers.ConsoleHelper;
+import tiger.bankapp.helpers.DisplayHelper;
+import tiger.bankapp.model.BankAccount;
 
 public class ShowOperationsCommand implements Command {
-    private final CommandHandler handler;
+    private final FacadeContext facades;
+    private final ConsoleHelper console;
+    private final DisplayHelper display;
 
-    public ShowOperationsCommand(CommandHandler handler) {
-        this.handler = handler;
+    public ShowOperationsCommand(FacadeContext facades, ConsoleHelper console, DisplayHelper display) {
+        this.facades = facades;
+        this.console = console;
+        this.display = display;
     }
 
     @Override
     public void execute() {
-        handler.handleShowOperations();
+        Long accountId = console.readLong("ID счета: ");
+
+        BankAccount account = facades.accountFacade().getAccount(accountId);
+        display.showOperations(account, facades.operationFacade().getAccountOperations(accountId));
     }
 
     @Override
