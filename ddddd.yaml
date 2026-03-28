@@ -1,0 +1,8064 @@
+!!tiger.bankapp.importer.ImportData
+accounts:
+- balance: 2204471.41
+  id: 1
+  name: Счет 1
+- balance: 1608675.29
+  id: 2
+  name: Счет 2
+- balance: 1448895.58
+  id: 3
+  name: Счет 3
+- balance: 1426206.43
+  id: 4
+  name: Счет 4
+- balance: 1977426.24
+  id: 5
+  name: Счет 5
+- balance: 1858057.46
+  id: 6
+  name: Счет 6
+- balance: 2000723.66
+  id: 7
+  name: Счет 7
+- balance: 1532706.18
+  id: 8
+  name: Счет 8
+- balance: 1383142.16
+  id: 9
+  name: Счет 9
+- balance: 1680461.43
+  id: 10
+  name: Счет 10
+categories:
+- id: 1
+  name: Зарплата
+  type: INCOME
+- id: 2
+  name: Премия
+  type: INCOME
+- id: 3
+  name: Кэшбэк
+  type: INCOME
+- id: 4
+  name: Подработка
+  type: INCOME
+- id: 5
+  name: Проценты по вкладу
+  type: INCOME
+- id: 6
+  name: Продукты
+  type: EXPENSE
+- id: 7
+  name: Кафе и рестораны
+  type: EXPENSE
+- id: 8
+  name: Транспорт
+  type: EXPENSE
+- id: 9
+  name: Коммунальные услуги
+  type: EXPENSE
+- id: 10
+  name: Развлечения
+  type: EXPENSE
+operations:
+- amount: 2035.49
+  bankAccountId: 4
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 1
+  type: EXPENSE
+- amount: 1544.48
+  bankAccountId: 6
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 2
+  type: EXPENSE
+- amount: 38399.02
+  bankAccountId: 5
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 3
+  type: INCOME
+- amount: 4911.28
+  bankAccountId: 4
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 4
+  type: EXPENSE
+- amount: 4702.99
+  bankAccountId: 10
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 5
+  type: EXPENSE
+- amount: 2213.71
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 6
+  type: EXPENSE
+- amount: 2980.39
+  bankAccountId: 7
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 7
+  type: EXPENSE
+- amount: 4737.26
+  bankAccountId: 2
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 8
+  type: EXPENSE
+- amount: 2312.04
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 9
+  type: EXPENSE
+- amount: 1250.73
+  bankAccountId: 9
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 10
+  type: EXPENSE
+- amount: 3960.85
+  bankAccountId: 2
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 11
+  type: EXPENSE
+- amount: 14664.25
+  bankAccountId: 10
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 12
+  type: INCOME
+- amount: 5192.43
+  bankAccountId: 1
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 13
+  type: EXPENSE
+- amount: 6711.8
+  bankAccountId: 6
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 14
+  type: EXPENSE
+- amount: 1243.57
+  bankAccountId: 6
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 15
+  type: EXPENSE
+- amount: 3547.18
+  bankAccountId: 4
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 16
+  type: EXPENSE
+- amount: 32730.51
+  bankAccountId: 4
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за February 2021
+  id: 17
+  type: INCOME
+- amount: 1796.28
+  bankAccountId: 5
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 18
+  type: EXPENSE
+- amount: 1243.51
+  bankAccountId: 10
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 19
+  type: EXPENSE
+- amount: 5833.37
+  bankAccountId: 8
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 20
+  type: EXPENSE
+- amount: 4186.82
+  bankAccountId: 7
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 21
+  type: EXPENSE
+- amount: 4351.91
+  bankAccountId: 2
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 22
+  type: EXPENSE
+- amount: 3325.13
+  bankAccountId: 6
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 23
+  type: EXPENSE
+- amount: 6421.98
+  bankAccountId: 3
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 24
+  type: EXPENSE
+- amount: 2703.27
+  bankAccountId: 8
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 25
+  type: EXPENSE
+- amount: 59875.66
+  bankAccountId: 10
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за February 2021
+  id: 26
+  type: INCOME
+- amount: 1054.83
+  bankAccountId: 1
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 27
+  type: EXPENSE
+- amount: 4754.71
+  bankAccountId: 2
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 28
+  type: EXPENSE
+- amount: 3721.78
+  bankAccountId: 1
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 29
+  type: EXPENSE
+- amount: 125247.54
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за March 2021
+  id: 30
+  type: INCOME
+- amount: 75980.41
+  bankAccountId: 7
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за March 2021
+  id: 31
+  type: INCOME
+- amount: 92130.12
+  bankAccountId: 7
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за March 2021
+  id: 32
+  type: INCOME
+- amount: 6385.33
+  bankAccountId: 10
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 33
+  type: EXPENSE
+- amount: 676.76
+  bankAccountId: 6
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 34
+  type: EXPENSE
+- amount: 453.3
+  bankAccountId: 3
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 35
+  type: EXPENSE
+- amount: 563.54
+  bankAccountId: 10
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 36
+  type: EXPENSE
+- amount: 2858.24
+  bankAccountId: 2
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 37
+  type: EXPENSE
+- amount: 16858.14
+  bankAccountId: 7
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 38
+  type: INCOME
+- amount: 2047.32
+  bankAccountId: 10
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 39
+  type: EXPENSE
+- amount: 89893.27
+  bankAccountId: 10
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за March 2021
+  id: 40
+  type: INCOME
+- amount: 4994.8
+  bankAccountId: 5
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 41
+  type: EXPENSE
+- amount: 6230.21
+  bankAccountId: 10
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 42
+  type: EXPENSE
+- amount: 39249.91
+  bankAccountId: 7
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 43
+  type: INCOME
+- amount: 79458.79
+  bankAccountId: 9
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за April 2021
+  id: 44
+  type: INCOME
+- amount: 2730.99
+  bankAccountId: 3
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 45
+  type: EXPENSE
+- amount: 573.32
+  bankAccountId: 4
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 46
+  type: EXPENSE
+- amount: 1863.41
+  bankAccountId: 4
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 47
+  type: EXPENSE
+- amount: 2527.96
+  bankAccountId: 10
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 48
+  type: EXPENSE
+- amount: 5461.97
+  bankAccountId: 10
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 49
+  type: EXPENSE
+- amount: 2517.75
+  bankAccountId: 4
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 50
+  type: EXPENSE
+- amount: 140.79
+  bankAccountId: 7
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 51
+  type: EXPENSE
+- amount: 2716.45
+  bankAccountId: 1
+  categoryId: 3
+  date: {
+    }
+  description: Кэшбэк
+  id: 52
+  type: INCOME
+- amount: 31817.46
+  bankAccountId: 3
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за April 2021
+  id: 53
+  type: INCOME
+- amount: 4527.38
+  bankAccountId: 9
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 54
+  type: EXPENSE
+- amount: 43286.2
+  bankAccountId: 4
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 55
+  type: INCOME
+- amount: 87882.59
+  bankAccountId: 2
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за April 2021
+  id: 56
+  type: INCOME
+- amount: 44319.64
+  bankAccountId: 9
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 57
+  type: INCOME
+- amount: 1253.09
+  bankAccountId: 6
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 58
+  type: EXPENSE
+- amount: 125938.37
+  bankAccountId: 3
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за April 2021
+  id: 59
+  type: INCOME
+- amount: 4045.38
+  bankAccountId: 4
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 60
+  type: EXPENSE
+- amount: 294.94
+  bankAccountId: 5
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 61
+  type: EXPENSE
+- amount: 67187.74
+  bankAccountId: 2
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за April 2021
+  id: 62
+  type: INCOME
+- amount: 6520.1
+  bankAccountId: 2
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 63
+  type: EXPENSE
+- amount: 4391.6
+  bankAccountId: 4
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 64
+  type: EXPENSE
+- amount: 5348.37
+  bankAccountId: 9
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 65
+  type: EXPENSE
+- amount: 14270.97
+  bankAccountId: 8
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 66
+  type: INCOME
+- amount: 84578.15
+  bankAccountId: 7
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за May 2021
+  id: 67
+  type: INCOME
+- amount: 139681.51
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за May 2021
+  id: 68
+  type: INCOME
+- amount: 134932.15
+  bankAccountId: 9
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за May 2021
+  id: 69
+  type: INCOME
+- amount: 41931.19
+  bankAccountId: 2
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за May 2021
+  id: 70
+  type: INCOME
+- amount: 2860.73
+  bankAccountId: 9
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 71
+  type: EXPENSE
+- amount: 8905.4
+  bankAccountId: 6
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 72
+  type: EXPENSE
+- amount: 3471.34
+  bankAccountId: 8
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 73
+  type: EXPENSE
+- amount: 4424.97
+  bankAccountId: 1
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 74
+  type: EXPENSE
+- amount: 5025.69
+  bankAccountId: 1
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 75
+  type: EXPENSE
+- amount: 3857.61
+  bankAccountId: 4
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 76
+  type: EXPENSE
+- amount: 5691.1
+  bankAccountId: 3
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 77
+  type: EXPENSE
+- amount: 423.57
+  bankAccountId: 7
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 78
+  type: EXPENSE
+- amount: 7406.96
+  bankAccountId: 4
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 79
+  type: EXPENSE
+- amount: 3966.35
+  bankAccountId: 2
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 80
+  type: EXPENSE
+- amount: 6089.09
+  bankAccountId: 9
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 81
+  type: EXPENSE
+- amount: 9410.64
+  bankAccountId: 8
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 82
+  type: EXPENSE
+- amount: 7007.57
+  bankAccountId: 3
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 83
+  type: EXPENSE
+- amount: 1403.79
+  bankAccountId: 4
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 84
+  type: EXPENSE
+- amount: 4356.79
+  bankAccountId: 4
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 85
+  type: EXPENSE
+- amount: 1333.49
+  bankAccountId: 1
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 86
+  type: EXPENSE
+- amount: 368.48
+  bankAccountId: 1
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 87
+  type: EXPENSE
+- amount: 559.28
+  bankAccountId: 8
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 88
+  type: EXPENSE
+- amount: 1011.91
+  bankAccountId: 9
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 89
+  type: EXPENSE
+- amount: 110107.55
+  bankAccountId: 6
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за June 2021
+  id: 90
+  type: INCOME
+- amount: 122677.89
+  bankAccountId: 10
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за June 2021
+  id: 91
+  type: INCOME
+- amount: 147704.83
+  bankAccountId: 5
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за June 2021
+  id: 92
+  type: INCOME
+- amount: 2372.98
+  bankAccountId: 9
+  categoryId: 3
+  date: {
+    }
+  description: Кэшбэк
+  id: 93
+  type: INCOME
+- amount: 2968.0
+  bankAccountId: 6
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 94
+  type: EXPENSE
+- amount: 5720.47
+  bankAccountId: 8
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 95
+  type: EXPENSE
+- amount: 41538.12
+  bankAccountId: 6
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 96
+  type: INCOME
+- amount: 5625.68
+  bankAccountId: 7
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 97
+  type: EXPENSE
+- amount: 7494.06
+  bankAccountId: 2
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 98
+  type: EXPENSE
+- amount: 94590.14
+  bankAccountId: 8
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за July 2021
+  id: 99
+  type: INCOME
+- amount: 22708.34
+  bankAccountId: 4
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 100
+  type: INCOME
+- amount: 4377.56
+  bankAccountId: 3
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 101
+  type: EXPENSE
+- amount: 7310.32
+  bankAccountId: 7
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 102
+  type: EXPENSE
+- amount: 1550.92
+  bankAccountId: 2
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 103
+  type: EXPENSE
+- amount: 2922.29
+  bankAccountId: 2
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 104
+  type: EXPENSE
+- amount: 7355.69
+  bankAccountId: 6
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 105
+  type: EXPENSE
+- amount: 3925.59
+  bankAccountId: 8
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 106
+  type: EXPENSE
+- amount: 1029.49
+  bankAccountId: 3
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 107
+  type: EXPENSE
+- amount: 629.5
+  bankAccountId: 3
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 108
+  type: EXPENSE
+- amount: 2290.75
+  bankAccountId: 5
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 109
+  type: EXPENSE
+- amount: 2431.09
+  bankAccountId: 6
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 110
+  type: EXPENSE
+- amount: 76810.38
+  bankAccountId: 10
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за August 2021
+  id: 111
+  type: INCOME
+- amount: 10455.44
+  bankAccountId: 1
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 112
+  type: INCOME
+- amount: 1788.21
+  bankAccountId: 5
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 113
+  type: EXPENSE
+- amount: 6299.57
+  bankAccountId: 6
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 114
+  type: EXPENSE
+- amount: 87411.65
+  bankAccountId: 3
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за August 2021
+  id: 115
+  type: INCOME
+- amount: 4766.46
+  bankAccountId: 4
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 116
+  type: EXPENSE
+- amount: 2889.69
+  bankAccountId: 1
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 117
+  type: EXPENSE
+- amount: 8054.0
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 118
+  type: EXPENSE
+- amount: 18627.58
+  bankAccountId: 6
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 119
+  type: INCOME
+- amount: 5830.1
+  bankAccountId: 7
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 120
+  type: INCOME
+- amount: 803.06
+  bankAccountId: 9
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 121
+  type: EXPENSE
+- amount: 1105.67
+  bankAccountId: 5
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 122
+  type: EXPENSE
+- amount: 816.76
+  bankAccountId: 9
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 123
+  type: EXPENSE
+- amount: 1699.63
+  bankAccountId: 1
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 124
+  type: EXPENSE
+- amount: 18996.15
+  bankAccountId: 5
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 125
+  type: INCOME
+- amount: 7272.66
+  bankAccountId: 4
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 126
+  type: EXPENSE
+- amount: 58722.96
+  bankAccountId: 2
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за August 2021
+  id: 127
+  type: INCOME
+- amount: 142621.7
+  bankAccountId: 6
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за August 2021
+  id: 128
+  type: INCOME
+- amount: 121551.62
+  bankAccountId: 6
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за August 2021
+  id: 129
+  type: INCOME
+- amount: 5348.22
+  bankAccountId: 5
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 130
+  type: INCOME
+- amount: 3932.97
+  bankAccountId: 2
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 131
+  type: EXPENSE
+- amount: 144677.35
+  bankAccountId: 4
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за August 2021
+  id: 132
+  type: INCOME
+- amount: 2306.11
+  bankAccountId: 8
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 133
+  type: EXPENSE
+- amount: 2646.9
+  bankAccountId: 10
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 134
+  type: EXPENSE
+- amount: 47066.75
+  bankAccountId: 9
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за September 2021
+  id: 135
+  type: INCOME
+- amount: 2351.47
+  bankAccountId: 7
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 136
+  type: EXPENSE
+- amount: 256.95
+  bankAccountId: 1
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 137
+  type: EXPENSE
+- amount: 1957.88
+  bankAccountId: 5
+  categoryId: 3
+  date: {
+    }
+  description: Кэшбэк
+  id: 138
+  type: INCOME
+- amount: 3179.93
+  bankAccountId: 3
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 139
+  type: EXPENSE
+- amount: 47334.47
+  bankAccountId: 10
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 140
+  type: INCOME
+- amount: 3105.44
+  bankAccountId: 9
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 141
+  type: EXPENSE
+- amount: 4656.33
+  bankAccountId: 4
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 142
+  type: EXPENSE
+- amount: 1348.16
+  bankAccountId: 2
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 143
+  type: EXPENSE
+- amount: 4627.13
+  bankAccountId: 9
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 144
+  type: EXPENSE
+- amount: 1831.27
+  bankAccountId: 6
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 145
+  type: EXPENSE
+- amount: 45075.46
+  bankAccountId: 7
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 146
+  type: INCOME
+- amount: 7593.41
+  bankAccountId: 5
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 147
+  type: EXPENSE
+- amount: 1601.76
+  bankAccountId: 7
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 148
+  type: EXPENSE
+- amount: 44245.69
+  bankAccountId: 5
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 149
+  type: INCOME
+- amount: 245.59
+  bankAccountId: 1
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 150
+  type: EXPENSE
+- amount: 80520.07
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за October 2021
+  id: 151
+  type: INCOME
+- amount: 1920.03
+  bankAccountId: 2
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 152
+  type: EXPENSE
+- amount: 507.36
+  bankAccountId: 1
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 153
+  type: EXPENSE
+- amount: 793.55
+  bankAccountId: 9
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 154
+  type: EXPENSE
+- amount: 1147.37
+  bankAccountId: 6
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 155
+  type: EXPENSE
+- amount: 1698.98
+  bankAccountId: 7
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 156
+  type: EXPENSE
+- amount: 8134.57
+  bankAccountId: 10
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 157
+  type: EXPENSE
+- amount: 8101.93
+  bankAccountId: 10
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 158
+  type: EXPENSE
+- amount: 1867.11
+  bankAccountId: 9
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 159
+  type: EXPENSE
+- amount: 2415.89
+  bankAccountId: 8
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 160
+  type: EXPENSE
+- amount: 117923.86
+  bankAccountId: 3
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за November 2021
+  id: 161
+  type: INCOME
+- amount: 123245.57
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за November 2021
+  id: 162
+  type: INCOME
+- amount: 1389.82
+  bankAccountId: 6
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 163
+  type: EXPENSE
+- amount: 1794.08
+  bankAccountId: 6
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 164
+  type: EXPENSE
+- amount: 45504.55
+  bankAccountId: 5
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 165
+  type: INCOME
+- amount: 4760.94
+  bankAccountId: 3
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 166
+  type: EXPENSE
+- amount: 5708.04
+  bankAccountId: 8
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 167
+  type: EXPENSE
+- amount: 5675.96
+  bankAccountId: 8
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 168
+  type: EXPENSE
+- amount: 882.09
+  bankAccountId: 10
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 169
+  type: EXPENSE
+- amount: 104653.16
+  bankAccountId: 3
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за November 2021
+  id: 170
+  type: INCOME
+- amount: 46093.54
+  bankAccountId: 4
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 171
+  type: INCOME
+- amount: 9724.88
+  bankAccountId: 6
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 172
+  type: EXPENSE
+- amount: 1511.89
+  bankAccountId: 10
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 173
+  type: EXPENSE
+- amount: 2169.28
+  bankAccountId: 2
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 174
+  type: EXPENSE
+- amount: 49471.12
+  bankAccountId: 2
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 175
+  type: INCOME
+- amount: 111564.79
+  bankAccountId: 4
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за December 2021
+  id: 176
+  type: INCOME
+- amount: 922.12
+  bankAccountId: 5
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 177
+  type: EXPENSE
+- amount: 679.96
+  bankAccountId: 5
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 178
+  type: EXPENSE
+- amount: 121130.6
+  bankAccountId: 5
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за December 2021
+  id: 179
+  type: INCOME
+- amount: 121248.69
+  bankAccountId: 10
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за December 2021
+  id: 180
+  type: INCOME
+- amount: 1752.85
+  bankAccountId: 4
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 181
+  type: EXPENSE
+- amount: 22786.43
+  bankAccountId: 8
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 182
+  type: INCOME
+- amount: 5547.28
+  bankAccountId: 4
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 183
+  type: EXPENSE
+- amount: 34736.45
+  bankAccountId: 8
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за December 2021
+  id: 184
+  type: INCOME
+- amount: 733.31
+  bankAccountId: 9
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 185
+  type: EXPENSE
+- amount: 5806.05
+  bankAccountId: 1
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 186
+  type: EXPENSE
+- amount: 107636.85
+  bankAccountId: 6
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за December 2021
+  id: 187
+  type: INCOME
+- amount: 856.2
+  bankAccountId: 7
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 188
+  type: EXPENSE
+- amount: 2279.97
+  bankAccountId: 9
+  categoryId: 3
+  date: {
+    }
+  description: Кэшбэк
+  id: 189
+  type: INCOME
+- amount: 6334.99
+  bankAccountId: 9
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 190
+  type: EXPENSE
+- amount: 1488.09
+  bankAccountId: 10
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 191
+  type: EXPENSE
+- amount: 4563.69
+  bankAccountId: 10
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 192
+  type: EXPENSE
+- amount: 6859.33
+  bankAccountId: 2
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 193
+  type: EXPENSE
+- amount: 9617.78
+  bankAccountId: 10
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 194
+  type: EXPENSE
+- amount: 9173.91
+  bankAccountId: 2
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 195
+  type: EXPENSE
+- amount: 1623.46
+  bankAccountId: 3
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 196
+  type: EXPENSE
+- amount: 97360.45
+  bankAccountId: 3
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за January 2022
+  id: 197
+  type: INCOME
+- amount: 107924.65
+  bankAccountId: 2
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за January 2022
+  id: 198
+  type: INCOME
+- amount: 2499.76
+  bankAccountId: 4
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 199
+  type: EXPENSE
+- amount: 1670.69
+  bankAccountId: 8
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 200
+  type: EXPENSE
+- amount: 1773.88
+  bankAccountId: 5
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 201
+  type: EXPENSE
+- amount: 2174.43
+  bankAccountId: 8
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 202
+  type: EXPENSE
+- amount: 4131.93
+  bankAccountId: 3
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 203
+  type: EXPENSE
+- amount: 144467.82
+  bankAccountId: 8
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за January 2022
+  id: 204
+  type: INCOME
+- amount: 8037.75
+  bankAccountId: 1
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 205
+  type: EXPENSE
+- amount: 6335.34
+  bankAccountId: 2
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 206
+  type: EXPENSE
+- amount: 3553.81
+  bankAccountId: 10
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 207
+  type: EXPENSE
+- amount: 39196.96
+  bankAccountId: 2
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 208
+  type: INCOME
+- amount: 1740.23
+  bankAccountId: 8
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 209
+  type: EXPENSE
+- amount: 22892.61
+  bankAccountId: 10
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 210
+  type: INCOME
+- amount: 9938.14
+  bankAccountId: 10
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 211
+  type: EXPENSE
+- amount: 2000.92
+  bankAccountId: 3
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 212
+  type: EXPENSE
+- amount: 31478.75
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за February 2022
+  id: 213
+  type: INCOME
+- amount: 1264.97
+  bankAccountId: 10
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 214
+  type: EXPENSE
+- amount: 24720.3
+  bankAccountId: 5
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 215
+  type: INCOME
+- amount: 9227.86
+  bankAccountId: 3
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 216
+  type: EXPENSE
+- amount: 103883.0
+  bankAccountId: 9
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за February 2022
+  id: 217
+  type: INCOME
+- amount: 7562.73
+  bankAccountId: 4
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 218
+  type: EXPENSE
+- amount: 2273.18
+  bankAccountId: 7
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 219
+  type: EXPENSE
+- amount: 3169.15
+  bankAccountId: 6
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 220
+  type: EXPENSE
+- amount: 3320.14
+  bankAccountId: 6
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 221
+  type: EXPENSE
+- amount: 4387.85
+  bankAccountId: 10
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 222
+  type: EXPENSE
+- amount: 39059.74
+  bankAccountId: 10
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 223
+  type: INCOME
+- amount: 2340.56
+  bankAccountId: 6
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 224
+  type: EXPENSE
+- amount: 2558.98
+  bankAccountId: 6
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 225
+  type: EXPENSE
+- amount: 4343.67
+  bankAccountId: 5
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 226
+  type: EXPENSE
+- amount: 937.01
+  bankAccountId: 10
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 227
+  type: EXPENSE
+- amount: 5481.66
+  bankAccountId: 2
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 228
+  type: EXPENSE
+- amount: 4598.9
+  bankAccountId: 8
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 229
+  type: EXPENSE
+- amount: 3888.15
+  bankAccountId: 4
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 230
+  type: EXPENSE
+- amount: 144900.68
+  bankAccountId: 8
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за March 2022
+  id: 231
+  type: INCOME
+- amount: 1421.47
+  bankAccountId: 7
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 232
+  type: EXPENSE
+- amount: 147624.55
+  bankAccountId: 4
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за March 2022
+  id: 233
+  type: INCOME
+- amount: 3850.23
+  bankAccountId: 6
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 234
+  type: EXPENSE
+- amount: 6696.76
+  bankAccountId: 5
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 235
+  type: EXPENSE
+- amount: 1466.6
+  bankAccountId: 9
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 236
+  type: EXPENSE
+- amount: 1496.42
+  bankAccountId: 1
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 237
+  type: EXPENSE
+- amount: 68231.18
+  bankAccountId: 3
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за March 2022
+  id: 238
+  type: INCOME
+- amount: 109883.09
+  bankAccountId: 7
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за March 2022
+  id: 239
+  type: INCOME
+- amount: 2509.28
+  bankAccountId: 7
+  categoryId: 3
+  date: {
+    }
+  description: Кэшбэк
+  id: 240
+  type: INCOME
+- amount: 8741.98
+  bankAccountId: 1
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 241
+  type: EXPENSE
+- amount: 5852.85
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 242
+  type: EXPENSE
+- amount: 842.36
+  bankAccountId: 9
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 243
+  type: EXPENSE
+- amount: 8445.23
+  bankAccountId: 5
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 244
+  type: EXPENSE
+- amount: 29901.71
+  bankAccountId: 7
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 245
+  type: INCOME
+- amount: 1598.78
+  bankAccountId: 8
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 246
+  type: EXPENSE
+- amount: 817.9
+  bankAccountId: 6
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 247
+  type: EXPENSE
+- amount: 7883.48
+  bankAccountId: 1
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 248
+  type: EXPENSE
+- amount: 40871.49
+  bankAccountId: 10
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за April 2022
+  id: 249
+  type: INCOME
+- amount: 32199.0
+  bankAccountId: 3
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 250
+  type: INCOME
+- amount: 2337.44
+  bankAccountId: 6
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 251
+  type: EXPENSE
+- amount: 44760.92
+  bankAccountId: 2
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за April 2022
+  id: 252
+  type: INCOME
+- amount: 113807.25
+  bankAccountId: 5
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за April 2022
+  id: 253
+  type: INCOME
+- amount: 36311.44
+  bankAccountId: 5
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за April 2022
+  id: 254
+  type: INCOME
+- amount: 607.71
+  bankAccountId: 3
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 255
+  type: EXPENSE
+- amount: 2810.36
+  bankAccountId: 10
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 256
+  type: EXPENSE
+- amount: 56831.7
+  bankAccountId: 5
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за April 2022
+  id: 257
+  type: INCOME
+- amount: 6009.98
+  bankAccountId: 6
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 258
+  type: EXPENSE
+- amount: 26890.6
+  bankAccountId: 10
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 259
+  type: INCOME
+- amount: 3261.5
+  bankAccountId: 6
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 260
+  type: EXPENSE
+- amount: 6408.55
+  bankAccountId: 9
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 261
+  type: EXPENSE
+- amount: 2030.82
+  bankAccountId: 6
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 262
+  type: EXPENSE
+- amount: 2527.34
+  bankAccountId: 1
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 263
+  type: EXPENSE
+- amount: 4688.7
+  bankAccountId: 4
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 264
+  type: EXPENSE
+- amount: 6629.67
+  bankAccountId: 6
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 265
+  type: EXPENSE
+- amount: 44965.59
+  bankAccountId: 3
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 266
+  type: INCOME
+- amount: 7395.69
+  bankAccountId: 3
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 267
+  type: INCOME
+- amount: 6697.39
+  bankAccountId: 10
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 268
+  type: EXPENSE
+- amount: 1960.96
+  bankAccountId: 7
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 269
+  type: EXPENSE
+- amount: 7737.98
+  bankAccountId: 6
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 270
+  type: EXPENSE
+- amount: 12759.91
+  bankAccountId: 6
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 271
+  type: INCOME
+- amount: 1861.96
+  bankAccountId: 5
+  categoryId: 3
+  date: {
+    }
+  description: Кэшбэк
+  id: 272
+  type: INCOME
+- amount: 24328.76
+  bankAccountId: 8
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 273
+  type: INCOME
+- amount: 1918.28
+  bankAccountId: 5
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 274
+  type: EXPENSE
+- amount: 5551.26
+  bankAccountId: 7
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 275
+  type: EXPENSE
+- amount: 9250.56
+  bankAccountId: 3
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 276
+  type: EXPENSE
+- amount: 1703.39
+  bankAccountId: 1
+  categoryId: 3
+  date: {
+    }
+  description: Кэшбэк
+  id: 277
+  type: INCOME
+- amount: 1510.79
+  bankAccountId: 8
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 278
+  type: EXPENSE
+- amount: 2871.55
+  bankAccountId: 9
+  categoryId: 3
+  date: {
+    }
+  description: Кэшбэк
+  id: 279
+  type: INCOME
+- amount: 4740.13
+  bankAccountId: 10
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 280
+  type: EXPENSE
+- amount: 1801.49
+  bankAccountId: 1
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 281
+  type: EXPENSE
+- amount: 288.27
+  bankAccountId: 9
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 282
+  type: EXPENSE
+- amount: 3600.52
+  bankAccountId: 2
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 283
+  type: EXPENSE
+- amount: 116000.86
+  bankAccountId: 2
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за June 2022
+  id: 284
+  type: INCOME
+- amount: 5273.31
+  bankAccountId: 6
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 285
+  type: EXPENSE
+- amount: 695.68
+  bankAccountId: 8
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 286
+  type: EXPENSE
+- amount: 2537.38
+  bankAccountId: 8
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 287
+  type: EXPENSE
+- amount: 1614.08
+  bankAccountId: 8
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 288
+  type: EXPENSE
+- amount: 744.63
+  bankAccountId: 3
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 289
+  type: EXPENSE
+- amount: 5013.94
+  bankAccountId: 1
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 290
+  type: EXPENSE
+- amount: 1689.94
+  bankAccountId: 5
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 291
+  type: EXPENSE
+- amount: 87832.68
+  bankAccountId: 6
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за June 2022
+  id: 292
+  type: INCOME
+- amount: 2809.06
+  bankAccountId: 1
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 293
+  type: EXPENSE
+- amount: 1918.72
+  bankAccountId: 9
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 294
+  type: EXPENSE
+- amount: 7902.54
+  bankAccountId: 4
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 295
+  type: EXPENSE
+- amount: 2061.38
+  bankAccountId: 10
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 296
+  type: EXPENSE
+- amount: 93242.33
+  bankAccountId: 10
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за July 2022
+  id: 297
+  type: INCOME
+- amount: 44971.76
+  bankAccountId: 5
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 298
+  type: INCOME
+- amount: 64796.3
+  bankAccountId: 5
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за July 2022
+  id: 299
+  type: INCOME
+- amount: 3109.69
+  bankAccountId: 10
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 300
+  type: EXPENSE
+- amount: 1172.5
+  bankAccountId: 5
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 301
+  type: EXPENSE
+- amount: 317.53
+  bankAccountId: 1
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 302
+  type: EXPENSE
+- amount: 158.38
+  bankAccountId: 4
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 303
+  type: EXPENSE
+- amount: 416.31
+  bankAccountId: 6
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 304
+  type: EXPENSE
+- amount: 94983.31
+  bankAccountId: 10
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за July 2022
+  id: 305
+  type: INCOME
+- amount: 1977.91
+  bankAccountId: 4
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 306
+  type: EXPENSE
+- amount: 5806.03
+  bankAccountId: 6
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 307
+  type: EXPENSE
+- amount: 6399.9
+  bankAccountId: 2
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 308
+  type: EXPENSE
+- amount: 9606.25
+  bankAccountId: 5
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 309
+  type: EXPENSE
+- amount: 19350.16
+  bankAccountId: 2
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 310
+  type: INCOME
+- amount: 5706.73
+  bankAccountId: 8
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 311
+  type: EXPENSE
+- amount: 45862.47
+  bankAccountId: 9
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за July 2022
+  id: 312
+  type: INCOME
+- amount: 4742.54
+  bankAccountId: 2
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 313
+  type: EXPENSE
+- amount: 1631.44
+  bankAccountId: 6
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 314
+  type: EXPENSE
+- amount: 576.77
+  bankAccountId: 6
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 315
+  type: EXPENSE
+- amount: 133226.14
+  bankAccountId: 2
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за August 2022
+  id: 316
+  type: INCOME
+- amount: 2299.34
+  bankAccountId: 9
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 317
+  type: EXPENSE
+- amount: 128461.28
+  bankAccountId: 5
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за August 2022
+  id: 318
+  type: INCOME
+- amount: 5237.96
+  bankAccountId: 2
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 319
+  type: EXPENSE
+- amount: 62826.22
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за August 2022
+  id: 320
+  type: INCOME
+- amount: 47987.51
+  bankAccountId: 6
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 321
+  type: INCOME
+- amount: 480.76
+  bankAccountId: 9
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 322
+  type: EXPENSE
+- amount: 3055.3
+  bankAccountId: 2
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 323
+  type: EXPENSE
+- amount: 7827.25
+  bankAccountId: 4
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 324
+  type: EXPENSE
+- amount: 81803.06
+  bankAccountId: 10
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за August 2022
+  id: 325
+  type: INCOME
+- amount: 126390.43
+  bankAccountId: 10
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за August 2022
+  id: 326
+  type: INCOME
+- amount: 95198.39
+  bankAccountId: 3
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за August 2022
+  id: 327
+  type: INCOME
+- amount: 7332.15
+  bankAccountId: 6
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 328
+  type: EXPENSE
+- amount: 5002.89
+  bankAccountId: 1
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 329
+  type: EXPENSE
+- amount: 5347.55
+  bankAccountId: 7
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 330
+  type: EXPENSE
+- amount: 4391.73
+  bankAccountId: 1
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 331
+  type: EXPENSE
+- amount: 104646.14
+  bankAccountId: 7
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за August 2022
+  id: 332
+  type: INCOME
+- amount: 4376.26
+  bankAccountId: 5
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 333
+  type: EXPENSE
+- amount: 830.49
+  bankAccountId: 7
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 334
+  type: EXPENSE
+- amount: 108289.44
+  bankAccountId: 2
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за August 2022
+  id: 335
+  type: INCOME
+- amount: 16679.03
+  bankAccountId: 3
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 336
+  type: INCOME
+- amount: 7521.41
+  bankAccountId: 6
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 337
+  type: EXPENSE
+- amount: 1013.11
+  bankAccountId: 2
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 338
+  type: EXPENSE
+- amount: 28396.7
+  bankAccountId: 8
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 339
+  type: INCOME
+- amount: 1971.62
+  bankAccountId: 2
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 340
+  type: EXPENSE
+- amount: 1145.98
+  bankAccountId: 3
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 341
+  type: EXPENSE
+- amount: 4540.48
+  bankAccountId: 5
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 342
+  type: EXPENSE
+- amount: 4737.47
+  bankAccountId: 5
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 343
+  type: EXPENSE
+- amount: 3681.53
+  bankAccountId: 8
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 344
+  type: EXPENSE
+- amount: 39721.54
+  bankAccountId: 2
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за September 2022
+  id: 345
+  type: INCOME
+- amount: 4809.27
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 346
+  type: EXPENSE
+- amount: 4516.34
+  bankAccountId: 8
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 347
+  type: EXPENSE
+- amount: 3493.04
+  bankAccountId: 10
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 348
+  type: EXPENSE
+- amount: 2405.42
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 349
+  type: EXPENSE
+- amount: 1863.64
+  bankAccountId: 5
+  categoryId: 3
+  date: {
+    }
+  description: Кэшбэк
+  id: 350
+  type: INCOME
+- amount: 4252.58
+  bankAccountId: 5
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 351
+  type: EXPENSE
+- amount: 12416.4
+  bankAccountId: 2
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 352
+  type: INCOME
+- amount: 118516.87
+  bankAccountId: 4
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за September 2022
+  id: 353
+  type: INCOME
+- amount: 321.01
+  bankAccountId: 1
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 354
+  type: EXPENSE
+- amount: 579.32
+  bankAccountId: 3
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 355
+  type: EXPENSE
+- amount: 3795.31
+  bankAccountId: 7
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 356
+  type: EXPENSE
+- amount: 2843.75
+  bankAccountId: 5
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 357
+  type: EXPENSE
+- amount: 1283.37
+  bankAccountId: 8
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 358
+  type: EXPENSE
+- amount: 946.44
+  bankAccountId: 7
+  categoryId: 3
+  date: {
+    }
+  description: Кэшбэк
+  id: 359
+  type: INCOME
+- amount: 6889.0
+  bankAccountId: 4
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 360
+  type: EXPENSE
+- amount: 7506.04
+  bankAccountId: 10
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 361
+  type: EXPENSE
+- amount: 2092.06
+  bankAccountId: 3
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 362
+  type: EXPENSE
+- amount: 22138.27
+  bankAccountId: 7
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 363
+  type: INCOME
+- amount: 8652.44
+  bankAccountId: 3
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 364
+  type: EXPENSE
+- amount: 3367.08
+  bankAccountId: 3
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 365
+  type: EXPENSE
+- amount: 3198.72
+  bankAccountId: 5
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 366
+  type: EXPENSE
+- amount: 1189.26
+  bankAccountId: 2
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 367
+  type: EXPENSE
+- amount: 2576.11
+  bankAccountId: 1
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 368
+  type: EXPENSE
+- amount: 6042.53
+  bankAccountId: 3
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 369
+  type: EXPENSE
+- amount: 1378.65
+  bankAccountId: 7
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 370
+  type: EXPENSE
+- amount: 18408.56
+  bankAccountId: 10
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 371
+  type: INCOME
+- amount: 7000.39
+  bankAccountId: 3
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 372
+  type: EXPENSE
+- amount: 1534.78
+  bankAccountId: 3
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 373
+  type: EXPENSE
+- amount: 1312.9
+  bankAccountId: 5
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 374
+  type: EXPENSE
+- amount: 129606.55
+  bankAccountId: 3
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за November 2022
+  id: 375
+  type: INCOME
+- amount: 3530.75
+  bankAccountId: 9
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 376
+  type: EXPENSE
+- amount: 3674.42
+  bankAccountId: 4
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 377
+  type: EXPENSE
+- amount: 61481.87
+  bankAccountId: 7
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за November 2022
+  id: 378
+  type: INCOME
+- amount: 140955.43
+  bankAccountId: 9
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за November 2022
+  id: 379
+  type: INCOME
+- amount: 8299.2
+  bankAccountId: 9
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 380
+  type: EXPENSE
+- amount: 127181.11
+  bankAccountId: 7
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за November 2022
+  id: 381
+  type: INCOME
+- amount: 6109.81
+  bankAccountId: 9
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 382
+  type: EXPENSE
+- amount: 1298.06
+  bankAccountId: 10
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 383
+  type: EXPENSE
+- amount: 2601.83
+  bankAccountId: 4
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 384
+  type: EXPENSE
+- amount: 549.7
+  bankAccountId: 3
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 385
+  type: EXPENSE
+- amount: 1426.2
+  bankAccountId: 6
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 386
+  type: EXPENSE
+- amount: 3373.01
+  bankAccountId: 10
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 387
+  type: EXPENSE
+- amount: 37777.16
+  bankAccountId: 5
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за December 2022
+  id: 388
+  type: INCOME
+- amount: 82695.13
+  bankAccountId: 4
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за December 2022
+  id: 389
+  type: INCOME
+- amount: 7293.02
+  bankAccountId: 6
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 390
+  type: EXPENSE
+- amount: 34293.52
+  bankAccountId: 9
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 391
+  type: INCOME
+- amount: 131524.16
+  bankAccountId: 4
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за December 2022
+  id: 392
+  type: INCOME
+- amount: 140977.13
+  bankAccountId: 9
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за December 2022
+  id: 393
+  type: INCOME
+- amount: 14516.28
+  bankAccountId: 1
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 394
+  type: INCOME
+- amount: 6426.43
+  bankAccountId: 10
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 395
+  type: EXPENSE
+- amount: 1207.25
+  bankAccountId: 6
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 396
+  type: EXPENSE
+- amount: 866.92
+  bankAccountId: 4
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 397
+  type: EXPENSE
+- amount: 9669.34
+  bankAccountId: 8
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 398
+  type: EXPENSE
+- amount: 134903.86
+  bankAccountId: 8
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за December 2022
+  id: 399
+  type: INCOME
+- amount: 43988.2
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за December 2022
+  id: 400
+  type: INCOME
+- amount: 46726.84
+  bankAccountId: 3
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за January 2023
+  id: 401
+  type: INCOME
+- amount: 3937.98
+  bankAccountId: 4
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 402
+  type: EXPENSE
+- amount: 2122.61
+  bankAccountId: 6
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 403
+  type: EXPENSE
+- amount: 137001.06
+  bankAccountId: 5
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за January 2023
+  id: 404
+  type: INCOME
+- amount: 845.63
+  bankAccountId: 3
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 405
+  type: EXPENSE
+- amount: 653.33
+  bankAccountId: 8
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 406
+  type: EXPENSE
+- amount: 3279.86
+  bankAccountId: 7
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 407
+  type: EXPENSE
+- amount: 1491.37
+  bankAccountId: 5
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 408
+  type: EXPENSE
+- amount: 100123.72
+  bankAccountId: 10
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за January 2023
+  id: 409
+  type: INCOME
+- amount: 39648.4
+  bankAccountId: 5
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за January 2023
+  id: 410
+  type: INCOME
+- amount: 2700.59
+  bankAccountId: 4
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 411
+  type: EXPENSE
+- amount: 11026.05
+  bankAccountId: 10
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 412
+  type: INCOME
+- amount: 143745.12
+  bankAccountId: 6
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за January 2023
+  id: 413
+  type: INCOME
+- amount: 8067.63
+  bankAccountId: 3
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 414
+  type: EXPENSE
+- amount: 1179.07
+  bankAccountId: 4
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 415
+  type: EXPENSE
+- amount: 1262.39
+  bankAccountId: 8
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 416
+  type: EXPENSE
+- amount: 15062.75
+  bankAccountId: 9
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 417
+  type: INCOME
+- amount: 7888.88
+  bankAccountId: 5
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 418
+  type: EXPENSE
+- amount: 130455.09
+  bankAccountId: 7
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за February 2023
+  id: 419
+  type: INCOME
+- amount: 1121.42
+  bankAccountId: 10
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 420
+  type: EXPENSE
+- amount: 1817.14
+  bankAccountId: 3
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 421
+  type: EXPENSE
+- amount: 4144.06
+  bankAccountId: 9
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 422
+  type: EXPENSE
+- amount: 1328.82
+  bankAccountId: 6
+  categoryId: 3
+  date: {
+    }
+  description: Кэшбэк
+  id: 423
+  type: INCOME
+- amount: 3597.93
+  bankAccountId: 3
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 424
+  type: EXPENSE
+- amount: 3982.98
+  bankAccountId: 8
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 425
+  type: EXPENSE
+- amount: 5729.3
+  bankAccountId: 3
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 426
+  type: EXPENSE
+- amount: 122191.13
+  bankAccountId: 2
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за February 2023
+  id: 427
+  type: INCOME
+- amount: 2224.85
+  bankAccountId: 3
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 428
+  type: EXPENSE
+- amount: 7867.15
+  bankAccountId: 3
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 429
+  type: EXPENSE
+- amount: 4364.88
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 430
+  type: EXPENSE
+- amount: 3826.91
+  bankAccountId: 3
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 431
+  type: EXPENSE
+- amount: 45646.26
+  bankAccountId: 7
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 432
+  type: INCOME
+- amount: 24387.06
+  bankAccountId: 3
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 433
+  type: INCOME
+- amount: 1240.37
+  bankAccountId: 2
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 434
+  type: EXPENSE
+- amount: 767.45
+  bankAccountId: 4
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 435
+  type: EXPENSE
+- amount: 4595.49
+  bankAccountId: 7
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 436
+  type: EXPENSE
+- amount: 37456.06
+  bankAccountId: 10
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за March 2023
+  id: 437
+  type: INCOME
+- amount: 2275.6
+  bankAccountId: 10
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 438
+  type: EXPENSE
+- amount: 137261.49
+  bankAccountId: 7
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за March 2023
+  id: 439
+  type: INCOME
+- amount: 137120.2
+  bankAccountId: 8
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за March 2023
+  id: 440
+  type: INCOME
+- amount: 261.7
+  bankAccountId: 1
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 441
+  type: EXPENSE
+- amount: 4175.07
+  bankAccountId: 1
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 442
+  type: EXPENSE
+- amount: 4391.04
+  bankAccountId: 6
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 443
+  type: EXPENSE
+- amount: 964.8
+  bankAccountId: 1
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 444
+  type: EXPENSE
+- amount: 117691.92
+  bankAccountId: 4
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за March 2023
+  id: 445
+  type: INCOME
+- amount: 5241.73
+  bankAccountId: 5
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 446
+  type: EXPENSE
+- amount: 5435.23
+  bankAccountId: 7
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 447
+  type: EXPENSE
+- amount: 3539.03
+  bankAccountId: 7
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 448
+  type: EXPENSE
+- amount: 86535.02
+  bankAccountId: 4
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за March 2023
+  id: 449
+  type: INCOME
+- amount: 982.33
+  bankAccountId: 2
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 450
+  type: EXPENSE
+- amount: 647.81
+  bankAccountId: 2
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 451
+  type: EXPENSE
+- amount: 1229.16
+  bankAccountId: 3
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 452
+  type: EXPENSE
+- amount: 16159.15
+  bankAccountId: 6
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 453
+  type: INCOME
+- amount: 3597.82
+  bankAccountId: 1
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 454
+  type: EXPENSE
+- amount: 4618.29
+  bankAccountId: 4
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 455
+  type: EXPENSE
+- amount: 6426.71
+  bankAccountId: 8
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 456
+  type: EXPENSE
+- amount: 35026.29
+  bankAccountId: 8
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 457
+  type: INCOME
+- amount: 3892.58
+  bankAccountId: 3
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 458
+  type: EXPENSE
+- amount: 29333.14
+  bankAccountId: 7
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 459
+  type: INCOME
+- amount: 1206.82
+  bankAccountId: 9
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 460
+  type: EXPENSE
+- amount: 5997.0
+  bankAccountId: 1
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 461
+  type: EXPENSE
+- amount: 108075.95
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за April 2023
+  id: 462
+  type: INCOME
+- amount: 981.27
+  bankAccountId: 3
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 463
+  type: EXPENSE
+- amount: 1690.2
+  bankAccountId: 8
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 464
+  type: EXPENSE
+- amount: 6133.81
+  bankAccountId: 1
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 465
+  type: EXPENSE
+- amount: 6131.34
+  bankAccountId: 10
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 466
+  type: EXPENSE
+- amount: 15823.59
+  bankAccountId: 5
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 467
+  type: INCOME
+- amount: 6551.46
+  bankAccountId: 1
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 468
+  type: EXPENSE
+- amount: 6770.61
+  bankAccountId: 2
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 469
+  type: EXPENSE
+- amount: 8462.45
+  bankAccountId: 5
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 470
+  type: EXPENSE
+- amount: 44650.13
+  bankAccountId: 4
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за April 2023
+  id: 471
+  type: INCOME
+- amount: 3162.93
+  bankAccountId: 10
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 472
+  type: EXPENSE
+- amount: 5302.75
+  bankAccountId: 10
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 473
+  type: EXPENSE
+- amount: 1314.08
+  bankAccountId: 5
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 474
+  type: EXPENSE
+- amount: 4027.36
+  bankAccountId: 5
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 475
+  type: EXPENSE
+- amount: 99511.19
+  bankAccountId: 2
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за May 2023
+  id: 476
+  type: INCOME
+- amount: 468.19
+  bankAccountId: 3
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 477
+  type: EXPENSE
+- amount: 7712.45
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 478
+  type: EXPENSE
+- amount: 42236.24
+  bankAccountId: 1
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 479
+  type: INCOME
+- amount: 2140.73
+  bankAccountId: 7
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 480
+  type: EXPENSE
+- amount: 2466.91
+  bankAccountId: 1
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 481
+  type: EXPENSE
+- amount: 45380.07
+  bankAccountId: 8
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за May 2023
+  id: 482
+  type: INCOME
+- amount: 7183.48
+  bankAccountId: 10
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 483
+  type: EXPENSE
+- amount: 1907.78
+  bankAccountId: 3
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 484
+  type: EXPENSE
+- amount: 95503.23
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за May 2023
+  id: 485
+  type: INCOME
+- amount: 3373.3
+  bankAccountId: 6
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 486
+  type: EXPENSE
+- amount: 6096.13
+  bankAccountId: 3
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 487
+  type: EXPENSE
+- amount: 33424.83
+  bankAccountId: 5
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за May 2023
+  id: 488
+  type: INCOME
+- amount: 902.69
+  bankAccountId: 7
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 489
+  type: EXPENSE
+- amount: 130633.49
+  bankAccountId: 7
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за May 2023
+  id: 490
+  type: INCOME
+- amount: 2120.73
+  bankAccountId: 10
+  categoryId: 3
+  date: {
+    }
+  description: Кэшбэк
+  id: 491
+  type: INCOME
+- amount: 2312.45
+  bankAccountId: 8
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 492
+  type: EXPENSE
+- amount: 1389.63
+  bankAccountId: 10
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 493
+  type: EXPENSE
+- amount: 2479.73
+  bankAccountId: 5
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 494
+  type: EXPENSE
+- amount: 576.85
+  bankAccountId: 10
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 495
+  type: EXPENSE
+- amount: 312.66
+  bankAccountId: 2
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 496
+  type: EXPENSE
+- amount: 6840.88
+  bankAccountId: 10
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 497
+  type: EXPENSE
+- amount: 1302.54
+  bankAccountId: 9
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 498
+  type: EXPENSE
+- amount: 2888.38
+  bankAccountId: 3
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 499
+  type: EXPENSE
+- amount: 3453.51
+  bankAccountId: 10
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 500
+  type: EXPENSE
+- amount: 1278.09
+  bankAccountId: 1
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 501
+  type: EXPENSE
+- amount: 27335.01
+  bankAccountId: 10
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 502
+  type: INCOME
+- amount: 11753.89
+  bankAccountId: 10
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 503
+  type: INCOME
+- amount: 3643.77
+  bankAccountId: 5
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 504
+  type: EXPENSE
+- amount: 793.3
+  bankAccountId: 1
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 505
+  type: EXPENSE
+- amount: 5286.08
+  bankAccountId: 2
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 506
+  type: EXPENSE
+- amount: 6960.52
+  bankAccountId: 5
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 507
+  type: EXPENSE
+- amount: 108890.84
+  bankAccountId: 10
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за June 2023
+  id: 508
+  type: INCOME
+- amount: 45005.18
+  bankAccountId: 10
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за June 2023
+  id: 509
+  type: INCOME
+- amount: 5200.06
+  bankAccountId: 2
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 510
+  type: EXPENSE
+- amount: 26654.15
+  bankAccountId: 8
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 511
+  type: INCOME
+- amount: 4412.86
+  bankAccountId: 1
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 512
+  type: EXPENSE
+- amount: 9220.73
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 513
+  type: EXPENSE
+- amount: 3314.28
+  bankAccountId: 6
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 514
+  type: EXPENSE
+- amount: 3616.2
+  bankAccountId: 5
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 515
+  type: EXPENSE
+- amount: 1037.83
+  bankAccountId: 6
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 516
+  type: EXPENSE
+- amount: 3454.45
+  bankAccountId: 9
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 517
+  type: EXPENSE
+- amount: 115204.49
+  bankAccountId: 10
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за July 2023
+  id: 518
+  type: INCOME
+- amount: 4324.21
+  bankAccountId: 5
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 519
+  type: EXPENSE
+- amount: 6497.11
+  bankAccountId: 3
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 520
+  type: EXPENSE
+- amount: 2939.74
+  bankAccountId: 1
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 521
+  type: EXPENSE
+- amount: 6825.93
+  bankAccountId: 2
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 522
+  type: EXPENSE
+- amount: 1981.13
+  bankAccountId: 5
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 523
+  type: EXPENSE
+- amount: 353.65
+  bankAccountId: 3
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 524
+  type: EXPENSE
+- amount: 1622.04
+  bankAccountId: 2
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 525
+  type: EXPENSE
+- amount: 2766.75
+  bankAccountId: 6
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 526
+  type: EXPENSE
+- amount: 6974.55
+  bankAccountId: 1
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 527
+  type: EXPENSE
+- amount: 97754.31
+  bankAccountId: 6
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за July 2023
+  id: 528
+  type: INCOME
+- amount: 571.94
+  bankAccountId: 4
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 529
+  type: EXPENSE
+- amount: 127899.05
+  bankAccountId: 6
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за July 2023
+  id: 530
+  type: INCOME
+- amount: 420.3
+  bankAccountId: 5
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 531
+  type: EXPENSE
+- amount: 18121.85
+  bankAccountId: 7
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 532
+  type: INCOME
+- amount: 42447.35
+  bankAccountId: 1
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 533
+  type: INCOME
+- amount: 6028.88
+  bankAccountId: 1
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 534
+  type: EXPENSE
+- amount: 3109.98
+  bankAccountId: 10
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 535
+  type: EXPENSE
+- amount: 3312.07
+  bankAccountId: 7
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 536
+  type: EXPENSE
+- amount: 4031.24
+  bankAccountId: 8
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 537
+  type: EXPENSE
+- amount: 1912.61
+  bankAccountId: 3
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 538
+  type: EXPENSE
+- amount: 1458.93
+  bankAccountId: 1
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 539
+  type: EXPENSE
+- amount: 1470.3
+  bankAccountId: 3
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 540
+  type: EXPENSE
+- amount: 5137.69
+  bankAccountId: 4
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 541
+  type: EXPENSE
+- amount: 2314.05
+  bankAccountId: 6
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 542
+  type: EXPENSE
+- amount: 7125.82
+  bankAccountId: 8
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 543
+  type: EXPENSE
+- amount: 4830.94
+  bankAccountId: 2
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 544
+  type: EXPENSE
+- amount: 5222.99
+  bankAccountId: 6
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 545
+  type: EXPENSE
+- amount: 5850.45
+  bankAccountId: 3
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 546
+  type: EXPENSE
+- amount: 1507.53
+  bankAccountId: 8
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 547
+  type: EXPENSE
+- amount: 2652.27
+  bankAccountId: 4
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 548
+  type: EXPENSE
+- amount: 2029.82
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 549
+  type: EXPENSE
+- amount: 7164.09
+  bankAccountId: 3
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 550
+  type: EXPENSE
+- amount: 3447.8
+  bankAccountId: 4
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 551
+  type: EXPENSE
+- amount: 144167.63
+  bankAccountId: 10
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за September 2023
+  id: 552
+  type: INCOME
+- amount: 2227.79
+  bankAccountId: 5
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 553
+  type: EXPENSE
+- amount: 48946.06
+  bankAccountId: 9
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 554
+  type: INCOME
+- amount: 507.67
+  bankAccountId: 1
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 555
+  type: EXPENSE
+- amount: 61417.4
+  bankAccountId: 4
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за September 2023
+  id: 556
+  type: INCOME
+- amount: 2802.34
+  bankAccountId: 3
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 557
+  type: EXPENSE
+- amount: 1936.89
+  bankAccountId: 9
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 558
+  type: EXPENSE
+- amount: 6567.44
+  bankAccountId: 6
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 559
+  type: EXPENSE
+- amount: 3736.13
+  bankAccountId: 9
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 560
+  type: EXPENSE
+- amount: 13691.58
+  bankAccountId: 2
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 561
+  type: INCOME
+- amount: 5081.84
+  bankAccountId: 5
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 562
+  type: EXPENSE
+- amount: 3455.47
+  bankAccountId: 1
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 563
+  type: EXPENSE
+- amount: 47889.82
+  bankAccountId: 8
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 564
+  type: INCOME
+- amount: 3946.72
+  bankAccountId: 4
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 565
+  type: EXPENSE
+- amount: 750.03
+  bankAccountId: 4
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 566
+  type: EXPENSE
+- amount: 3543.74
+  bankAccountId: 4
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 567
+  type: EXPENSE
+- amount: 6348.32
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 568
+  type: EXPENSE
+- amount: 16928.57
+  bankAccountId: 6
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 569
+  type: INCOME
+- amount: 3231.78
+  bankAccountId: 2
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 570
+  type: EXPENSE
+- amount: 368.9
+  bankAccountId: 8
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 571
+  type: EXPENSE
+- amount: 1975.7
+  bankAccountId: 8
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 572
+  type: EXPENSE
+- amount: 8592.94
+  bankAccountId: 3
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 573
+  type: EXPENSE
+- amount: 1166.27
+  bankAccountId: 6
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 574
+  type: EXPENSE
+- amount: 3448.01
+  bankAccountId: 7
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 575
+  type: EXPENSE
+- amount: 143839.7
+  bankAccountId: 5
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за October 2023
+  id: 576
+  type: INCOME
+- amount: 2426.06
+  bankAccountId: 1
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 577
+  type: EXPENSE
+- amount: 1616.12
+  bankAccountId: 1
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 578
+  type: EXPENSE
+- amount: 78995.71
+  bankAccountId: 8
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за November 2023
+  id: 579
+  type: INCOME
+- amount: 133274.57
+  bankAccountId: 6
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за November 2023
+  id: 580
+  type: INCOME
+- amount: 60720.52
+  bankAccountId: 5
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за November 2023
+  id: 581
+  type: INCOME
+- amount: 482.88
+  bankAccountId: 3
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 582
+  type: EXPENSE
+- amount: 117099.42
+  bankAccountId: 7
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за November 2023
+  id: 583
+  type: INCOME
+- amount: 1270.28
+  bankAccountId: 10
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 584
+  type: EXPENSE
+- amount: 1084.33
+  bankAccountId: 9
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 585
+  type: EXPENSE
+- amount: 21051.62
+  bankAccountId: 1
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 586
+  type: INCOME
+- amount: 3126.77
+  bankAccountId: 1
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 587
+  type: EXPENSE
+- amount: 2947.11
+  bankAccountId: 3
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 588
+  type: EXPENSE
+- amount: 2482.81
+  bankAccountId: 10
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 589
+  type: EXPENSE
+- amount: 49613.48
+  bankAccountId: 3
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 590
+  type: INCOME
+- amount: 4615.37
+  bankAccountId: 3
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 591
+  type: EXPENSE
+- amount: 694.04
+  bankAccountId: 7
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 592
+  type: EXPENSE
+- amount: 1917.5
+  bankAccountId: 7
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 593
+  type: EXPENSE
+- amount: 2003.83
+  bankAccountId: 6
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 594
+  type: EXPENSE
+- amount: 3932.21
+  bankAccountId: 9
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 595
+  type: EXPENSE
+- amount: 3986.98
+  bankAccountId: 7
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 596
+  type: EXPENSE
+- amount: 25855.04
+  bankAccountId: 4
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 597
+  type: INCOME
+- amount: 7116.76
+  bankAccountId: 6
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 598
+  type: INCOME
+- amount: 1860.23
+  bankAccountId: 8
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 599
+  type: EXPENSE
+- amount: 5345.59
+  bankAccountId: 5
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 600
+  type: EXPENSE
+- amount: 6105.88
+  bankAccountId: 9
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 601
+  type: EXPENSE
+- amount: 5284.75
+  bankAccountId: 2
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 602
+  type: EXPENSE
+- amount: 6407.62
+  bankAccountId: 2
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 603
+  type: EXPENSE
+- amount: 5181.58
+  bankAccountId: 8
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 604
+  type: EXPENSE
+- amount: 64675.46
+  bankAccountId: 6
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за January 2024
+  id: 605
+  type: INCOME
+- amount: 487.25
+  bankAccountId: 8
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 606
+  type: EXPENSE
+- amount: 101050.82
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за January 2024
+  id: 607
+  type: INCOME
+- amount: 4498.28
+  bankAccountId: 5
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 608
+  type: EXPENSE
+- amount: 1770.22
+  bankAccountId: 9
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 609
+  type: EXPENSE
+- amount: 8029.04
+  bankAccountId: 10
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 610
+  type: EXPENSE
+- amount: 2292.54
+  bankAccountId: 7
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 611
+  type: EXPENSE
+- amount: 1951.69
+  bankAccountId: 5
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 612
+  type: EXPENSE
+- amount: 28063.52
+  bankAccountId: 9
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 613
+  type: INCOME
+- amount: 8282.05
+  bankAccountId: 5
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 614
+  type: EXPENSE
+- amount: 1237.73
+  bankAccountId: 5
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 615
+  type: EXPENSE
+- amount: 4793.59
+  bankAccountId: 5
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 616
+  type: EXPENSE
+- amount: 6123.05
+  bankAccountId: 5
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 617
+  type: EXPENSE
+- amount: 5553.03
+  bankAccountId: 1
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 618
+  type: EXPENSE
+- amount: 7822.56
+  bankAccountId: 1
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 619
+  type: EXPENSE
+- amount: 496.21
+  bankAccountId: 3
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 620
+  type: EXPENSE
+- amount: 2304.35
+  bankAccountId: 7
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 621
+  type: EXPENSE
+- amount: 1591.24
+  bankAccountId: 10
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 622
+  type: EXPENSE
+- amount: 7912.08
+  bankAccountId: 5
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 623
+  type: EXPENSE
+- amount: 5877.52
+  bankAccountId: 4
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 624
+  type: EXPENSE
+- amount: 9686.14
+  bankAccountId: 5
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 625
+  type: INCOME
+- amount: 51058.47
+  bankAccountId: 7
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за February 2024
+  id: 626
+  type: INCOME
+- amount: 1227.62
+  bankAccountId: 10
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 627
+  type: EXPENSE
+- amount: 71894.31
+  bankAccountId: 2
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за March 2024
+  id: 628
+  type: INCOME
+- amount: 6027.92
+  bankAccountId: 2
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 629
+  type: EXPENSE
+- amount: 109181.73
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за March 2024
+  id: 630
+  type: INCOME
+- amount: 3689.19
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 631
+  type: EXPENSE
+- amount: 21928.76
+  bankAccountId: 4
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 632
+  type: INCOME
+- amount: 4854.46
+  bankAccountId: 3
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 633
+  type: EXPENSE
+- amount: 1766.27
+  bankAccountId: 2
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 634
+  type: EXPENSE
+- amount: 7684.24
+  bankAccountId: 3
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 635
+  type: EXPENSE
+- amount: 1224.55
+  bankAccountId: 9
+  categoryId: 3
+  date: {
+    }
+  description: Кэшбэк
+  id: 636
+  type: INCOME
+- amount: 606.6
+  bankAccountId: 4
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 637
+  type: EXPENSE
+- amount: 27771.57
+  bankAccountId: 7
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 638
+  type: INCOME
+- amount: 2886.55
+  bankAccountId: 2
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 639
+  type: EXPENSE
+- amount: 58593.96
+  bankAccountId: 6
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за March 2024
+  id: 640
+  type: INCOME
+- amount: 2843.47
+  bankAccountId: 6
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 641
+  type: EXPENSE
+- amount: 430.71
+  bankAccountId: 1
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 642
+  type: EXPENSE
+- amount: 557.96
+  bankAccountId: 10
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 643
+  type: EXPENSE
+- amount: 7862.48
+  bankAccountId: 9
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 644
+  type: EXPENSE
+- amount: 18317.88
+  bankAccountId: 6
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 645
+  type: INCOME
+- amount: 3124.68
+  bankAccountId: 2
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 646
+  type: EXPENSE
+- amount: 2147.76
+  bankAccountId: 2
+  categoryId: 3
+  date: {
+    }
+  description: Кэшбэк
+  id: 647
+  type: INCOME
+- amount: 2707.78
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 648
+  type: EXPENSE
+- amount: 43404.4
+  bankAccountId: 2
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 649
+  type: INCOME
+- amount: 1189.52
+  bankAccountId: 6
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 650
+  type: EXPENSE
+- amount: 6345.81
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 651
+  type: EXPENSE
+- amount: 25458.55
+  bankAccountId: 1
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 652
+  type: INCOME
+- amount: 48919.88
+  bankAccountId: 2
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за April 2024
+  id: 653
+  type: INCOME
+- amount: 48180.76
+  bankAccountId: 7
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 654
+  type: INCOME
+- amount: 3407.15
+  bankAccountId: 10
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 655
+  type: EXPENSE
+- amount: 1838.33
+  bankAccountId: 3
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 656
+  type: EXPENSE
+- amount: 100170.59
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за April 2024
+  id: 657
+  type: INCOME
+- amount: 1959.91
+  bankAccountId: 1
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 658
+  type: EXPENSE
+- amount: 2840.91
+  bankAccountId: 6
+  categoryId: 3
+  date: {
+    }
+  description: Кэшбэк
+  id: 659
+  type: INCOME
+- amount: 3787.05
+  bankAccountId: 9
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 660
+  type: EXPENSE
+- amount: 8068.6
+  bankAccountId: 8
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 661
+  type: INCOME
+- amount: 1310.68
+  bankAccountId: 7
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 662
+  type: EXPENSE
+- amount: 110191.61
+  bankAccountId: 7
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за May 2024
+  id: 663
+  type: INCOME
+- amount: 503.71
+  bankAccountId: 5
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 664
+  type: EXPENSE
+- amount: 64658.88
+  bankAccountId: 3
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за May 2024
+  id: 665
+  type: INCOME
+- amount: 41732.63
+  bankAccountId: 9
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за May 2024
+  id: 666
+  type: INCOME
+- amount: 1935.84
+  bankAccountId: 9
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 667
+  type: EXPENSE
+- amount: 2353.99
+  bankAccountId: 5
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 668
+  type: EXPENSE
+- amount: 136152.96
+  bankAccountId: 8
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за May 2024
+  id: 669
+  type: INCOME
+- amount: 5703.89
+  bankAccountId: 8
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 670
+  type: EXPENSE
+- amount: 49690.36
+  bankAccountId: 10
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 671
+  type: INCOME
+- amount: 5561.07
+  bankAccountId: 4
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 672
+  type: EXPENSE
+- amount: 3570.39
+  bankAccountId: 3
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 673
+  type: EXPENSE
+- amount: 115971.11
+  bankAccountId: 9
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за June 2024
+  id: 674
+  type: INCOME
+- amount: 7910.99
+  bankAccountId: 9
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 675
+  type: EXPENSE
+- amount: 5764.88
+  bankAccountId: 3
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 676
+  type: EXPENSE
+- amount: 1349.92
+  bankAccountId: 8
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 677
+  type: EXPENSE
+- amount: 41962.37
+  bankAccountId: 4
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за June 2024
+  id: 678
+  type: INCOME
+- amount: 40853.07
+  bankAccountId: 3
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 679
+  type: INCOME
+- amount: 1466.6
+  bankAccountId: 1
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 680
+  type: EXPENSE
+- amount: 2389.87
+  bankAccountId: 9
+  categoryId: 3
+  date: {
+    }
+  description: Кэшбэк
+  id: 681
+  type: INCOME
+- amount: 2704.1
+  bankAccountId: 7
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 682
+  type: EXPENSE
+- amount: 4382.84
+  bankAccountId: 4
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 683
+  type: EXPENSE
+- amount: 2333.28
+  bankAccountId: 3
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 684
+  type: EXPENSE
+- amount: 100058.72
+  bankAccountId: 8
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за June 2024
+  id: 685
+  type: INCOME
+- amount: 9697.85
+  bankAccountId: 6
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 686
+  type: EXPENSE
+- amount: 6557.11
+  bankAccountId: 2
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 687
+  type: EXPENSE
+- amount: 3091.94
+  bankAccountId: 3
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 688
+  type: EXPENSE
+- amount: 133088.88
+  bankAccountId: 5
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за June 2024
+  id: 689
+  type: INCOME
+- amount: 1567.92
+  bankAccountId: 4
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 690
+  type: EXPENSE
+- amount: 39852.57
+  bankAccountId: 2
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 691
+  type: INCOME
+- amount: 1648.81
+  bankAccountId: 8
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 692
+  type: EXPENSE
+- amount: 8992.2
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 693
+  type: EXPENSE
+- amount: 8179.21
+  bankAccountId: 10
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 694
+  type: EXPENSE
+- amount: 59028.67
+  bankAccountId: 5
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за July 2024
+  id: 695
+  type: INCOME
+- amount: 6930.28
+  bankAccountId: 5
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 696
+  type: EXPENSE
+- amount: 7818.94
+  bankAccountId: 10
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 697
+  type: EXPENSE
+- amount: 4791.94
+  bankAccountId: 5
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 698
+  type: EXPENSE
+- amount: 3244.88
+  bankAccountId: 9
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 699
+  type: EXPENSE
+- amount: 7484.12
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 700
+  type: EXPENSE
+- amount: 38853.36
+  bankAccountId: 8
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 701
+  type: INCOME
+- amount: 3816.12
+  bankAccountId: 8
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 702
+  type: EXPENSE
+- amount: 4415.83
+  bankAccountId: 4
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 703
+  type: EXPENSE
+- amount: 463.76
+  bankAccountId: 10
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 704
+  type: EXPENSE
+- amount: 56628.13
+  bankAccountId: 7
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за July 2024
+  id: 705
+  type: INCOME
+- amount: 9292.19
+  bankAccountId: 4
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 706
+  type: EXPENSE
+- amount: 8264.12
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 707
+  type: EXPENSE
+- amount: 447.62
+  bankAccountId: 2
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 708
+  type: EXPENSE
+- amount: 1169.4
+  bankAccountId: 10
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 709
+  type: EXPENSE
+- amount: 2205.72
+  bankAccountId: 1
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 710
+  type: EXPENSE
+- amount: 558.62
+  bankAccountId: 8
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 711
+  type: EXPENSE
+- amount: 1710.54
+  bankAccountId: 10
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 712
+  type: EXPENSE
+- amount: 3079.0
+  bankAccountId: 7
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 713
+  type: EXPENSE
+- amount: 1767.92
+  bankAccountId: 8
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 714
+  type: EXPENSE
+- amount: 2654.04
+  bankAccountId: 4
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 715
+  type: EXPENSE
+- amount: 42839.1
+  bankAccountId: 5
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за August 2024
+  id: 716
+  type: INCOME
+- amount: 95366.66
+  bankAccountId: 3
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за September 2024
+  id: 717
+  type: INCOME
+- amount: 2074.71
+  bankAccountId: 1
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 718
+  type: EXPENSE
+- amount: 19716.44
+  bankAccountId: 3
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 719
+  type: INCOME
+- amount: 125064.48
+  bankAccountId: 4
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за September 2024
+  id: 720
+  type: INCOME
+- amount: 4077.17
+  bankAccountId: 6
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 721
+  type: EXPENSE
+- amount: 3099.7
+  bankAccountId: 5
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 722
+  type: EXPENSE
+- amount: 2974.96
+  bankAccountId: 10
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 723
+  type: EXPENSE
+- amount: 2774.39
+  bankAccountId: 9
+  categoryId: 3
+  date: {
+    }
+  description: Кэшбэк
+  id: 724
+  type: INCOME
+- amount: 1838.09
+  bankAccountId: 7
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 725
+  type: EXPENSE
+- amount: 2881.5
+  bankAccountId: 6
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 726
+  type: EXPENSE
+- amount: 3325.77
+  bankAccountId: 1
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 727
+  type: EXPENSE
+- amount: 1646.4
+  bankAccountId: 4
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 728
+  type: EXPENSE
+- amount: 4713.27
+  bankAccountId: 1
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 729
+  type: EXPENSE
+- amount: 4136.06
+  bankAccountId: 10
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 730
+  type: EXPENSE
+- amount: 41783.99
+  bankAccountId: 7
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за September 2024
+  id: 731
+  type: INCOME
+- amount: 7784.72
+  bankAccountId: 1
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 732
+  type: EXPENSE
+- amount: 3912.17
+  bankAccountId: 4
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 733
+  type: EXPENSE
+- amount: 1082.48
+  bankAccountId: 3
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 734
+  type: EXPENSE
+- amount: 16750.51
+  bankAccountId: 6
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 735
+  type: INCOME
+- amount: 90984.72
+  bankAccountId: 6
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за September 2024
+  id: 736
+  type: INCOME
+- amount: 727.64
+  bankAccountId: 3
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 737
+  type: EXPENSE
+- amount: 1027.63
+  bankAccountId: 3
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 738
+  type: EXPENSE
+- amount: 108275.63
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за October 2024
+  id: 739
+  type: INCOME
+- amount: 3761.51
+  bankAccountId: 8
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 740
+  type: EXPENSE
+- amount: 7329.44
+  bankAccountId: 10
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 741
+  type: EXPENSE
+- amount: 30566.52
+  bankAccountId: 8
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за October 2024
+  id: 742
+  type: INCOME
+- amount: 4688.69
+  bankAccountId: 6
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 743
+  type: EXPENSE
+- amount: 115982.08
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за October 2024
+  id: 744
+  type: INCOME
+- amount: 1563.6
+  bankAccountId: 8
+  categoryId: 3
+  date: {
+    }
+  description: Кэшбэк
+  id: 745
+  type: INCOME
+- amount: 2977.58
+  bankAccountId: 7
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 746
+  type: EXPENSE
+- amount: 37654.53
+  bankAccountId: 6
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 747
+  type: INCOME
+- amount: 1031.28
+  bankAccountId: 4
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 748
+  type: EXPENSE
+- amount: 12324.24
+  bankAccountId: 2
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 749
+  type: INCOME
+- amount: 2809.26
+  bankAccountId: 7
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 750
+  type: EXPENSE
+- amount: 5590.46
+  bankAccountId: 1
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 751
+  type: EXPENSE
+- amount: 7907.24
+  bankAccountId: 4
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 752
+  type: EXPENSE
+- amount: 7010.0
+  bankAccountId: 8
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 753
+  type: EXPENSE
+- amount: 1052.61
+  bankAccountId: 3
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 754
+  type: EXPENSE
+- amount: 2796.76
+  bankAccountId: 2
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 755
+  type: EXPENSE
+- amount: 1179.09
+  bankAccountId: 8
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 756
+  type: EXPENSE
+- amount: 4093.27
+  bankAccountId: 9
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 757
+  type: EXPENSE
+- amount: 2419.2
+  bankAccountId: 4
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 758
+  type: EXPENSE
+- amount: 4641.69
+  bankAccountId: 9
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 759
+  type: EXPENSE
+- amount: 3281.35
+  bankAccountId: 5
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 760
+  type: EXPENSE
+- amount: 124372.66
+  bankAccountId: 9
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за November 2024
+  id: 761
+  type: INCOME
+- amount: 4763.11
+  bankAccountId: 1
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 762
+  type: EXPENSE
+- amount: 96245.88
+  bankAccountId: 5
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за November 2024
+  id: 763
+  type: INCOME
+- amount: 13022.43
+  bankAccountId: 6
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 764
+  type: INCOME
+- amount: 119937.8
+  bankAccountId: 6
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за November 2024
+  id: 765
+  type: INCOME
+- amount: 45560.91
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за December 2024
+  id: 766
+  type: INCOME
+- amount: 1563.53
+  bankAccountId: 1
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 767
+  type: EXPENSE
+- amount: 1682.36
+  bankAccountId: 7
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 768
+  type: EXPENSE
+- amount: 17234.35
+  bankAccountId: 6
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 769
+  type: INCOME
+- amount: 43312.95
+  bankAccountId: 3
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 770
+  type: INCOME
+- amount: 3444.2
+  bankAccountId: 6
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 771
+  type: EXPENSE
+- amount: 3755.98
+  bankAccountId: 4
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 772
+  type: EXPENSE
+- amount: 9008.49
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 773
+  type: EXPENSE
+- amount: 95592.47
+  bankAccountId: 9
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за December 2024
+  id: 774
+  type: INCOME
+- amount: 2465.14
+  bankAccountId: 1
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 775
+  type: EXPENSE
+- amount: 2266.18
+  bankAccountId: 1
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 776
+  type: EXPENSE
+- amount: 921.24
+  bankAccountId: 2
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 777
+  type: EXPENSE
+- amount: 39093.18
+  bankAccountId: 8
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 778
+  type: INCOME
+- amount: 142584.01
+  bankAccountId: 7
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за December 2024
+  id: 779
+  type: INCOME
+- amount: 651.24
+  bankAccountId: 5
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 780
+  type: EXPENSE
+- amount: 100039.75
+  bankAccountId: 6
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за December 2024
+  id: 781
+  type: INCOME
+- amount: 2306.44
+  bankAccountId: 6
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 782
+  type: EXPENSE
+- amount: 78201.68
+  bankAccountId: 7
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за December 2024
+  id: 783
+  type: INCOME
+- amount: 105848.8
+  bankAccountId: 6
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за December 2024
+  id: 784
+  type: INCOME
+- amount: 7631.82
+  bankAccountId: 2
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 785
+  type: EXPENSE
+- amount: 3732.01
+  bankAccountId: 9
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 786
+  type: EXPENSE
+- amount: 122144.33
+  bankAccountId: 8
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за January 2025
+  id: 787
+  type: INCOME
+- amount: 1726.06
+  bankAccountId: 6
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 788
+  type: EXPENSE
+- amount: 1282.16
+  bankAccountId: 5
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 789
+  type: EXPENSE
+- amount: 4868.48
+  bankAccountId: 7
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 790
+  type: EXPENSE
+- amount: 2430.17
+  bankAccountId: 10
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 791
+  type: EXPENSE
+- amount: 1350.44
+  bankAccountId: 1
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 792
+  type: EXPENSE
+- amount: 2140.68
+  bankAccountId: 1
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 793
+  type: EXPENSE
+- amount: 2333.76
+  bankAccountId: 9
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 794
+  type: EXPENSE
+- amount: 3218.63
+  bankAccountId: 9
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 795
+  type: EXPENSE
+- amount: 6530.73
+  bankAccountId: 7
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 796
+  type: EXPENSE
+- amount: 582.57
+  bankAccountId: 6
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 797
+  type: EXPENSE
+- amount: 5778.66
+  bankAccountId: 7
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 798
+  type: EXPENSE
+- amount: 5524.82
+  bankAccountId: 3
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 799
+  type: EXPENSE
+- amount: 9074.17
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 800
+  type: EXPENSE
+- amount: 6741.71
+  bankAccountId: 2
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 801
+  type: EXPENSE
+- amount: 109291.23
+  bankAccountId: 6
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за January 2025
+  id: 802
+  type: INCOME
+- amount: 21770.28
+  bankAccountId: 8
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 803
+  type: INCOME
+- amount: 1221.6
+  bankAccountId: 8
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 804
+  type: EXPENSE
+- amount: 3248.4
+  bankAccountId: 3
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 805
+  type: EXPENSE
+- amount: 1452.66
+  bankAccountId: 4
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 806
+  type: EXPENSE
+- amount: 7696.28
+  bankAccountId: 2
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 807
+  type: EXPENSE
+- amount: 121190.43
+  bankAccountId: 9
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за February 2025
+  id: 808
+  type: INCOME
+- amount: 77103.74
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за February 2025
+  id: 809
+  type: INCOME
+- amount: 137891.57
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за February 2025
+  id: 810
+  type: INCOME
+- amount: 135431.13
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за February 2025
+  id: 811
+  type: INCOME
+- amount: 967.64
+  bankAccountId: 8
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 812
+  type: EXPENSE
+- amount: 4700.9
+  bankAccountId: 5
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 813
+  type: EXPENSE
+- amount: 4210.6
+  bankAccountId: 4
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 814
+  type: EXPENSE
+- amount: 4440.53
+  bankAccountId: 7
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 815
+  type: EXPENSE
+- amount: 7357.35
+  bankAccountId: 8
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 816
+  type: EXPENSE
+- amount: 5672.98
+  bankAccountId: 10
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 817
+  type: INCOME
+- amount: 1211.32
+  bankAccountId: 5
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 818
+  type: EXPENSE
+- amount: 3627.69
+  bankAccountId: 9
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 819
+  type: EXPENSE
+- amount: 3200.8
+  bankAccountId: 1
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 820
+  type: EXPENSE
+- amount: 121010.15
+  bankAccountId: 7
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за February 2025
+  id: 821
+  type: INCOME
+- amount: 9938.61
+  bankAccountId: 5
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 822
+  type: EXPENSE
+- amount: 2518.99
+  bankAccountId: 8
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 823
+  type: EXPENSE
+- amount: 36894.94
+  bankAccountId: 5
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за February 2025
+  id: 824
+  type: INCOME
+- amount: 1868.22
+  bankAccountId: 2
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 825
+  type: EXPENSE
+- amount: 4148.82
+  bankAccountId: 5
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 826
+  type: EXPENSE
+- amount: 6699.45
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 827
+  type: EXPENSE
+- amount: 27182.11
+  bankAccountId: 5
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 828
+  type: INCOME
+- amount: 5540.54
+  bankAccountId: 10
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 829
+  type: EXPENSE
+- amount: 7643.99
+  bankAccountId: 9
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 830
+  type: EXPENSE
+- amount: 720.7
+  bankAccountId: 10
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 831
+  type: EXPENSE
+- amount: 2192.61
+  bankAccountId: 4
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 832
+  type: EXPENSE
+- amount: 118379.82
+  bankAccountId: 5
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за March 2025
+  id: 833
+  type: INCOME
+- amount: 2733.77
+  bankAccountId: 1
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 834
+  type: EXPENSE
+- amount: 7514.49
+  bankAccountId: 1
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 835
+  type: EXPENSE
+- amount: 2449.26
+  bankAccountId: 6
+  categoryId: 3
+  date: {
+    }
+  description: Кэшбэк
+  id: 836
+  type: INCOME
+- amount: 4872.42
+  bankAccountId: 5
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 837
+  type: EXPENSE
+- amount: 6139.52
+  bankAccountId: 3
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 838
+  type: EXPENSE
+- amount: 11334.53
+  bankAccountId: 6
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 839
+  type: INCOME
+- amount: 3865.97
+  bankAccountId: 9
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 840
+  type: EXPENSE
+- amount: 9185.76
+  bankAccountId: 4
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 841
+  type: EXPENSE
+- amount: 1218.11
+  bankAccountId: 10
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 842
+  type: EXPENSE
+- amount: 4012.79
+  bankAccountId: 8
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 843
+  type: EXPENSE
+- amount: 1427.9
+  bankAccountId: 8
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 844
+  type: EXPENSE
+- amount: 1733.29
+  bankAccountId: 4
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 845
+  type: EXPENSE
+- amount: 866.89
+  bankAccountId: 2
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 846
+  type: EXPENSE
+- amount: 5723.85
+  bankAccountId: 2
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 847
+  type: EXPENSE
+- amount: 7458.7
+  bankAccountId: 9
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 848
+  type: EXPENSE
+- amount: 3830.54
+  bankAccountId: 5
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 849
+  type: EXPENSE
+- amount: 2861.08
+  bankAccountId: 10
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 850
+  type: EXPENSE
+- amount: 9911.94
+  bankAccountId: 4
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 851
+  type: EXPENSE
+- amount: 57477.64
+  bankAccountId: 9
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за April 2025
+  id: 852
+  type: INCOME
+- amount: 5488.23
+  bankAccountId: 1
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 853
+  type: EXPENSE
+- amount: 34943.86
+  bankAccountId: 3
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 854
+  type: INCOME
+- amount: 3754.97
+  bankAccountId: 8
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 855
+  type: EXPENSE
+- amount: 14676.5
+  bankAccountId: 3
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 856
+  type: INCOME
+- amount: 1960.31
+  bankAccountId: 8
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 857
+  type: EXPENSE
+- amount: 142693.68
+  bankAccountId: 9
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за April 2025
+  id: 858
+  type: INCOME
+- amount: 4325.58
+  bankAccountId: 3
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 859
+  type: EXPENSE
+- amount: 1818.26
+  bankAccountId: 7
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 860
+  type: EXPENSE
+- amount: 2378.21
+  bankAccountId: 4
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 861
+  type: EXPENSE
+- amount: 2221.45
+  bankAccountId: 7
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 862
+  type: EXPENSE
+- amount: 4136.76
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 863
+  type: EXPENSE
+- amount: 6698.61
+  bankAccountId: 9
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 864
+  type: EXPENSE
+- amount: 31939.3
+  bankAccountId: 10
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 865
+  type: INCOME
+- amount: 6844.99
+  bankAccountId: 3
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 866
+  type: EXPENSE
+- amount: 5502.19
+  bankAccountId: 2
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 867
+  type: EXPENSE
+- amount: 1354.29
+  bankAccountId: 5
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 868
+  type: EXPENSE
+- amount: 895.03
+  bankAccountId: 7
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 869
+  type: EXPENSE
+- amount: 1802.98
+  bankAccountId: 6
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 870
+  type: EXPENSE
+- amount: 1294.89
+  bankAccountId: 3
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 871
+  type: EXPENSE
+- amount: 6165.2
+  bankAccountId: 10
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 872
+  type: EXPENSE
+- amount: 1413.72
+  bankAccountId: 10
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 873
+  type: EXPENSE
+- amount: 8223.56
+  bankAccountId: 9
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 874
+  type: EXPENSE
+- amount: 6885.17
+  bankAccountId: 2
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 875
+  type: EXPENSE
+- amount: 862.48
+  bankAccountId: 3
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 876
+  type: EXPENSE
+- amount: 5626.71
+  bankAccountId: 1
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 877
+  type: EXPENSE
+- amount: 4099.84
+  bankAccountId: 3
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 878
+  type: EXPENSE
+- amount: 7788.85
+  bankAccountId: 3
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 879
+  type: EXPENSE
+- amount: 3577.63
+  bankAccountId: 10
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 880
+  type: EXPENSE
+- amount: 5479.33
+  bankAccountId: 7
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 881
+  type: EXPENSE
+- amount: 122993.73
+  bankAccountId: 4
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за June 2025
+  id: 882
+  type: INCOME
+- amount: 1855.48
+  bankAccountId: 6
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 883
+  type: EXPENSE
+- amount: 234.79
+  bankAccountId: 9
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 884
+  type: EXPENSE
+- amount: 119624.19
+  bankAccountId: 3
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за June 2025
+  id: 885
+  type: INCOME
+- amount: 926.65
+  bankAccountId: 10
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 886
+  type: EXPENSE
+- amount: 3278.21
+  bankAccountId: 2
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 887
+  type: EXPENSE
+- amount: 4994.99
+  bankAccountId: 8
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 888
+  type: EXPENSE
+- amount: 5728.52
+  bankAccountId: 8
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 889
+  type: EXPENSE
+- amount: 134454.26
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за July 2025
+  id: 890
+  type: INCOME
+- amount: 36633.71
+  bankAccountId: 3
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 891
+  type: INCOME
+- amount: 1268.8
+  bankAccountId: 4
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 892
+  type: EXPENSE
+- amount: 32455.45
+  bankAccountId: 2
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 893
+  type: INCOME
+- amount: 9203.3
+  bankAccountId: 6
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 894
+  type: EXPENSE
+- amount: 147137.73
+  bankAccountId: 4
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за July 2025
+  id: 895
+  type: INCOME
+- amount: 1055.41
+  bankAccountId: 6
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 896
+  type: EXPENSE
+- amount: 121460.6
+  bankAccountId: 10
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за July 2025
+  id: 897
+  type: INCOME
+- amount: 1692.71
+  bankAccountId: 10
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 898
+  type: EXPENSE
+- amount: 22266.18
+  bankAccountId: 7
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 899
+  type: INCOME
+- amount: 1217.88
+  bankAccountId: 5
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 900
+  type: EXPENSE
+- amount: 2594.7
+  bankAccountId: 3
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 901
+  type: EXPENSE
+- amount: 69458.0
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за July 2025
+  id: 902
+  type: INCOME
+- amount: 2880.06
+  bankAccountId: 9
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 903
+  type: EXPENSE
+- amount: 2021.91
+  bankAccountId: 10
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 904
+  type: EXPENSE
+- amount: 2718.48
+  bankAccountId: 7
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 905
+  type: EXPENSE
+- amount: 44725.4
+  bankAccountId: 5
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 906
+  type: INCOME
+- amount: 14748.95
+  bankAccountId: 8
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 907
+  type: INCOME
+- amount: 2896.24
+  bankAccountId: 10
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 908
+  type: EXPENSE
+- amount: 5704.59
+  bankAccountId: 7
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 909
+  type: EXPENSE
+- amount: 28767.01
+  bankAccountId: 10
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 910
+  type: INCOME
+- amount: 9291.81
+  bankAccountId: 1
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 911
+  type: EXPENSE
+- amount: 45922.58
+  bankAccountId: 6
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за August 2025
+  id: 912
+  type: INCOME
+- amount: 337.06
+  bankAccountId: 2
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 913
+  type: EXPENSE
+- amount: 6263.51
+  bankAccountId: 10
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 914
+  type: EXPENSE
+- amount: 916.64
+  bankAccountId: 10
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 915
+  type: EXPENSE
+- amount: 5098.46
+  bankAccountId: 4
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 916
+  type: EXPENSE
+- amount: 18192.51
+  bankAccountId: 5
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 917
+  type: INCOME
+- amount: 8413.79
+  bankAccountId: 6
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 918
+  type: EXPENSE
+- amount: 4612.48
+  bankAccountId: 1
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 919
+  type: EXPENSE
+- amount: 2489.62
+  bankAccountId: 2
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 920
+  type: EXPENSE
+- amount: 3008.56
+  bankAccountId: 4
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 921
+  type: EXPENSE
+- amount: 4393.13
+  bankAccountId: 5
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 922
+  type: EXPENSE
+- amount: 112802.39
+  bankAccountId: 3
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за August 2025
+  id: 923
+  type: INCOME
+- amount: 256.84
+  bankAccountId: 4
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 924
+  type: EXPENSE
+- amount: 34328.4
+  bankAccountId: 7
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за August 2025
+  id: 925
+  type: INCOME
+- amount: 4007.67
+  bankAccountId: 6
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 926
+  type: EXPENSE
+- amount: 44003.16
+  bankAccountId: 3
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 927
+  type: INCOME
+- amount: 2867.65
+  bankAccountId: 10
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 928
+  type: EXPENSE
+- amount: 32829.82
+  bankAccountId: 10
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 929
+  type: INCOME
+- amount: 3968.88
+  bankAccountId: 6
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 930
+  type: EXPENSE
+- amount: 656.58
+  bankAccountId: 10
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 931
+  type: EXPENSE
+- amount: 1687.07
+  bankAccountId: 7
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 932
+  type: EXPENSE
+- amount: 141351.61
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за September 2025
+  id: 933
+  type: INCOME
+- amount: 693.5
+  bankAccountId: 1
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 934
+  type: EXPENSE
+- amount: 26892.76
+  bankAccountId: 6
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 935
+  type: INCOME
+- amount: 119956.95
+  bankAccountId: 8
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за September 2025
+  id: 936
+  type: INCOME
+- amount: 93862.02
+  bankAccountId: 2
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за September 2025
+  id: 937
+  type: INCOME
+- amount: 3903.47
+  bankAccountId: 5
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 938
+  type: EXPENSE
+- amount: 6521.15
+  bankAccountId: 3
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 939
+  type: EXPENSE
+- amount: 9494.53
+  bankAccountId: 2
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 940
+  type: EXPENSE
+- amount: 1833.15
+  bankAccountId: 5
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 941
+  type: EXPENSE
+- amount: 53337.69
+  bankAccountId: 5
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за September 2025
+  id: 942
+  type: INCOME
+- amount: 2541.41
+  bankAccountId: 9
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 943
+  type: EXPENSE
+- amount: 6835.31
+  bankAccountId: 6
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 944
+  type: EXPENSE
+- amount: 2201.24
+  bankAccountId: 5
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 945
+  type: EXPENSE
+- amount: 4645.1
+  bankAccountId: 3
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 946
+  type: EXPENSE
+- amount: 4704.67
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 947
+  type: EXPENSE
+- amount: 3979.97
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 948
+  type: EXPENSE
+- amount: 2977.43
+  bankAccountId: 3
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 949
+  type: EXPENSE
+- amount: 22470.21
+  bankAccountId: 1
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 950
+  type: INCOME
+- amount: 2213.58
+  bankAccountId: 7
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 951
+  type: EXPENSE
+- amount: 1426.97
+  bankAccountId: 7
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 952
+  type: EXPENSE
+- amount: 1168.33
+  bankAccountId: 7
+  categoryId: 8
+  date: {
+    }
+  description: Такси
+  id: 953
+  type: EXPENSE
+- amount: 7073.1
+  bankAccountId: 6
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 954
+  type: EXPENSE
+- amount: 938.95
+  bankAccountId: 8
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 955
+  type: EXPENSE
+- amount: 366.99
+  bankAccountId: 7
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 956
+  type: EXPENSE
+- amount: 2095.26
+  bankAccountId: 5
+  categoryId: 3
+  date: {
+    }
+  description: Кэшбэк
+  id: 957
+  type: INCOME
+- amount: 2992.81
+  bankAccountId: 7
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 958
+  type: EXPENSE
+- amount: 7923.41
+  bankAccountId: 6
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 959
+  type: EXPENSE
+- amount: 632.9
+  bankAccountId: 9
+  categoryId: 7
+  date: {
+    }
+  description: Обед
+  id: 960
+  type: EXPENSE
+- amount: 850.81
+  bankAccountId: 10
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 961
+  type: EXPENSE
+- amount: 84366.37
+  bankAccountId: 8
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за October 2025
+  id: 962
+  type: INCOME
+- amount: 133289.21
+  bankAccountId: 2
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за October 2025
+  id: 963
+  type: INCOME
+- amount: 867.56
+  bankAccountId: 10
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 964
+  type: EXPENSE
+- amount: 1034.13
+  bankAccountId: 5
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 965
+  type: EXPENSE
+- amount: 33218.67
+  bankAccountId: 5
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 966
+  type: INCOME
+- amount: 124961.4
+  bankAccountId: 7
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за October 2025
+  id: 967
+  type: INCOME
+- amount: 1811.41
+  bankAccountId: 3
+  categoryId: 3
+  date: {
+    }
+  description: Кэшбэк
+  id: 968
+  type: INCOME
+- amount: 105.54
+  bankAccountId: 8
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 969
+  type: EXPENSE
+- amount: 1288.99
+  bankAccountId: 4
+  categoryId: 10
+  date: {
+    }
+  description: Хобби
+  id: 970
+  type: EXPENSE
+- amount: 3670.64
+  bankAccountId: 9
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 971
+  type: EXPENSE
+- amount: 5867.42
+  bankAccountId: 8
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 972
+  type: EXPENSE
+- amount: 90303.2
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за November 2025
+  id: 973
+  type: INCOME
+- amount: 8500.13
+  bankAccountId: 2
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 974
+  type: EXPENSE
+- amount: 4697.26
+  bankAccountId: 10
+  categoryId: 10
+  date: {
+    }
+  description: Кино
+  id: 975
+  type: EXPENSE
+- amount: 4219.12
+  bankAccountId: 3
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 976
+  type: EXPENSE
+- amount: 33331.68
+  bankAccountId: 5
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 977
+  type: INCOME
+- amount: 30132.51
+  bankAccountId: 3
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за November 2025
+  id: 978
+  type: INCOME
+- amount: 1450.99
+  bankAccountId: 6
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 979
+  type: EXPENSE
+- amount: 4500.57
+  bankAccountId: 1
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 980
+  type: EXPENSE
+- amount: 649.13
+  bankAccountId: 9
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 981
+  type: EXPENSE
+- amount: 4385.97
+  bankAccountId: 3
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 982
+  type: EXPENSE
+- amount: 6732.77
+  bankAccountId: 5
+  categoryId: 2
+  date: {
+    }
+  description: Премия
+  id: 983
+  type: INCOME
+- amount: 69554.78
+  bankAccountId: 2
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за November 2025
+  id: 984
+  type: INCOME
+- amount: 8293.75
+  bankAccountId: 1
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 985
+  type: EXPENSE
+- amount: 1407.0
+  bankAccountId: 5
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 986
+  type: EXPENSE
+- amount: 4193.51
+  bankAccountId: 6
+  categoryId: 9
+  date: {
+    }
+  description: Коммунальные услуги
+  id: 987
+  type: EXPENSE
+- amount: 1838.3
+  bankAccountId: 8
+  categoryId: 8
+  date: {
+    }
+  description: Метро
+  id: 988
+  type: EXPENSE
+- amount: 840.45
+  bankAccountId: 10
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 989
+  type: EXPENSE
+- amount: 54457.43
+  bankAccountId: 6
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за December 2025
+  id: 990
+  type: INCOME
+- amount: 147228.49
+  bankAccountId: 2
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за December 2025
+  id: 991
+  type: INCOME
+- amount: 147920.39
+  bankAccountId: 5
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за December 2025
+  id: 992
+  type: INCOME
+- amount: 1788.39
+  bankAccountId: 3
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 993
+  type: EXPENSE
+- amount: 3859.11
+  bankAccountId: 1
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 994
+  type: EXPENSE
+- amount: 477.68
+  bankAccountId: 7
+  categoryId: 8
+  date: {
+    }
+  description: Бензин
+  id: 995
+  type: EXPENSE
+- amount: 106540.01
+  bankAccountId: 1
+  categoryId: 1
+  date: {
+    }
+  description: Зарплата за December 2025
+  id: 996
+  type: INCOME
+- amount: 2247.48
+  bankAccountId: 9
+  categoryId: 7
+  date: {
+    }
+  description: Кофе
+  id: 997
+  type: EXPENSE
+- amount: 2271.91
+  bankAccountId: 4
+  categoryId: 10
+  date: {
+    }
+  description: Концерт
+  id: 998
+  type: EXPENSE
+- amount: 6409.37
+  bankAccountId: 6
+  categoryId: 6
+  date: {
+    }
+  description: Продукты
+  id: 999
+  type: EXPENSE
+- amount: 2465.38
+  bankAccountId: 4
+  categoryId: 7
+  date: {
+    }
+  description: Ужин
+  id: 1000
+  type: EXPENSE
