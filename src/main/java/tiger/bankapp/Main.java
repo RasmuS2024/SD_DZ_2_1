@@ -7,8 +7,11 @@ import tiger.bankapp.helpers.ConsoleHelper;
 public class Main {
     public static void main(String[] args) {
         ConsoleHelper console = new ConsoleHelper();
-        ObjectMapper mapper = new ObjectMapper().registerModule(new JavaTimeModule());
-
+        ObjectMapper mapper = new ObjectMapper()
+                .registerModule(new JavaTimeModule())
+                .configure(
+                        com.fasterxml.jackson.databind.DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false
+                );
         try {
             AppContainer.assemble(console, mapper).start();
         } catch (Exception e) {

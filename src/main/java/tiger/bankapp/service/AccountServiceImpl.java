@@ -1,5 +1,7 @@
 package tiger.bankapp.service;
 
+import tiger.bankapp.exceptions.AccountNotEmptyException;
+import tiger.bankapp.exceptions.ValidationException;
 import tiger.bankapp.factory.AccountFactory;
 import tiger.bankapp.model.BankAccount;
 import tiger.bankapp.repository.AccountRepository;
@@ -50,10 +52,14 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public boolean deleteAccount(Long id) {
-        return accountRepository.findById(id)
-                .filter(acc -> acc.getBalance() == 0)
-                .map(acc -> accountRepository.deleteById(id))
-                .orElse(false);
+        BankAccount account = accountRepository.findById(id)
+                .orElseThrow(() -> new ValidationException("Счет с ID " + id + " не найден"));
+
+        if (account.getBalance() != 0) {
+            throw new AccountNotEmptyException("Нельзя удалить счет с ненулевым балансом: " + account.getBalance());
+        }
+
+        return accountRepository.deleteById(id);
     }
 
     @Override
