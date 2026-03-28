@@ -1,10 +1,6 @@
 package tiger.bankapp.controller;
 
 import tiger.bankapp.exceptions.ValidationException;
-import tiger.bankapp.facade.AccountFacade;
-import tiger.bankapp.facade.CategoryFacade;
-import tiger.bankapp.facade.OperationFacade;
-import tiger.bankapp.facade.AnalyticsFacade;
 import tiger.bankapp.helpers.ConsoleHelper;
 import tiger.bankapp.helpers.DisplayHelper;
 import tiger.bankapp.exporter.DataExporter;
@@ -18,10 +14,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public class CommandHandler {
-    private final AccountFacade accountFacade;
-    private final CategoryFacade categoryFacade;
-    private final OperationFacade operationFacade;
-    private final AnalyticsFacade analyticsFacade;
+    private final FacadeContext facades;
     private final ConsoleHelper console;
     private final DisplayHelper display;
     private final List<DataImporter> importers;
@@ -30,19 +23,15 @@ public class CommandHandler {
     public CommandHandler(
             List<DataImporter> importers,
             List<DataExporter> exporters,
-            AccountFacade accountFacade,
-            CategoryFacade categoryFacade,
-            OperationFacade operationFacade,
-            AnalyticsFacade analyticsFacade
+            FacadeContext facades,
+            ConsoleHelper console,
+            DisplayHelper display
     ) {
         this.importers = importers;
         this.exporters = exporters;
-        this.accountFacade = accountFacade;
-        this.categoryFacade = categoryFacade;
-        this.operationFacade = operationFacade;
-        this.analyticsFacade = analyticsFacade;
-        this.console = new ConsoleHelper();
-        this.display = new DisplayHelper();
+        this.facades = facades;
+        this.console = console;
+        this.display = display;
     }
 
     public void handleCreateAccount() {
@@ -51,7 +40,7 @@ public class CommandHandler {
             throw new ValidationException("Название счета не может быть пустым");
         }
 
-        BankAccount account = accountFacade.createAccount(name);
+        BankAccount account = facades.accountFacade().createAccount(name);
         console.printSuccess("Счет успешно создан: " + account);
     }
 
@@ -70,7 +59,7 @@ public class CommandHandler {
         };
 
         String name = console.readString("Название категории: ");
-        Category category = categoryFacade.createCategory(type, name);
+        Category category = facades.categoryFacade().createCategory(type, name);
         console.printSuccess("Категория успешно создана: " + category);
     }
 
@@ -78,11 +67,11 @@ public class CommandHandler {
         Long accountId = console.readLong("ID счета: ");
         int amount = console.readInt("Сумма: ");
 
-        display.showCategoriesForSelection(categoryFacade.getIncomeCategories(), "доходов");
+        display.showCategoriesForSelection(facades.categoryFacade().getIncomeCategories(), "доходов");
         Integer categoryId = console.readInt("ID категории: ");
         String description = console.readString("Описание: ");
 
-        Operation operation = operationFacade.addIncome(accountId, amount, categoryId, description);
+        Operation operation = facades.operationFacade().addIncome(accountId, amount, categoryId, description);
         console.printSuccess("Доход добавлен. " + operation);
         showAccountBalance(accountId);
     }
@@ -91,61 +80,61 @@ public class CommandHandler {
         Long accountId = console.readLong("ID счета: ");
         int amount = console.readInt("Сумма: ");
 
-        display.showCategoriesForSelection(categoryFacade.getExpenseCategories(), "расходов");
+        display.showCategoriesForSelection(facades.categoryFacade().getExpenseCategories(), "расходов");
         Integer categoryId = console.readInt("ID категории: ");
         String description = console.readString("Описание: ");
 
-        Operation operation = operationFacade.addExpense(accountId, amount, categoryId, description);
+        Operation operation = facades.operationFacade().addExpense(accountId, amount, categoryId, description);
         console.printSuccess("Расход добавлен. " + operation);
         showAccountBalance(accountId);
     }
 
     public void handleShowAccounts() {
-        display.showAccounts(accountFacade.getAllAccounts());
+        display.showAccounts(facades.accountFacade().getAllAccounts());
     }
 
     public void handleShowCategories() {
-        display.showCategories(categoryFacade.getIncomeCategories(),
-                categoryFacade.getExpenseCategories());
+        display.showCategories(facades.categoryFacade().getIncomeCategories(),
+                facades.categoryFacade().getExpenseCategories());
     }
 
     public void handleShowOperations() {
         Long accountId = console.readLong("ID счета: ");
 
-        BankAccount account = accountFacade.getAccount(accountId);
-        display.showOperations(account, operationFacade.getAccountOperations(accountId));
+        BankAccount account = facades.accountFacade().getAccount(accountId);
+        display.showOperations(account, facades.operationFacade().getAccountOperations(accountId));
     }
 
     public void handleDeleteOperation() {
         Integer operationId = console.readInt("ID операции: ");
 
-        operationFacade.deleteOperation(operationId);
+        facades.operationFacade().deleteOperation(operationId);
         console.printSuccess("Операция удалена, баланс счета скорректирован");
     }
 
     public void handleDeleteAccount() {
         Long accountId = console.readLong("ID счета: ");
 
-        BankAccount account = accountFacade.getAccount(accountId);
+        BankAccount account = facades.accountFacade().getAccount(accountId);
         if (account.getBalance() != 0) {
             throw new ValidationException("Нельзя удалить счет с ненулевым балансом: " + account.getBalance());
         }
 
-        accountFacade.deleteAccount(accountId);
+        facades.accountFacade().deleteAccount(accountId);
         console.printSuccess("Счет удален");
     }
 
     public void handleDeleteCategory() {
         Integer categoryId = console.readInt("ID категории: ");
 
-        categoryFacade.deleteCategory(categoryId);
+        facades.categoryFacade().deleteCategory(categoryId);
         console.printSuccess("Категория удалена");
     }
 
     public void handleEditAccount() {
         Long id = console.readLong("ID счета для редактирования: ");
 
-        BankAccount account = accountFacade.getAccount(id);
+        BankAccount account = facades.accountFacade().getAccount(id);
         console.printMessage("Текущее название: " + account.getName());
 
         String newName = console.readString("Новое название: ");
@@ -153,27 +142,27 @@ public class CommandHandler {
             throw new ValidationException("Название счета не может быть пустым");
         }
 
-        accountFacade.updateAccount(id, newName);
+        facades.accountFacade().updateAccount(id, newName);
         console.printSuccess("Счет обновлен");
     }
 
     public void handleEditCategory() {
         Integer id = console.readInt("ID категории для редактирования: ");
 
-        Category category = categoryFacade.getCategory(id);
+        Category category = facades.categoryFacade().getCategory(id);
         console.printMessage("Текущая категория: " + category);
 
         String type = console.readString("Новый тип (INCOME/EXPENSE): ");
         String name = console.readString("Новое название: ");
 
-        categoryFacade.updateCategory(id, type, name);
+        facades.categoryFacade().updateCategory(id, type, name);
         console.printSuccess("Категория обновлена");
     }
 
     public void handleEditOperation() {
         Integer id = console.readInt("ID операции для редактирования: ");
 
-        Operation operation = operationFacade.getOperation(id);
+        Operation operation = facades.operationFacade().getOperation(id);
         console.printMessage("Текущее описание: " + operation.getDescription());
 
         String newDesc = console.readString("Новое описание: ");
@@ -187,7 +176,7 @@ public class CommandHandler {
             }
         }
 
-        operationFacade.updateOperation(id, newDesc, newCatId);
+        facades.operationFacade().updateOperation(id, newDesc, newCatId);
         console.printSuccess("Операция обновлена");
     }
 
@@ -197,7 +186,7 @@ public class CommandHandler {
         LocalDateTime from = parseDate(console.readString("Начальная дата: "));
         LocalDateTime to = parseDate(console.readString("Конечная дата: ")).plusDays(1).minusNanos(1);
 
-        analyticsFacade.printBalanceForPeriod(from, to);
+        facades.analyticsFacade().printBalanceForPeriod(from, to);
     }
 
     private LocalDateTime parseDate(String dateStr) {
@@ -213,7 +202,7 @@ public class CommandHandler {
     }
 
     private void showAccountBalance(Long accountId) {
-        BankAccount account = accountFacade.getAccount(accountId);
+        BankAccount account = facades.accountFacade().getAccount(accountId);
         console.printMessage("Новый баланс: " + account.getBalance());
     }
 
@@ -273,7 +262,7 @@ public class CommandHandler {
         LocalDateTime from = parseDate(console.readString("Начальная дата: "));
         LocalDateTime to = parseDate(console.readString("Конечная дата: ")).plusDays(1).minusNanos(1);
 
-        analyticsFacade.printFullAnalytics(from, to);
+        facades.analyticsFacade().printFullAnalytics(from, to);
     }
 
     /**
@@ -288,7 +277,7 @@ public class CommandHandler {
 
         switch (choice) {
             case 1 -> {
-                int fixed = analyticsFacade.verifyAndFixAllAccounts();
+                int fixed = facades.analyticsFacade().verifyAndFixAllAccounts();
                 if (fixed > 0) {
                     console.printSuccess("Проверка завершена. Исправлено счетов: " + fixed);
                 } else {
@@ -298,17 +287,17 @@ public class CommandHandler {
             case 2 -> {
                 Long id = console.readLong("ID счета: ");
 
-                BankAccount account = accountFacade.getAccount(id);
+                BankAccount account = facades.accountFacade().getAccount(id);
                 if (account == null) {
                     console.printError("Счет с ID " + id + " не найден");
                     return;
                 }
 
-                boolean wasFixed = analyticsFacade.verifyAndFixAccountBalance(id);
+                boolean wasFixed = facades.analyticsFacade().verifyAndFixAccountBalance(id);
 
                 if (wasFixed) {
                     console.printSuccess("Баланс счета " + id + " был исправлен. Текущий баланс: " +
-                            accountFacade.getAccount(id).getBalance());
+                            facades.accountFacade().getAccount(id).getBalance());
                 } else {
                     console.printSuccess("Счет " + id + ": баланс корректен (" +
                             account.getBalance() + ")");

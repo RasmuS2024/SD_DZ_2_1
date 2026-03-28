@@ -4,6 +4,7 @@ import tiger.bankapp.exceptions.BankingException;
 import tiger.bankapp.factory.OperationFactory;
 import tiger.bankapp.model.BankAccount;
 import tiger.bankapp.model.Operation;
+import tiger.bankapp.model.enums.OperationType;
 import tiger.bankapp.repository.OperationRepository;
 
 import java.time.LocalDateTime;
@@ -26,7 +27,13 @@ public class OperationServiceImpl implements OperationService {
     public Operation createIncome(Long accountId, double amount, Integer categoryId, String description) {
         validateAmount(amount);
 
-        Operation op = operationFactory.createOperation("INCOME", accountId, amount, categoryId, description);
+        Operation op = operationFactory.createOperation(
+                OperationType.INCOME,
+                accountId,
+                amount,
+                categoryId,
+                description
+        );
 
         boolean success = accountService.deposit(accountId, amount);
 
@@ -45,7 +52,14 @@ public class OperationServiceImpl implements OperationService {
             throw new BankingException("Недостаточно средств на счете " + accountId);
         }
 
-        Operation op = operationFactory.createOperation("EXPENSE", accountId, amount, categoryId, description);
+        Operation op = operationFactory.createOperation(
+                OperationType.EXPENSE,
+                accountId,
+                amount,
+                categoryId,
+                description
+        );
+
         return operationRepository.save(op);
     }
 
@@ -119,7 +133,7 @@ public class OperationServiceImpl implements OperationService {
         if (account == null) return null;
 
         Operation operation = operationFactory.createOperationWithAllFields(
-                null, "INCOME", accountId, amount, date, description, categoryId
+                null, OperationType.INCOME, accountId, amount, date, description, categoryId
         );
         return operationRepository.save(operation);
     }
@@ -130,7 +144,7 @@ public class OperationServiceImpl implements OperationService {
         if (account == null) return null;
 
         Operation operation = operationFactory.createOperationWithAllFields(
-                null, "EXPENSE", accountId, amount, date, description, categoryId
+                null, OperationType.EXPENSE, accountId, amount, date, description, categoryId
         );
         return operationRepository.save(operation);
     }

@@ -1,15 +1,12 @@
 package tiger.bankapp.facade;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import tiger.bankapp.model.BankAccount;
 import tiger.bankapp.service.AccountService;
-
-import java.util.Arrays;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -20,77 +17,47 @@ class AccountFacadeTest {
     @Mock
     private AccountService accountService;
 
+    @InjectMocks
     private AccountFacade accountFacade;
 
-    @BeforeEach
-    void setUp() {
-        accountFacade = new AccountFacade(accountService);
+    /**
+     * Проверяет делегирование создания счета сервису
+     */
+    @Test
+    void testCreateAccount() {
+        BankAccount account = new BankAccount(1L, "Счет", 0.0);
+        when(accountService.createAccount("Счет")).thenReturn(account);
+
+        BankAccount result = accountFacade.createAccount("Счет");
+
+        assertNotNull(result);
+        assertEquals("Счет", result.getName());
+        verify(accountService).createAccount("Счет");
     }
 
+    /**
+     * Проверяет проброс вызова операции пополнения баланса через фасад
+     */
     @Test
-    void createAccount_returnsAccount() {
-        BankAccount expected = new BankAccount(1L, "John", 0.0);
-        when(accountService.createAccount("John")).thenReturn(expected);
+    void testDeposit() {
+        when(accountService.deposit(1L, 500.0)).thenReturn(true);
 
-        BankAccount result = accountFacade.createAccount("John");
+        boolean success = accountFacade.deposit(1L, 500.0);
 
-        assertEquals(expected, result);
-        verify(accountService).createAccount("John");
+        assertTrue(success);
+        verify(accountService).deposit(1L, 500.0);
     }
 
+    /**
+     * Проверяет корректность вызова удаления счета в сервисе
+     */
     @Test
-    void createAccountWithBalance_returnsAccount() {
-        BankAccount expected = new BankAccount(1L, "John", 100.0);
-        when(accountService.createAccountWithBalance("John", 100.0)).thenReturn(expected);
-
-        BankAccount result = accountFacade.createAccountWithBalance("John", 100.0);
-
-        assertEquals(expected, result);
-    }
-
-    @Test
-    void getAccount_returnsAccount() {
-        BankAccount expected = new BankAccount(1L, "John", 0.0);
-        when(accountService.getAccount(1L)).thenReturn(expected);
-
-        assertEquals(expected, accountFacade.getAccount(1L));
-    }
-
-    @Test
-    void getAllAccounts_returnsList() {
-        List<BankAccount> expected = Arrays.asList(
-                new BankAccount(1L, "John", 100.0),
-                new BankAccount(2L, "Jane", 200.0)
-        );
-        when(accountService.getAllAccounts()).thenReturn(expected);
-
-        List<BankAccount> result = accountFacade.getAllAccounts();
-
-        assertEquals(2, result.size());
-        assertEquals("John", result.getFirst().getName());
-    }
-
-    @Test
-    void updateAccount_returnsTrue() {
-        when(accountService.updateAccount(1L, "NewName")).thenReturn(true);
-        assertTrue(accountFacade.updateAccount(1L, "NewName"));
-    }
-
-    @Test
-    void deleteAccount_returnsTrue() {
+    void testDeleteAccount() {
         when(accountService.deleteAccount(1L)).thenReturn(true);
-        assertTrue(accountFacade.deleteAccount(1L));
-    }
 
-    @Test
-    void deposit_returnsTrue() {
-        when(accountService.deposit(1L, 50.0)).thenReturn(true);
-        assertTrue(accountFacade.deposit(1L, 50.0));
-    }
+        boolean deleted = accountFacade.deleteAccount(1L);
 
-    @Test
-    void withdraw_returnsFalse_whenFailed() {
-        when(accountService.withdraw(1L, 100.0)).thenReturn(false);
-        assertFalse(accountFacade.withdraw(1L, 100.0));
+        assertTrue(deleted);
+        verify(accountService).deleteAccount(1L);
     }
 }

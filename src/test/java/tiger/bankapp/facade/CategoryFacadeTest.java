@@ -9,7 +9,6 @@ import tiger.bankapp.model.Category;
 import tiger.bankapp.model.enums.OperationType;
 import tiger.bankapp.service.CategoryService;
 
-import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -24,32 +23,54 @@ class CategoryFacadeTest {
     @InjectMocks
     private CategoryFacade categoryFacade;
 
+    /**
+     * Проверяет корректность конвертации строкового типа в Enum и создание категории через фасад.
+     */
     @Test
-    void testCreateIncome() {
+    void testCreateCategory() {
         Category category = new Category(1, OperationType.INCOME, "Зарплата");
-        when(categoryService.createIncomeCategory("Зарплата")).thenReturn(category);
+        when(categoryService.createCategory(OperationType.INCOME, "Зарплата")).thenReturn(category);
 
-        Category result = categoryFacade.createIncomeCategory("Зарплата");
+        Category result = categoryFacade.createCategory("INCOME", "Зарплата");
 
-        assertEquals("Зарплата", result.getName());
+        assertNotNull(result);
         assertEquals(OperationType.INCOME, result.getType());
+        verify(categoryService).createCategory(OperationType.INCOME, "Зарплата");
     }
 
+    /**
+     * Проверяет получение списка всех доходных категорий через вызов сервиса.
+     */
     @Test
-    void testGetExpenseCategories() {
-        Category category = new Category(1, OperationType.EXPENSE, "Продукты");
-        when(categoryService.getExpenseCategories()).thenReturn(List.of(category));
+    void testGetIncomeCategories() {
+        when(categoryService.getIncomeCategories()).thenReturn(List.of(new Category()));
 
-        List<Category> result = categoryFacade.getExpenseCategories();
+        List<Category> result = categoryFacade.getIncomeCategories();
 
         assertFalse(result.isEmpty());
-        assertEquals("Продукты", result.get(0).getName());
+        verify(categoryService).getIncomeCategories();
     }
 
+    /**
+     * Проверяет проброс параметров обновления категории и корректную трансформацию типа.
+     */
     @Test
-    void testDelete() {
+    void testUpdateCategory() {
+        categoryFacade.updateCategory(1, "EXPENSE", "Еда");
+
+        verify(categoryService).updateCategory(1, OperationType.EXPENSE, "Еда");
+    }
+
+    /**
+     * Проверяет вызов метода удаления категории.
+     */
+    @Test
+    void testDeleteCategory() {
         when(categoryService.deleteCategory(1)).thenReturn(true);
-        assertTrue(categoryFacade.deleteCategory(1));
+
+        boolean deleted = categoryFacade.deleteCategory(1);
+
+        assertTrue(deleted);
         verify(categoryService).deleteCategory(1);
     }
 }

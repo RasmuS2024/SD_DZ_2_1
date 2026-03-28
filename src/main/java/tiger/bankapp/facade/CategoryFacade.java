@@ -17,14 +17,6 @@ public class CategoryFacade {
         return categoryService.createCategory(OperationType.valueOf(type), name);
     }
 
-    public Category createIncomeCategory(String name) {
-        return categoryService.createIncomeCategory(name);
-    }
-
-    public Category createExpenseCategory(String name) {
-        return categoryService.createExpenseCategory(name);
-    }
-
     public Category getCategory(Integer id) {
         return categoryService.getCategory(id);
     }

@@ -1,9 +1,7 @@
 package tiger.bankapp.exporter;
 
+import tiger.bankapp.controller.FacadeContext;
 import tiger.bankapp.exceptions.BankingException;
-import tiger.bankapp.facade.AccountFacade;
-import tiger.bankapp.facade.CategoryFacade;
-import tiger.bankapp.facade.OperationFacade;
 import tiger.bankapp.importer.ImportData;
 import tiger.bankapp.model.BankAccount;
 import tiger.bankapp.model.Category;
@@ -20,10 +18,8 @@ import static tiger.bankapp.config.ImportExportConfig.NUMBER_LOCALE;
 
 public class CsvDataExporter extends DataExporter {
 
-    public CsvDataExporter(AccountFacade accountFacade,
-                           CategoryFacade categoryFacade,
-                           OperationFacade operationFacade) {
-        super(accountFacade, categoryFacade, operationFacade);
+    public CsvDataExporter(FacadeContext facades) {
+        super(facades);
     }
 
     @Override

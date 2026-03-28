@@ -6,6 +6,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BankAccountTest {
 
+    /**
+     * Проверяет корректность создания счета через конструктор и инициализацию полей.
+     */
     @Test
     void testCreateAccount() {
         BankAccount account = new BankAccount(1L, "Тестовый счет", 0.0);
@@ -15,6 +18,9 @@ class BankAccountTest {
         assertEquals(0.0, account.getBalance());
     }
 
+    /**
+     * Проверяет логику пополнения баланса (метод deposit).
+     */
     @Test
     void testDeposit() {
         BankAccount account = new BankAccount(1L, "Тестовый счет", 0.0);
@@ -26,6 +32,9 @@ class BankAccountTest {
         assertEquals(1500.0, account.getBalance());
     }
 
+    /**
+     * Проверяет успешное списание средств при достаточном балансе (метод withdraw).
+     */
     @Test
     void testWithdraw() {
         BankAccount account = new BankAccount(1L, "Тестовый счет", 0.0);
@@ -37,6 +46,9 @@ class BankAccountTest {
         assertEquals(700.0, account.getBalance());
     }
 
+    /**
+     * Проверяет отказ в списании средств при их нехватке на балансе.
+     */
     @Test
     void testWithdrawInsufficientFunds() {
         BankAccount account = new BankAccount(1L, "Тестовый счет", 0.0);
@@ -48,10 +60,14 @@ class BankAccountTest {
         assertEquals(500.0, account.getBalance());
     }
 
+    /**
+     * Проверяет строковое представление счета, включая форматирование баланса.
+     */
     @Test
     void testToString() {
         BankAccount account = new BankAccount(1L, "Тестовый счет", 1500.0);
 
+        // Убедитесь, что ваш toString в модели BankAccount использует форматирование %.2f
         String expected = "Счет{id=1, name='Тестовый счет', balance=1500,00}";
         assertEquals(expected, account.toString());
     }

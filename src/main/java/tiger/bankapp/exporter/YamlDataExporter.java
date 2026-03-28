@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import tiger.bankapp.controller.FacadeContext;
 import tiger.bankapp.exceptions.BankingException;
 import tiger.bankapp.facade.AccountFacade;
 import tiger.bankapp.facade.CategoryFacade;
@@ -18,15 +19,13 @@ public class YamlDataExporter extends DataExporter {
 
     private final ObjectMapper mapper;
 
-    public YamlDataExporter(AccountFacade accountFacade,
-                            CategoryFacade categoryFacade,
-                            OperationFacade operationFacade) {
-        super(accountFacade, categoryFacade, operationFacade);
+    public YamlDataExporter(FacadeContext facades) {
+        super(facades);
 
         this.mapper = new ObjectMapper(new YAMLFactory());
         this.mapper.registerModule(new JavaTimeModule());
 
-        // Отключаем запись дат в виде чисел, чтобы была красивая строка
+        // Отключаем запись дат в виде чисел
         this.mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
         // Включаем красивый отступ
         this.mapper.enable(SerializationFeature.INDENT_OUTPUT);

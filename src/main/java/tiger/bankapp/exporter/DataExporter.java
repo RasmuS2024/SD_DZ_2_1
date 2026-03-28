@@ -1,31 +1,17 @@
 package tiger.bankapp.exporter;
 
-import tiger.bankapp.facade.AccountFacade;
-import tiger.bankapp.facade.CategoryFacade;
-import tiger.bankapp.facade.OperationFacade;
+import lombok.RequiredArgsConstructor;
+import tiger.bankapp.controller.FacadeContext;
 import tiger.bankapp.importer.ImportData;
 import tiger.bankapp.model.enums.ImportFormat;
 
-import java.time.format.DateTimeFormatter;
-import java.util.Locale;
-
+@RequiredArgsConstructor
 public abstract class DataExporter {
 
-    protected final AccountFacade accountFacade;
-    protected final CategoryFacade categoryFacade;
-    protected final OperationFacade operationFacade;
-
-    protected DataExporter(AccountFacade accountFacade,
-                           CategoryFacade categoryFacade,
-                           OperationFacade operationFacade) {
-        this.accountFacade = accountFacade;
-        this.categoryFacade = categoryFacade;
-        this.operationFacade = operationFacade;
-    }
+    protected final FacadeContext facades;
 
     /**
      * Шаблонный метод для экспорта
-     * @return
      */
     public final void exportData(String filePath) {
         System.out.println("Экспорт в файл: " + filePath);
@@ -47,9 +33,9 @@ public abstract class DataExporter {
     private ImportData loadData() {
         ImportData data = new ImportData();
 
-        data.setAccounts(accountFacade.getAllAccounts());
-        data.setCategories(categoryFacade.getAllCategories());
-        data.setOperations(operationFacade.getAllOperations());
+        data.setAccounts(facades.accountFacade().getAllAccounts());
+        data.setCategories(facades.categoryFacade().getAllCategories());
+        data.setOperations(facades.operationFacade().getAllOperations());
 
         return data;
     }

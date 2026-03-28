@@ -1,9 +1,7 @@
 package tiger.bankapp.importer;
 
 import lombok.RequiredArgsConstructor;
-import tiger.bankapp.facade.AccountFacade;
-import tiger.bankapp.facade.CategoryFacade;
-import tiger.bankapp.facade.OperationFacade;
+import tiger.bankapp.controller.FacadeContext;
 import tiger.bankapp.model.BankAccount;
 import tiger.bankapp.model.Category;
 import tiger.bankapp.model.Operation;
@@ -14,9 +12,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public abstract class DataImporter {
 
-    protected final AccountFacade accountFacade;
-    protected final CategoryFacade categoryFacade;
-    protected final OperationFacade operationFacade;
+    protected final FacadeContext facades;
 
     /**
      *  Шаблонный метод импорта
@@ -47,19 +43,19 @@ public abstract class DataImporter {
                 .toList();
 
         for (BankAccount acc : data.getAccounts()) {
-            accountFacade.createAccountWithBalance(
+            facades.accountFacade().createAccountWithBalance(
                     acc.getName(),
                     acc.getBalance()
             );
         }
 
         for (Category cat : data.getCategories()) {
-            categoryFacade.createCategory(String.valueOf(cat.getType()), cat.getName());
+            facades.categoryFacade().createCategory(String.valueOf(cat.getType()), cat.getName());
         }
 
         for (Operation op : sortedOperations) {
             if ("INCOME".equals(op.getType())) {
-                operationFacade.importIncome(
+                facades.operationFacade().importIncome(
                         op.getBankAccountId(),
                         op.getAmount(),
                         op.getCategoryId(),
@@ -67,7 +63,7 @@ public abstract class DataImporter {
                         op.getDate()
                 );
             } else {
-                operationFacade.importExpense(
+                facades.operationFacade().importExpense(
                         op.getBankAccountId(),
                         op.getAmount(),
                         op.getCategoryId(),

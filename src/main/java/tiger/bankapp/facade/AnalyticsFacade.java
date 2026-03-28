@@ -2,6 +2,7 @@ package tiger.bankapp.facade;
 
 import tiger.bankapp.model.BankAccount;
 import tiger.bankapp.model.Operation;
+import tiger.bankapp.model.enums.OperationType;
 import tiger.bankapp.service.OperationService;
 import tiger.bankapp.service.AccountService;
 import tiger.bankapp.service.CategoryService;
@@ -28,12 +29,12 @@ public class AnalyticsFacade {
         List<Operation> operations = operationService.getOperationsInPeriod(from, to);
 
         double totalIncome = operations.stream()
-                .filter(op -> "INCOME".equals(op.getType()))
+                .filter(op -> op.getType() == OperationType.INCOME)
                 .mapToDouble(Operation::getAmount)
                 .sum();
 
         double totalExpense = operations.stream()
-                .filter(op -> "EXPENSE".equals(op.getType()))
+                .filter(op -> op.getType() == OperationType.EXPENSE)
                 .mapToDouble(Operation::getAmount)
                 .sum();
 
@@ -56,16 +57,16 @@ public class AnalyticsFacade {
     }
 
     public Map<String, Double> getIncomeByCategory(LocalDateTime from, LocalDateTime to) {
-        return getSumByCategory(from, to, "INCOME");
+        return getSumByCategory(from, to, OperationType.INCOME);
     }
 
     public Map<String, Double> getExpenseByCategory(LocalDateTime from, LocalDateTime to) {
-        return getSumByCategory(from, to, "EXPENSE");
+        return getSumByCategory(from, to, OperationType.EXPENSE);
     }
 
-    private Map<String, Double> getSumByCategory(LocalDateTime from, LocalDateTime to, String type) {
+    private Map<String, Double> getSumByCategory(LocalDateTime from, LocalDateTime to, OperationType type) {
         return operationService.getOperationsInPeriod(from, to).stream()
-                .filter(op -> type.equals(op.getType()))
+                .filter(op -> op.getType() == type)
                 .collect(Collectors.groupingBy(
                         op -> {
                             var cat = categoryService.getCategory(op.getCategoryId());
@@ -109,7 +110,7 @@ public class AnalyticsFacade {
         List<Operation> operations = operationService.getAccountOperations(accountId);
 
         double calculatedBalance = operations.stream()
-                .mapToDouble(op -> "INCOME".equals(op.getType()) ? op.getAmount() : -op.getAmount())
+                .mapToDouble(op -> op.getType() == OperationType.INCOME ? op.getAmount() : -op.getAmount())
                 .sum();
 
         double currentBalance = account.getBalance();

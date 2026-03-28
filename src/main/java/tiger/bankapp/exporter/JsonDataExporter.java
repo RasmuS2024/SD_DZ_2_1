@@ -3,6 +3,7 @@ package tiger.bankapp.exporter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import tiger.bankapp.controller.FacadeContext;
 import tiger.bankapp.exceptions.BankingException;
 import tiger.bankapp.facade.AccountFacade;
 import tiger.bankapp.facade.CategoryFacade;
@@ -16,11 +17,8 @@ import java.io.IOException;
 public class JsonDataExporter extends DataExporter {
     private final ObjectMapper mapper;
 
-    public JsonDataExporter(AccountFacade accountFacade,
-                            CategoryFacade categoryFacade,
-                            OperationFacade operationFacade,
-                            ObjectMapper mapper) {
-        super(accountFacade, categoryFacade, operationFacade);
+    public JsonDataExporter(FacadeContext facades, ObjectMapper mapper) {
+        super(facades);
         this.mapper = mapper;
     }
 

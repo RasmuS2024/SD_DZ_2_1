@@ -1,10 +1,8 @@
 package tiger.bankapp.importer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import tiger.bankapp.controller.FacadeContext;
 import tiger.bankapp.exceptions.ImportException;
-import tiger.bankapp.facade.AccountFacade;
-import tiger.bankapp.facade.CategoryFacade;
-import tiger.bankapp.facade.OperationFacade;
 import tiger.bankapp.model.enums.ImportFormat;
 
 import java.io.File;
@@ -13,11 +11,8 @@ import java.io.IOException;
 public class JsonDataImporter extends DataImporter {
     private final ObjectMapper objectMapper;
 
-    public JsonDataImporter(AccountFacade accountFacade,
-                            CategoryFacade categoryFacade,
-                            OperationFacade operationFacade,
-                            ObjectMapper objectMapper) {
-        super(accountFacade, categoryFacade, operationFacade);
+    public JsonDataImporter(FacadeContext facades, ObjectMapper objectMapper) {
+        super(facades);
         this.objectMapper = objectMapper;
     }
 
