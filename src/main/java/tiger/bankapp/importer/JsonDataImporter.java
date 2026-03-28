@@ -16,7 +16,7 @@ public class JsonDataImporter extends DataImporter {
     public JsonDataImporter(AccountFacade accountFacade,
                             CategoryFacade categoryFacade,
                             OperationFacade operationFacade,
-                            ObjectMapper objectMapper) { // Принимаем настроенный извне
+                            ObjectMapper objectMapper) {
         super(accountFacade, categoryFacade, operationFacade);
         this.objectMapper = objectMapper;
     }

@@ -2,6 +2,7 @@ package tiger.bankapp.repository;
 
 import tiger.bankapp.model.Category;
 import tiger.bankapp.factory.CategoryFactory;
+import tiger.bankapp.model.enums.OperationType;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -16,9 +17,9 @@ public class CategoryRepository {
         this.categoryFactory = categoryFactory;
     }
 
-    public Category saveCategory(String type, String name) {
+    public Category saveCategory(OperationType type, String name) {
         int id = nextId.getAndIncrement();
-        Category category = categoryFactory.createCategory(id, type, name);
+        Category category = categoryFactory.createCategory(id, String.valueOf(type), name);
         storage.put(id, category);
         return category;
     }
@@ -31,9 +32,9 @@ public class CategoryRepository {
         return new ArrayList<>(storage.values());
     }
 
-    public List<Category> findByType(String type) {
+    public List<Category> findByType(OperationType type) {
         return storage.values().stream()
-                .filter(c -> c.getType().equals(type))
+                .filter(c -> c.getType() == type) // Enum можно сравнивать через ==
                 .collect(Collectors.toList());
     }
 

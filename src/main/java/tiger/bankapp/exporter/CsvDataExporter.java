@@ -14,13 +14,11 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
-import java.time.format.DateTimeFormatter;
-import java.util.Locale;
+
+import static tiger.bankapp.config.ImportExportConfig.DATE_FORMATTER;
+import static tiger.bankapp.config.ImportExportConfig.NUMBER_LOCALE;
 
 public class CsvDataExporter extends DataExporter {
-
-    private static final DateTimeFormatter DATE_FORMATTER =
-            DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
 
     public CsvDataExporter(AccountFacade accountFacade,
                            CategoryFacade categoryFacade,
@@ -33,30 +31,26 @@ public class CsvDataExporter extends DataExporter {
         try (PrintWriter writer = new PrintWriter(new File(filePath), StandardCharsets.UTF_8)) {
 
             // Экспорт счетов
-            for (BankAccount bankAccount : data.getAccounts()) {
-                String balanceStr = String.format(Locale.US, "%.2f", bankAccount.getBalance());
-                writer.println("ACCOUNT;" + bankAccount.getId() + ";" + bankAccount.getName() + ";" + balanceStr);
+            for (BankAccount account : data.getAccounts()) {
+                writer.printf(NUMBER_LOCALE, "ACCOUNT;%d;%s;%.2f%n",
+                        account.getId(), account.getName(), account.getBalance());
             }
 
             // Экспорт категорий
-            for (Category category : data.getCategories()) {
-                writer.println("CATEGORY;" + category.getId() + ";" + category.getType() + ";" + category.getName());
+            for (Category cat : data.getCategories()) {
+                writer.printf("CATEGORY;%d;%s;%s%n",
+                        cat.getId(), cat.getType(), cat.getName());
             }
 
             // Экспорт операций
-            for (Operation operation : data.getOperations()) {
-                String formattedDate = operation.getDate() != null
-                        ? operation.getDate().format(DATE_FORMATTER)
-                        : "";
+            for (Operation op : data.getOperations()) {
+                String dateStr = op.getDate() != null ? op.getDate().format(DATE_FORMATTER) : "";
 
-                writer.printf("OPERATION;%d;%s;%d;%.2f;%s;%s;%d%n",
-                        operation.getId(),
-                        operation.getType(),
-                        operation.getBankAccountId(),
-                        operation.getAmount(),
-                        formattedDate,
-                        operation.getDescription() != null ? operation.getDescription() : "",
-                        operation.getCategoryId() != null ? operation.getCategoryId() : 0
+                Object catId = op.getCategoryId() != null ? op.getCategoryId() : "";
+
+                writer.printf(NUMBER_LOCALE, "OPERATION;%d;%s;%d;%.2f;%s;%s;%s%n",
+                        op.getId(), op.getType(), op.getBankAccountId(),
+                        op.getAmount(), dateStr, op.getDescription(), catId
                 );
             }
 

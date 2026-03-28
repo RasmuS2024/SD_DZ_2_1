@@ -15,15 +15,14 @@ import tiger.bankapp.model.enums.ImportFormat;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+
+import static tiger.bankapp.config.ImportExportConfig.DATE_FORMATTER;
 
 public class CsvDataImporter extends DataImporter {
     private final AccountFactory accountFactory;
     private final CategoryFactory categoryFactory;
     private final OperationFactory operationFactory;
 
-    private static final DateTimeFormatter DATE_FORMATTER =
-            DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
 
     public CsvDataImporter(AccountFacade accountFacade,
                            CategoryFacade categoryFacade,
@@ -95,7 +94,7 @@ public class CsvDataImporter extends DataImporter {
 
         Category category = categoryFactory.createCategory(
                 Integer.parseInt(parts[1]),
-                parts[2],
+                String.valueOf(parts[2]),
                 parts[3]
         );
 

@@ -54,7 +54,7 @@ public abstract class DataImporter {
         }
 
         for (Category cat : data.getCategories()) {
-            categoryFacade.createCategory(cat.getType(), cat.getName());
+            categoryFacade.createCategory(String.valueOf(cat.getType()), cat.getName());
         }
 
         for (Operation op : sortedOperations) {

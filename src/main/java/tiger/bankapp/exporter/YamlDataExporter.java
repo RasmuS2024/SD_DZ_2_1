@@ -1,7 +1,9 @@
 package tiger.bankapp.exporter;
 
-import org.yaml.snakeyaml.DumperOptions;
-import org.yaml.snakeyaml.Yaml;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import tiger.bankapp.exceptions.BankingException;
 import tiger.bankapp.facade.AccountFacade;
 import tiger.bankapp.facade.CategoryFacade;
@@ -9,30 +11,31 @@ import tiger.bankapp.facade.OperationFacade;
 import tiger.bankapp.importer.ImportData;
 import tiger.bankapp.model.enums.ImportFormat;
 
-import java.io.FileWriter;
+import java.io.File;
 import java.io.IOException;
 
 public class YamlDataExporter extends DataExporter {
 
-    private final Yaml yaml;
+    private final ObjectMapper mapper;
 
     public YamlDataExporter(AccountFacade accountFacade,
                             CategoryFacade categoryFacade,
                             OperationFacade operationFacade) {
         super(accountFacade, categoryFacade, operationFacade);
 
-        DumperOptions options = new DumperOptions();
-        options.setIndent(2);
-        options.setPrettyFlow(true);
-        options.setDefaultFlowStyle(DumperOptions.FlowStyle.BLOCK);
+        this.mapper = new ObjectMapper(new YAMLFactory());
+        this.mapper.registerModule(new JavaTimeModule());
 
-        this.yaml = new Yaml(options);
+        // Отключаем запись дат в виде чисел, чтобы была красивая строка
+        this.mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
+        // Включаем красивый отступ
+        this.mapper.enable(SerializationFeature.INDENT_OUTPUT);
     }
 
     @Override
     protected void serializeData(ImportData data, String filePath) {
-        try (FileWriter writer = new FileWriter(filePath)) {
-            yaml.dump(data, writer);
+        try {
+            mapper.writeValue(new File(filePath), data);
         } catch (IOException e) {
             throw new BankingException("Ошибка записи YAML: " + e.getMessage(), e);
         }

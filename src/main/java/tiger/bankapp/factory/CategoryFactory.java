@@ -1,30 +1,25 @@
 package tiger.bankapp.factory;
 
 import tiger.bankapp.model.Category;
+import tiger.bankapp.model.enums.OperationType;
 
 public class CategoryFactory {
 
     public Category createIncomeCategory(Integer id, String name) {
-        return new Category(id, "INCOME", name);
+        return new Category(id, OperationType.INCOME, name);
     }
 
     public Category createExpenseCategory(Integer id, String name) {
-        return new Category(id, "EXPENSE", name);
+        return new Category(id, OperationType.EXPENSE, name);
     }
 
-    public Category createCategory(Integer id, String type, String name) {
-        validateType(type);
+    public Category createCategory(Integer id, String typeStr, String name) {
+        OperationType type = OperationType.valueOf(typeStr.toUpperCase());
         return new Category(id, type, name);
     }
 
-    public Category createCategory(String type, String name) {
-        validateType(type);
-        return new Category(null, type, name);
+    public Category createCategory(Integer id, OperationType type, String name) {
+        return new Category(id, type, name);
     }
 
-    private void validateType(String type) {
-        if (!"INCOME".equals(type) && !"EXPENSE".equals(type)) {
-            throw new IllegalArgumentException("Тип должен быть INCOME или EXPENSE");
-        }
-    }
 }

@@ -1,6 +1,7 @@
 package tiger.bankapp.facade;
 
 import tiger.bankapp.model.Category;
+import tiger.bankapp.model.enums.OperationType;
 import tiger.bankapp.service.CategoryService;
 
 import java.util.List;
@@ -13,7 +14,7 @@ public class CategoryFacade {
     }
 
     public Category createCategory(String type, String name) {
-        return categoryService.createCategory(type, name);
+        return categoryService.createCategory(OperationType.valueOf(type), name);
     }
 
     public Category createIncomeCategory(String name) {
@@ -40,8 +41,8 @@ public class CategoryFacade {
         return categoryService.getExpenseCategories();
     }
 
-    public boolean updateCategory(Integer id, String type, String name) {
-        return categoryService.updateCategory(id, type, name);
+    public void updateCategory(Integer id, String type, String name) {
+        categoryService.updateCategory(id, OperationType.valueOf(type), name);
     }
 
     public boolean deleteCategory(Integer id) {
