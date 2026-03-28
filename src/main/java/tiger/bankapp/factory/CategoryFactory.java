@@ -1,9 +1,7 @@
 package tiger.bankapp.factory;
 
-import org.springframework.stereotype.Component;
 import tiger.bankapp.model.Category;
 
-@Component
 public class CategoryFactory {
 
     public Category createIncomeCategory(Integer id, String name) {

@@ -1,14 +1,11 @@
 package tiger.bankapp.service;
 
-import org.springframework.stereotype.Service;
-import tiger.bankapp.aop.LogExecutionTime;
 import tiger.bankapp.factory.AccountFactory;
 import tiger.bankapp.model.BankAccount;
 import tiger.bankapp.repository.AccountRepository;
 
 import java.util.List;
 
-@Service
 public class AccountServiceImpl implements AccountService {
     private final AccountRepository accountRepository;
     private final AccountFactory accountFactory;
@@ -18,7 +15,6 @@ public class AccountServiceImpl implements AccountService {
         this.accountFactory = accountFactory;
     }
 
-    @LogExecutionTime
     @Override
     public BankAccount createAccount(String name) {
         BankAccount account = accountFactory.createAccount(name);

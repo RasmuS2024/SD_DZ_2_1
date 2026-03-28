@@ -1,8 +1,7 @@
-package tiger.bankapp;
+package tiger.bankapp.model;
 
 import org.junit.jupiter.api.Test;
 import java.time.LocalDateTime;
-import tiger.bankapp.model.Operation;
 
 import static org.junit.jupiter.api.Assertions.*;
 

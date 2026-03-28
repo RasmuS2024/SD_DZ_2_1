@@ -1,17 +1,13 @@
 package tiger.bankapp.facade;
 
-import org.springframework.stereotype.Component;
-import org.springframework.beans.factory.annotation.Autowired;
 import tiger.bankapp.model.BankAccount;
 import tiger.bankapp.service.AccountService;
 
 import java.util.List;
 
-@Component
 public class AccountFacade {
     private final AccountService accountService;
 
-    @Autowired
     public AccountFacade(AccountService accountService) {
         this.accountService = accountService;
     }

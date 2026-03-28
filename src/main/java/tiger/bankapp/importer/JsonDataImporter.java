@@ -1,7 +1,6 @@
 package tiger.bankapp.importer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.stereotype.Component;
 import tiger.bankapp.exceptions.ImportException;
 import tiger.bankapp.facade.AccountFacade;
 import tiger.bankapp.facade.CategoryFacade;
@@ -11,12 +10,15 @@ import tiger.bankapp.model.enums.ImportFormat;
 import java.io.File;
 import java.io.IOException;
 
-@Component
 public class JsonDataImporter extends DataImporter {
-    private final ObjectMapper objectMapper = new ObjectMapper();
+    private final ObjectMapper objectMapper;
 
-    public JsonDataImporter(AccountFacade accountFacade, CategoryFacade categoryFacade, OperationFacade operationFacade) {
+    public JsonDataImporter(AccountFacade accountFacade,
+                            CategoryFacade categoryFacade,
+                            OperationFacade operationFacade,
+                            ObjectMapper objectMapper) { // Принимаем настроенный извне
         super(accountFacade, categoryFacade, operationFacade);
+        this.objectMapper = objectMapper;
     }
 
     @Override

@@ -1,13 +1,11 @@
 package tiger.bankapp.command.impl;
 
-import org.springframework.stereotype.Component;
 import tiger.bankapp.command.Command;
 import tiger.bankapp.controller.CommandHandler;
 import tiger.bankapp.helpers.ConsoleHelper;
 import tiger.bankapp.model.enums.ImportFormat;
 import java.util.Arrays;
 
-@Component
 public class ExportDataCommand implements Command {
 
     private final CommandHandler handler;

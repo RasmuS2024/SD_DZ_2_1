@@ -1,11 +1,9 @@
 package tiger.bankapp.command.impl;
 
-import org.springframework.stereotype.Component;
 import tiger.bankapp.command.Command;
 import tiger.bankapp.controller.CommandHandler;
 import tiger.bankapp.helpers.ConsoleHelper;
 
-@Component
 public class ImportDataCommand implements Command {
 
     private final CommandHandler handler;

@@ -1,23 +1,18 @@
 package tiger.bankapp.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import tiger.bankapp.command.Command;
 import tiger.bankapp.exceptions.BankingException;
 import tiger.bankapp.helpers.ConsoleHelper;
-
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.stream.Collectors;
 
-@Component
 public class MenuController {
     private final ConsoleHelper console;
     private final Map<Integer, Command> commands;
 
-    @Autowired
     public MenuController(ConsoleHelper console, List<Command> commandList) {
         this.console = console;
         this.commands = commandList.stream()

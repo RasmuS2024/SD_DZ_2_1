@@ -1,10 +1,7 @@
 package tiger.bankapp.helpers;
 
-import org.springframework.stereotype.Component;
-
 import java.util.Scanner;
 
-@Component
 public class ConsoleHelper {
     private final Scanner scanner;
 

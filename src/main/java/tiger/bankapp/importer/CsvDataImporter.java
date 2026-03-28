@@ -1,7 +1,5 @@
 package tiger.bankapp.importer;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import tiger.bankapp.exceptions.ImportException;
 import tiger.bankapp.facade.AccountFacade;
 import tiger.bankapp.facade.CategoryFacade;
@@ -19,7 +17,6 @@ import java.io.FileReader;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-@Component
 public class CsvDataImporter extends DataImporter {
     private final AccountFactory accountFactory;
     private final CategoryFactory categoryFactory;
@@ -28,7 +25,6 @@ public class CsvDataImporter extends DataImporter {
     private static final DateTimeFormatter DATE_FORMATTER =
             DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
 
-    @Autowired
     public CsvDataImporter(AccountFacade accountFacade,
                            CategoryFacade categoryFacade,
                            OperationFacade operationFacade,

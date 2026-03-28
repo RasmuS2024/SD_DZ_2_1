@@ -1,18 +1,14 @@
 package tiger.bankapp.facade;
 
-import org.springframework.stereotype.Component;
-import org.springframework.beans.factory.annotation.Autowired;
 import tiger.bankapp.model.Operation;
 import tiger.bankapp.service.OperationService;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Component
 public class OperationFacade {
     private final OperationService operationService;
 
-    @Autowired
     public OperationFacade(OperationService operationService) {
         this.operationService = operationService;
     }

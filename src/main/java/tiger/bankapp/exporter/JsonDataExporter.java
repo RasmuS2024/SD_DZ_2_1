@@ -3,7 +3,6 @@ package tiger.bankapp.exporter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import org.springframework.stereotype.Component;
 import tiger.bankapp.exceptions.BankingException;
 import tiger.bankapp.facade.AccountFacade;
 import tiger.bankapp.facade.CategoryFacade;
@@ -14,15 +13,15 @@ import tiger.bankapp.model.enums.ImportFormat;
 import java.io.File;
 import java.io.IOException;
 
-@Component
 public class JsonDataExporter extends DataExporter {
-    private final ObjectMapper mapper = new ObjectMapper();
+    private final ObjectMapper mapper;
 
-    public JsonDataExporter(AccountFacade accountFacade, CategoryFacade categoryFacade, OperationFacade operationFacade) {
+    public JsonDataExporter(AccountFacade accountFacade,
+                            CategoryFacade categoryFacade,
+                            OperationFacade operationFacade,
+                            ObjectMapper mapper) {
         super(accountFacade, categoryFacade, operationFacade);
-
-        this.mapper.enable(SerializationFeature.INDENT_OUTPUT);
-        this.mapper.registerModule(new JavaTimeModule());
+        this.mapper = mapper;
     }
 
     @Override

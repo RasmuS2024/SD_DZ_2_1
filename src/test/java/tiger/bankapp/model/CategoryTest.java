@@ -1,7 +1,6 @@
-package tiger.bankapp;
+package tiger.bankapp.model;
 
 import org.junit.jupiter.api.Test;
-import tiger.bankapp.model.Category;
 
 import static org.junit.jupiter.api.Assertions.*;
 

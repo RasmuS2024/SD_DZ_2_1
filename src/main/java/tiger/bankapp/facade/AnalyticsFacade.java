@@ -1,7 +1,5 @@
 package tiger.bankapp.facade;
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
 import tiger.bankapp.model.BankAccount;
 import tiger.bankapp.model.Operation;
 import tiger.bankapp.service.OperationService;
@@ -13,12 +11,18 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-@Component
-@RequiredArgsConstructor
 public class AnalyticsFacade {
     private final OperationService operationService;
     private final AccountService accountService;
     private final CategoryService categoryService;
+
+    public AnalyticsFacade(OperationService operationService,
+                           AccountService accountService,
+                           CategoryService categoryService) {
+        this.operationService = operationService;
+        this.accountService = accountService;
+        this.categoryService = categoryService;
+    }
 
     public void printBalanceForPeriod(LocalDateTime from, LocalDateTime to) {
         List<Operation> operations = operationService.getOperationsInPeriod(from, to);

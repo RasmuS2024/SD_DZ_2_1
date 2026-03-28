@@ -1,17 +1,13 @@
 package tiger.bankapp.facade;
 
-import org.springframework.stereotype.Component;
-import org.springframework.beans.factory.annotation.Autowired;
 import tiger.bankapp.model.Category;
 import tiger.bankapp.service.CategoryService;
 
 import java.util.List;
 
-@Component
 public class CategoryFacade {
     private final CategoryService categoryService;
 
-    @Autowired
     public CategoryFacade(CategoryService categoryService) {
         this.categoryService = categoryService;
     }

@@ -1,10 +1,8 @@
 package tiger.bankapp.command.impl;
 
-import org.springframework.stereotype.Component;
 import tiger.bankapp.command.Command;
 import tiger.bankapp.controller.CommandHandler;
 
-@Component
 public class CreateAccountCommand implements Command {
 
     private final CommandHandler handler;

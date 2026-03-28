@@ -1,11 +1,9 @@
 package tiger.bankapp.factory;
 
-import org.springframework.stereotype.Component;
 import tiger.bankapp.model.Operation;
 
 import java.time.LocalDateTime;
 
-@Component
 public class OperationFactory {
     /**
      * Создание новой операции (ID = null, дата = сейчас)

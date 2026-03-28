@@ -1,6 +1,5 @@
 package tiger.bankapp.exporter;
 
-import org.springframework.stereotype.Component;
 import tiger.bankapp.exceptions.BankingException;
 import tiger.bankapp.facade.AccountFacade;
 import tiger.bankapp.facade.CategoryFacade;
@@ -18,7 +17,6 @@ import java.nio.charset.StandardCharsets;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
-@Component
 public class CsvDataExporter extends DataExporter {
 
     private static final DateTimeFormatter DATE_FORMATTER =

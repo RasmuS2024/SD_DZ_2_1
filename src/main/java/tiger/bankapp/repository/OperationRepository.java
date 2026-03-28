@@ -1,12 +1,10 @@
 package tiger.bankapp.repository;
 
-import org.springframework.stereotype.Repository;
 import tiger.bankapp.model.Operation;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
-@Repository
 public class OperationRepository {
     private final Map<Integer, Operation> storage = new HashMap<>();
     private final AtomicInteger nextId = new AtomicInteger(1);

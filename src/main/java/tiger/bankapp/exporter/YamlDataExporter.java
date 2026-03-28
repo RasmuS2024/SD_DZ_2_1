@@ -1,20 +1,17 @@
 package tiger.bankapp.exporter;
 
-import org.springframework.stereotype.Component;
 import org.yaml.snakeyaml.DumperOptions;
 import org.yaml.snakeyaml.Yaml;
 import tiger.bankapp.exceptions.BankingException;
 import tiger.bankapp.facade.AccountFacade;
 import tiger.bankapp.facade.CategoryFacade;
 import tiger.bankapp.facade.OperationFacade;
-import tiger.bankapp.exporter.DataExporter;
 import tiger.bankapp.importer.ImportData;
 import tiger.bankapp.model.enums.ImportFormat;
 
 import java.io.FileWriter;
 import java.io.IOException;
 
-@Component
 public class YamlDataExporter extends DataExporter {
 
     private final Yaml yaml;

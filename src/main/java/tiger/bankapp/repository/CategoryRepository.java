@@ -1,7 +1,5 @@
 package tiger.bankapp.repository;
 
-import org.springframework.stereotype.Repository;
-import org.springframework.beans.factory.annotation.Autowired;
 import tiger.bankapp.model.Category;
 import tiger.bankapp.factory.CategoryFactory;
 
@@ -9,13 +7,11 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
-@Repository
 public class CategoryRepository {
     private final Map<Integer, Category> storage = new HashMap<>();
     private final AtomicInteger nextId = new AtomicInteger(1);
     private final CategoryFactory categoryFactory;
 
-    @Autowired
     public CategoryRepository(CategoryFactory categoryFactory) {
         this.categoryFactory = categoryFactory;
     }

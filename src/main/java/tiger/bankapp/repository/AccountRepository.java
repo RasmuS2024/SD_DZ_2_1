@@ -1,12 +1,10 @@
 package tiger.bankapp.repository;
 
-import org.springframework.stereotype.Repository;
 import tiger.bankapp.model.BankAccount;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicLong;
 
-@Repository
 public class AccountRepository {
     private final Map<Long, BankAccount> storage = new HashMap<>();
     private final AtomicLong nextId = new AtomicLong(1);

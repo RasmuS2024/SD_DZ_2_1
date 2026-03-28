@@ -1,7 +1,5 @@
 package tiger.bankapp.controller;
 
-import org.springframework.stereotype.Component;
-import org.springframework.beans.factory.annotation.Autowired;
 import tiger.bankapp.exceptions.ValidationException;
 import tiger.bankapp.facade.AccountFacade;
 import tiger.bankapp.facade.CategoryFacade;
@@ -19,7 +17,6 @@ import tiger.bankapp.model.enums.ImportFormat;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Component
 public class CommandHandler {
     private final AccountFacade accountFacade;
     private final CategoryFacade categoryFacade;
@@ -30,7 +27,6 @@ public class CommandHandler {
     private final List<DataImporter> importers;
     private final List<DataExporter> exporters;
 
-    @Autowired
     public CommandHandler(
             List<DataImporter> importers,
             List<DataExporter> exporters,

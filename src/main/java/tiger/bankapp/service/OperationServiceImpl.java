@@ -1,8 +1,5 @@
 package tiger.bankapp.service;
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
-import tiger.bankapp.aop.LogExecutionTime;
 import tiger.bankapp.exceptions.BankingException;
 import tiger.bankapp.factory.OperationFactory;
 import tiger.bankapp.model.BankAccount;
@@ -12,14 +9,19 @@ import tiger.bankapp.repository.OperationRepository;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Service
-@RequiredArgsConstructor
 public class OperationServiceImpl implements OperationService {
     private final OperationRepository operationRepository;
     private final AccountService accountService;
     private final OperationFactory operationFactory;
 
-    @LogExecutionTime
+    public OperationServiceImpl(OperationRepository operationRepository,
+                                AccountService accountService,
+                                OperationFactory operationFactory) {
+        this.operationRepository = operationRepository;
+        this.accountService = accountService;
+        this.operationFactory = operationFactory;
+    }
+
     @Override
     public Operation createIncome(Long accountId, double amount, Integer categoryId, String description) {
         validateAmount(amount);
