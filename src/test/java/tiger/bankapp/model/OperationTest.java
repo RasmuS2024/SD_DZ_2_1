@@ -5,6 +5,7 @@ import tiger.bankapp.model.enums.OperationType;
 import java.time.LocalDateTime;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static tiger.bankapp.config.ImportExportConfig.NUMBER_LOCALE;
 
 class OperationTest {
 
@@ -46,7 +47,7 @@ class OperationTest {
         LocalDateTime date = LocalDateTime.of(2024, 3, 15, 14, 30);
         Operation op = new Operation(1, OperationType.INCOME, 1L, 1000.0, date, "Зарплата", 1);
 
-        String expected = "Операция{id=1, тип=Доход, счет=1, сумма=1000,00, дата=15.03.2024 14:30}";
+        String expected = "Операция{id=1, тип=Доход, счет=1, сумма=1000.00, дата=15.03.2024 14:30}";
 
         assertEquals(expected, op.toString());
     }

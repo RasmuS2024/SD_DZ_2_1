@@ -7,6 +7,7 @@ import tiger.bankapp.model.enums.OperationType;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 @Data
 @NoArgsConstructor
@@ -27,7 +28,7 @@ public class Operation {
     @Override
     public String toString() {
         String typeName = (type == OperationType.INCOME) ? "Доход" : "Расход";
-        return String.format("Операция{id=%d, тип=%s, счет=%d, сумма=%.2f, дата=%s}",
+        return String.format(Locale.US, "Операция{id=%d, тип=%s, счет=%d, сумма=%.2f, дата=%s}",
                 id, typeName, bankAccountId, amount, getFormattedDate());
     }
 }

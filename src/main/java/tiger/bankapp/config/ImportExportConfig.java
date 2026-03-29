@@ -5,6 +5,10 @@ import java.util.Locale;
 
 public class ImportExportConfig {
 
+    private ImportExportConfig() {
+        // Скрытый конструктор
+    }
+
     public static final DateTimeFormatter DATE_FORMATTER =
             DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
 

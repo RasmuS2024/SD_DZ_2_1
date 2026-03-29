@@ -68,7 +68,7 @@ class BankAccountTest {
         BankAccount account = new BankAccount(1L, "Тестовый счет", 1500.0);
 
         // Убедитесь, что ваш toString в модели BankAccount использует форматирование %.2f
-        String expected = "Счет{id=1, name='Тестовый счет', balance=1500,00}";
+        String expected = "Счет{id=1, name='Тестовый счет', balance=1500.00}";
         assertEquals(expected, account.toString());
     }
 }
